@@ -284,7 +284,7 @@ button.card-button {
     color: white;
 }
 
-footer{
+footer {
     padding-top: 20px;
 }
 
@@ -333,11 +333,163 @@ footer{
     text-align: center;
     bottom: 0;
 }
-hr{
+
+hr {
     color: #fff !important;
 }
 
 .copyright h1 {
     font-size: 15px;
     color: white;
+}
+
+/* 1024 */
+@media only screen and (min-width: 1024px) and (max-width:1200px) {
+    .carousel-caption {
+        bottom: 10% !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 34px;
+    }
+
+    .carousel-caption p {
+        font-size: 16px;
+    }
+
+    .header-sosmed i {
+        font-size: 16px;
+    }
+
+    h5.card-harga {
+        font-size: 18px;
+    }
+    button.card-button {
+        display: flex;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .icon-shop {
+        font-size: 13px;
+    }
+    .card-img-top{
+        width: 75px !important;
+    }
+    .card.categories img {
+        width: 300px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .title-text{
+        font-size: 28px;
+    }
+    .carousel-caption {
+        bottom: 5% !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 24px;
+    }
+
+    .carousel-caption p {
+        font-size: 14px;
+    }
+
+    .header-sosmed i {
+        font-size: 12px;
+    }
+    .card {
+        margin-bottom: 30px;
+        padding: 10px 3px;
+    }
+    
+    span.card-badge {
+        font-size: 12px;
+        top: -10px;
+        left: -3px;
+        padding: 5px 5px;
+    }
+    .card-img-top{
+        width: 55px !important;
+    }
+    .card-body h6{
+        font-size: 10px;
+    }
+    .card-body h5{
+        font-size: 12px;
+    }
+    .card-icon{
+        font-size: 10px;
+    }
+    h6.card-sold{
+        font-size: 10px;
+    }
+    .card-by{
+        font-size: 10px;
+    }
+    h5.card-harga {
+        position: relative;
+        top: 5px;
+        font-size: 11px;
+    }
+    button.card-button {
+        position: relative;
+        left: -10px;
+        display: flex;
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+    .icon-shop {
+        margin-top: 3px;
+        font-size: 9px;
+    }
+    .card.categories img {
+        width: 220px !important;
+    }
+    .txt-card-categories{
+        position: relative;
+        top:0px;
+    }
+    .text-card-categories{
+        font-size: 22px !important;
+    }
+    .carousel-caption .tag-card-categories{
+        font-size: 11px !important;
+    }
+    .card-cta img{
+        width: 160px;
+    }
+    .txt-cta-motor{
+        position: relative;
+        top: 5px;
+    }
+    .txt-cta-motor h1{
+        font-size: 26px;
+    }
+    .txt-cta-motor p{
+        font-size: 12px;
+    }
+    button.btn-white{
+        font-size: 12px;
+    }
+    button.btn-solid{
+        font-size: 15px;
+    }
+    .logo-footer img{
+        width: 90px !important;
+    }
+    .txt-footer-logo h1{
+        font-size: 26px;
+    }
+    .txt-footer-logo h2{
+        font-size: 24px;
+    }
+    .footer-text h3{
+        font-size: 16px;
+    }
+    .footer-text p{
+        font-size: 13px;
+    }
 }

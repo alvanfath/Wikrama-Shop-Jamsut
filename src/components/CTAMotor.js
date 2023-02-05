@@ -9,7 +9,7 @@ const CTAMotor = () => {
                         <img src={Motor1}></img>
                     </div>
                     <div className="col-4 text-center txt-cta-motor">
-                        <h1>testing</h1>
+                        <h1>Motor Listrik</h1>
                         <p>lorem ipsum dolar sit amet</p>
                         <button className="btn-white">Gasken !</button>
                     </div>

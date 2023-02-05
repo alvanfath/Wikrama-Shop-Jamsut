@@ -9,7 +9,7 @@ const ProdukLainnya = () => {
                 <div className="row">
                     <div className="col-3">
                         <div className="card produk">
-                            <span className="text-center col-3 card-badge">-16%</span>
+                            <span className="text-center col-lg-3 col-md-4 card-badge">-16%</span>
                             <img src={produk} className="card-img-top"></img>
                             <div className="card-body">
                                 <h6 className="card-categories">Snack</h6>
@@ -38,7 +38,7 @@ const ProdukLainnya = () => {
                     </div>
                     <div className="col-3">
                         <div className="card">
-                            <span className="text-center col-3 card-badge">-16%</span>
+                            <span className="text-center col-lg-3 col-md-4 card-badge">-16%</span>
                             <img src={produk} className="card-img-top"></img>
                             <div className="card-body">
                                 <h6 className="card-categories">Snack</h6>
@@ -67,7 +67,7 @@ const ProdukLainnya = () => {
                     </div>
                     <div className="col-3">
                         <div className="card">
-                            <span className="text-center col-3 card-badge">-16%</span>
+                            <span className="text-center col-lg-3 col-md-4 card-badge">-16%</span>
                             <img src={produk} className="card-img-top"></img>
                             <div className="card-body">
                                 <h6 className="card-categories">Snack</h6>
@@ -96,7 +96,7 @@ const ProdukLainnya = () => {
                     </div>
                     <div className="col-3">
                         <div className="card">
-                            <span className="text-center col-3 card-badge">-16%</span>
+                            <span className="text-center col-lg-3 col-md-4 card-badge">-16%</span>
                             <img src={produk} className="card-img-top"></img>
                             <div className="card-body">
                                 <h6 className="card-categories">Snack</h6>
@@ -125,7 +125,7 @@ const ProdukLainnya = () => {
                     </div>
                     <div className="col-3">
                         <div className="card">
-                            <span className="text-center col-3 card-badge">-16%</span>
+                            <span className="text-center col-lg-3 col-md-4 card-badge">-16%</span>
                             <img src={produk} className="card-img-top"></img>
                             <div className="card-body">
                                 <h6 className="card-categories">Snack</h6>
@@ -154,7 +154,7 @@ const ProdukLainnya = () => {
                     </div>
                     <div className="col-3">
                         <div className="card">
-                            <span className="text-center col-3 card-badge">-16%</span>
+                            <span className="text-center col-lg-3 col-md-4 card-badge">-16%</span>
                             <img src={produk} className="card-img-top"></img>
                             <div className="card-body">
                                 <h6 className="card-categories">Snack</h6>
@@ -183,7 +183,7 @@ const ProdukLainnya = () => {
                     </div>
                     <div className="col-3">
                         <div className="card">
-                            <span className="text-center col-3 card-badge">-16%</span>
+                            <span className="text-center col-lg-3 col-md-4 card-badge">-16%</span>
                             <img src={produk} className="card-img-top"></img>
                             <div className="card-body">
                                 <h6 className="card-categories">Snack</h6>
@@ -212,7 +212,7 @@ const ProdukLainnya = () => {
                     </div>
                     <div className="col-3">
                         <div className="card">
-                            <span className="text-center col-3 card-badge">-16%</span>
+                            <span className="text-center col-lg-3 col-md-4 card-badge">-16%</span>
                             <img src={produk} className="card-img-top"></img>
                             <div className="card-body">
                                 <h6 className="card-categories">Snack</h6>

@@ -22,28 +22,28 @@ const CardKategori = () => {
 
                             <div className="card categories position-relative">
                                 <img src={categories} class="card-img-top"></img>
-                                <div className="carousel-caption text-center">
+                                <div className="carousel-caption text-center txt-card-categories">
                                     <h4 className="text-card-categories">Minuman</h4>
                                     <p className="tag-card-categories">Minuman Sehat Tanpa Pewarna Buatan</p>
                                 </div>
                             </div>
                             <div className="card categories position-relative">
                                 <img src={categories} class="card-img-top"></img>
-                                <div className="carousel-caption text-center">
+                                <div className="carousel-caption text-center txt-card-categories">
                                     <h4 className="text-card-categories">Minuman</h4>
                                     <p className="tag-card-categories">Minuman Sehat Tanpa Pewarna Buatan</p>
                                 </div>
                             </div>
                             <div className="card categories position-relative">
                                 <img src={categories} class="card-img-top"></img>
-                                <div className="carousel-caption text-center">
+                                <div className="carousel-caption text-center txt-card-categories">
                                     <h4 className="text-card-categories">Minuman</h4>
                                     <p className="tag-card-categories">Minuman Sehat Tanpa Pewarna Buatan</p>
                                 </div>
                             </div>
                             <div className="card categories position-relative">
                                 <img src={categories} class="card-img-top"></img>
-                                <div className="carousel-caption text-center">
+                                <div className="carousel-caption text-center txt-card-categories">
                                     <h4 className="text-card-categories">Minuman</h4>
                                     <p className="tag-card-categories">Minuman Sehat Tanpa Pewarna Buatan</p>
                                 </div>
