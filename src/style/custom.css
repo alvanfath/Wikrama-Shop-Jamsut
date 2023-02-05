@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body * {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-blue {
+    background-color: #5278Ff;
+}
+
+.bg-white {
+    background-color: white !important;
+}
+
+.bg-red {
+    background-color: red !important;
+}
+
+section.half-section {
+    padding: 80px 0;
+}
+
+section.small-section {
+    padding: 25px 0;
+}
+
+button.btn-outline {
+    padding: 6px 22px;
+    background-color: transparent;
+    border: 1px solid #5278Ff;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    transition: 0.3s;
+}
+
+button.btn-outline:hover {
+    background-color: #5278Ff;
+    color: white;
+}
+
+button.btn-solid {
+    padding: 6px 22px;
+    background-color: #5278Ff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+}
+
+button.btn-white {
+    padding: 6px 22px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #5278Ff;
+    transition: 0.3s;
+}
+
+button.btn-white:hover {
+    background-color: #f0f0f0;
+}
+
+button.btn-solid:hover {
+    background-color: #052cb6;
+}
+
+.navbar-brand {
+    display: flex;
+}
+
+.navbar-brand h4 {
+
+    display: flex;
+    margin-left: 10px;
+    font-weight: 700;
+    align-items: center;
+    color: white;
+    font-style: italic;
+    -webkit-text-stroke: 1px #5278Ff;
+}
+
+.navbar-brand span {
+    margin-left: 2px;
+    font-style: normal;
+    color: #5278Ff;
+    -webkit-text-stroke: 0px #5278Ff;
+}
+
+.navbar-brand img {
+    width: 60px;
+}
+
+input.form-control.search {
+    width: 300px;
+    border: 1px solid #5278Ff;
+}
+
+.shop-bag {
+    color: #5278Ff;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-indicators button {
+    border-radius: 100% !important;
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.carousel-item img {
+    border-radius: 20px;
+}
+
+.carousel-caption {
+    position: relative;
+    font-family: 'Poppins', sans-serif !important;
+    right: 50px !important;
+    bottom: 15% !important;
+    left: 50px !important;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: start !important;
+}
+
+.carousel-caption h1 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.carousel-caption p {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.header-sosmed {
+    display: flex;
+
+}
+
+.header-sosmed i {
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+    background-color: white;
+    color: #5278Ff;
+    padding: 10px;
+    /* border-radius: 100%; */
+}
+
+.title-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.card {
+    margin-bottom: 30px;
+    padding: 20px 3px;
+    /* border:1px solid gray !important; */
+    border-radius: 15px !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+span.card-badge {
+    color: white;
+    border-radius: 15px 0px 15px 0px;
+    font-size: 13px;
+    position: relative;
+    top: -20px;
+    left: -3px;
+    background-color: #5278Ff;
+    padding: 5px 5px;
+}
+
+.card-img-top {
+    width: 85px !important;
+    margin: 0 auto;
+}
+
+.card.categories {
+    box-shadow: none !important;
+    border: none;
+    font-weight: 500;
+    font-size: 13px;
+    color: #ADADAD;
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-icon {
+    font-size: 13px;
+    color: #FFC107;
+}
+
+.card-sold {
+    font-size: 13px;
+    color: #ADADAD;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.card-by {
+    font-size: 14px;
+    color: #b6b6b6;
+    font-weight: 500;
+}
+
+.card-by span {
+    color: #5278Ff;
+}
+
+.card-harga {
+    display: flex;
+    position: relative;
+    top: 10px;
+    font-weight: 600;
+    color: #5278Ff;
+    font-size: 21px;
+}
+
+button.card-button {
+    background-color: #5278Ff;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.icon-shop {
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.card.categories {
+    padding: 0px !important;
+    border: none !important;
+}
+
+.card.categories img {
+    width: 360px !important;
+}
+
+.text-card-categories {
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px !important;
+}
+
+.tag-card-categories {
+    color: black;
+    font-weight: 600;
+    font-size: 13px !important;
+}
+
+.card-cta {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.txt-cta-motor {
+    position: relative;
+    top: 20px;
+    color: white;
+}
+
+footer{
+    padding-top: 20px;
+}
+
+.logo-footer {
+    display: flex;
+}
+
+.logo-footer img {
+    width: 110px;
+}
+
+.txt-footer-logo {
+    margin-left: 10px;
+}
+
+.txt-footer-logo h1 {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 40px;
+    color: #5278Ff;
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.txt-footer-logo h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.footer-text h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-text p {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.copyright {
+    margin-top: 40px;
+    padding-bottom: 0px;
+    display: flex;
+    text-align: center;
+    bottom: 0;
+}
+hr{
+    color: #fff !important;
+}
+
+.copyright h1 {
+    font-size: 15px;
+    color: white;
+}
