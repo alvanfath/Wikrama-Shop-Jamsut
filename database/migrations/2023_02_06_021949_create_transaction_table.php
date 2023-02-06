@@ -18,7 +18,7 @@ class CreateTransactionTable extends Migration
             $table->id();
             $table->string('nomor_transaksi')->unique()->default(Str::random(20));
             $table->string('user_id')->nullable();
-            $table->foreign('product_id')->references('id')->on('product');
+            $table->string('product_id');
             $table->integer('quantity');
             $table->string('total_price');
             $table->timestamps();
