@@ -21,7 +21,7 @@ class CreateProductTable extends Migration
             $table->string('price');
             $table->string('stock');
             $table->integer('category_id');
-            $table->integer('supplier_id')->nullable()->default('Wikrama shop');
+            $table->string('supplier_id')->nullable()->default('Wikrama Shop');
             $table->timestamps();
         });
     }
