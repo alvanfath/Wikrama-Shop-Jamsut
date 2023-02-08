@@ -28,7 +28,8 @@ class RegisterController extends Controller
                 return response()->json([
                     'statusCode' => 400,
                     'success' => false,
-                    'message' => 'validation error'
+                    'message' => 'validation error',
+                    'error_response' => $validator->errors()
                 ]);
             }
 
@@ -44,10 +45,10 @@ class RegisterController extends Controller
 
             return response()->json([
                 'statusCode' => 200,
-                'success' => false,
+                'success' => true,
                 'message' => 'Register Success'
             ]);
-            
+
         } catch (\Throwable $th) {
             return response()->json([
                 'statusCode' => 500,
@@ -59,11 +60,13 @@ class RegisterController extends Controller
 
     public function verifEmail($token){
         try{
+            $new_token = Str::random(20);
             $data = DB::table('users')->where('token', $token)->first();
             if($data){
                 DB::table('users')->where('token', $token)->update([
                     'email_verified_at' => Carbon::now(),
-                    'status' => 1
+                    'status' => 1,
+                    'token' => $new_token
                 ]);
                 return response()->json([
                     'statusCode' => 200,
@@ -77,8 +80,6 @@ class RegisterController extends Controller
                     'message' => 'Your account not found'
                 ]);
             }
-
-
         }catch(\Throwable $th){
             return response()->json([
                 'statusCode' => 500,
