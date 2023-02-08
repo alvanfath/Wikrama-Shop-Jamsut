@@ -1,0 +1,653 @@
+/* background */
+.bg-blue {background-color: #5278Ff;}
+.bg-white {background-color: white !important;}
+.bg-red {background-color: red !important;}
+
+/* section */
+section.half-section {padding: 80px 0;}
+section.small-section {padding: 25px 0;}
+
+/* button */
+button.btn-outline {
+    padding: 6px 22px;
+    background-color: transparent;
+    border: 1px solid #5278Ff;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    transition: 0.3s;
+}
+button.btn-outline:hover {
+    background-color: #5278Ff;
+    color: white;
+}
+button.btn-solid {
+    padding: 6px 22px;
+    background-color: #5278Ff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+}
+button.btn-white {
+    padding: 6px 22px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #5278Ff;
+    transition: 0.3s;
+}
+button.btn-white:hover {
+    background-color: #f0f0f0;
+}
+button.btn-solid:hover {
+    background-color: #052cb6;
+}
+
+/* navbar */
+.navbar-brand {
+    display: flex;
+}
+
+.navbar-brand h4 {
+    display: flex;
+    margin-left: 10px;
+    font-weight: 700;
+    align-items: center;
+    color: white;
+    font-style: italic;
+    -webkit-text-stroke: 1px #5278Ff;
+}
+
+.navbar-brand span {
+    margin-left: 2px;
+    font-style: normal;
+    color: #5278Ff;
+    -webkit-text-stroke: 0px #5278Ff;
+}
+
+.navbar-brand img {
+    width: 60px;
+}
+
+input.form-control.search {
+    width: 300px;
+    border: 1px solid #5278Ff;
+}
+
+.shop-bag {
+    color: #5278Ff;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* header */
+.carousel-indicators button {
+    border-radius: 100% !important;
+    width: 10px !important;
+    height: 10px !important;
+}
+.carousel-item img {
+    border-radius: 20px;
+}
+
+.carousel-caption {
+    position: relative;
+    font-family: 'Poppins', sans-serif !important;
+    right: 50px !important;
+    bottom: 15% !important;
+    left: 50px !important;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: start !important;
+}
+
+.carousel-caption h1 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.carousel-caption p {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.header-sosmed {
+    display: flex;
+
+}
+.header-sosmed i {
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+    background-color: white;
+    color: #5278Ff;
+    padding: 10px;
+    /* border-radius: 100%; */
+}
+.title-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* card produk */
+.card {
+    margin-bottom: 30px;
+    padding: 20px 3px;
+    /* border:1px solid gray !important; */
+    border-radius: 15px !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+span.card-badge {
+    color: white;
+    border-radius: 15px 0px 15px 0px;
+    font-size: 13px;
+    position: relative;
+    top: -20px;
+    left: -3px;
+    background-color: #5278Ff;
+    padding: 5px 5px;
+}
+.card-img-top {
+    width: 85px !important;
+    margin: 0 auto;
+}
+
+.card.categories {
+    box-shadow: none !important;
+    border: none;
+    font-weight: 500;
+    font-size: 13px;
+    color: #ADADAD;
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-icon {
+    font-size: 13px;
+    color: #FFC107;
+}
+
+.card-sold {
+    font-size: 13px;
+    color: #ADADAD;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.card-by {
+    font-size: 14px;
+    color: #b6b6b6;
+    font-weight: 500;
+}
+
+.card-by span {
+    color: #5278Ff;
+}
+
+.card-harga {
+    display: flex;
+    position: relative;
+    top: 10px;
+    font-weight: 600;
+    color: #5278Ff;
+    font-size: 21px;
+}
+
+button.card-button {
+    background-color: #5278Ff;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.icon-shop {
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+/* category card */
+.card.categories {
+    padding: 0px !important;
+    border: none !important;
+}
+
+.card.categories img {
+    width: 360px !important;
+}
+
+.text-card-categories {
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px !important;
+}
+
+.tag-card-categories {
+    color: black;
+    font-weight: 600;
+    font-size: 13px !important;
+}
+
+/* CTA */
+.card-cta {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.txt-cta-motor {
+    position: relative;
+    top: 20px;
+    color: white;
+}
+
+/* footer */
+footer {
+    padding-top: 20px;
+}
+
+.logo-footer {
+    display: flex;
+}
+
+.logo-footer img {
+    width: 110px;
+}
+
+.txt-footer-logo {
+    margin-left: 10px;
+}
+
+.txt-footer-logo h1 {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 40px;
+    color: #5278Ff;
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.txt-footer-logo h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.footer-text h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-text p {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.copyright {
+    margin-top: 40px;
+    padding-bottom: 0px;
+    display: flex;
+    text-align: center;
+    bottom: 0;
+}
+
+hr {
+    color: #fff !important;
+}
+
+.copyright h1 {
+    font-size: 15px;
+    color: white;
+}
+
+/* login & register */
+.auth-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.auth-input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-input-wrapper h4 {
+    text-align: center;
+    color: #5278Ff;
+}
+
+input[type="text"].form-control.login-input,
+input[type="password"].form-control.login-input {
+    width: 400px;
+    padding-left: 0;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #5278Ff;
+}
+
+input[type="text"].form-control.login-input::placeholder,
+input[type="password"].form-control.login-input::placeholder {
+    color: #5278Ff;
+}
+
+.text-gray p {
+    color: #9d9b9b;
+}
+
+.btn-auth button {
+    text-align: center;
+    padding: 10px 50px;
+    color: #fff;
+    background-color: #5278Ff;
+    border: none;
+    border-radius: 25px;
+}
+
+/* 1024 */
+@media only screen and (min-width: 1024px) and (max-width:1200px) {
+    .carousel-caption {
+        bottom: 10% !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 34px;
+    }
+
+    .carousel-caption p {
+        font-size: 16px;
+    }
+
+    .header-sosmed i {
+        font-size: 16px;
+    }
+
+    h5.card-harga {
+        font-size: 18px;
+    }
+    button.card-button {
+        display: flex;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .icon-shop {
+        font-size: 13px;
+    }
+    .card-img-top{
+        width: 75px !important;
+    }
+    .card.categories img {
+        width: 300px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .title-text{
+        font-size: 28px;
+    }
+    .carousel-caption {
+        bottom: 5% !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 24px;
+    }
+
+    .carousel-caption p {
+        font-size: 14px;
+    }
+
+    .header-sosmed i {
+        font-size: 12px;
+    }
+    .card {
+        margin-bottom: 30px;
+        padding: 10px 3px;
+    }
+    
+    span.card-badge {
+        font-size: 12px;
+        top: -10px;
+        left: -3px;
+        padding: 5px 5px;
+    }
+    .card-img-top{
+        width: 55px !important;
+    }
+    .card-body h6{
+        font-size: 10px;
+    }
+    .card-body h5{
+        font-size: 12px;
+    }
+    .card-icon{
+        font-size: 10px;
+    }
+    h6.card-sold{
+        font-size: 10px;
+    }
+    .card-by{
+        font-size: 10px;
+    }
+    h5.card-harga {
+        position: relative;
+        top: 5px;
+        font-size: 11px;
+    }
+    button.card-button {
+        position: relative;
+        left: -10px;
+        display: flex;
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+    .icon-shop {
+        margin-top: 3px;
+        font-size: 9px;
+    }
+    .card.categories img {
+        width: 220px !important;
+    }
+    .txt-card-categories{
+        position: relative;
+        top:0px;
+    }
+    .text-card-categories{
+        font-size: 22px !important;
+    }
+    .carousel-caption .tag-card-categories{
+        font-size: 11px !important;
+    }
+    .card-cta img{
+        width: 160px;
+    }
+    .txt-cta-motor{
+        position: relative;
+        top: 5px;
+    }
+    .txt-cta-motor h1{
+        font-size: 26px;
+    }
+    .txt-cta-motor p{
+        font-size: 12px;
+    }
+    button.btn-white{
+        font-size: 12px;
+    }
+    button.btn-solid{
+        font-size: 15px;
+    }
+    .logo-footer img{
+        width: 90px !important;
+    }
+    .txt-footer-logo h1{
+        font-size: 26px;
+    }
+    .txt-footer-logo h2{
+        font-size: 24px;
+    }
+    .footer-text h3{
+        font-size: 16px;
+    }
+    .footer-text p{
+        font-size: 13px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .navbar-brand img{
+        width: 45px;
+        height: 45px;
+    }
+    .navbar-brand h4{
+        font-size: 18px;
+    }
+    .carousel-item img{
+        border-radius: 5px;
+    }
+    .title-text{
+        font-size: 16px;
+    }
+    .carousel-caption {
+        bottom: -16px !important;
+        left: 15px !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 10px;
+    }
+
+    .carousel-caption p {
+        font-size: 8px;
+    }
+
+    .header-sosmed i {
+        display: none;
+    }
+    .card {
+        margin-bottom: 30px;
+        padding: 5px 3px;
+    }
+    
+    span.card-badge {
+        font-size: 10px;
+        top: -10px;
+        left: -3px;
+        padding: 5px 5px;
+    }
+    .card-img-top{
+        width: 40px !important;
+    }
+    .card-body h6{
+        font-size: 8px;
+    }
+    .card-body h5{
+        font-size: 10px;
+    }
+    .card-icon{
+        font-size: 8px;
+    }
+    h6.card-sold{
+        font-size: 8px;
+    }
+    .card-by{
+        font-size: 8px;
+    }
+    h5.card-harga {
+        position: relative;
+        top: 5px;
+        font-size: 9px;
+    }
+    button.card-button {
+        position: relative;
+        left: -15px;
+        display: flex;
+        padding: 5px 8px;
+        font-size: 8px;
+    }
+    .icon-shop {
+        margin-top: 3px;
+        font-size: 8px;
+    }
+    .card.categories img {
+        width: 100px !important;
+    }
+    .txt-card-categories{
+        position: relative;
+        top:0px;
+    }
+    .text-card-categories{
+        font-size: 22px !important;
+    }
+    .carousel-caption .tag-card-categories{
+        font-size: 11px !important;
+    }
+    .card-cta{
+        width: 290px !important;
+    }
+    .card-cta img{
+position: relative;
+top: 15px;
+        width: 60px;
+        height: 60px;
+    }
+    .txt-cta-motor{
+        position: relative;
+        top: 5px;
+    }
+    .txt-cta-motor h1{
+        font-size: 13px;
+    }
+    .txt-cta-motor p{
+        font-size: 8px;
+    }
+    button.btn-white{
+        padding: 3px 9px;
+        position: relative;
+        top: -10px;
+        font-size: 8px;
+    }
+    button.btn-solid{
+        font-size: 10px;
+    }
+    .logo-footer img{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .txt-footer-logo h1{
+        font-size: 18px;
+    }
+    .txt-footer-logo h2{
+        font-size: 18px;
+    }
+    .footer-text h3{
+        font-size: 14px;
+    }
+    .footer-text p{
+        font-size: 10px;
+    }
+}
