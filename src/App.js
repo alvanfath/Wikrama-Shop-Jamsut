@@ -1,28 +1,19 @@
+import { Route, Routes } from 'react-router-dom';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
+import Home from './pages/home/Home';
 import './App.css';
-import NavigationBar from './components/NavigationBar';
-import Header from './components/Header';
-import RekomendasiProduk from './components/RekomendasiProduk';
-import CardKategori from './components/CardKategori';
-import CTAMotor from './components/CTAMotor';
-import ProdukLainnya from './components/ProdukLainnya';
-import Footer from './components/Footer';
-import './style/custom.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Login from './login'; 
 
-
-function App() {
-  return (
-    <div>
-      <NavigationBar />
-      <Header />
-      <RekomendasiProduk />
-      <CardKategori />
-      <CTAMotor />
-      <ProdukLainnya />
-      <Footer />
-    </div>
-  );
+const App = () => {
+    return (
+        <>
+            <Routes>
+                <Route path="/login" element={<Login />}></Route>
+                <Route path="/register" element={<Register />}></Route>
+                <Route path="/" element={<Home />}></Route>
+            </Routes>
+        </>
+    )
 }
 
 export default App;

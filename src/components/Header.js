@@ -1,5 +1,5 @@
-
 import CardBg from "../assets/bg-card1.png"
+
 const Header = () => {
     return (
         <section className="small-section">
@@ -26,7 +26,7 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="carousel-item">
-                            <img src={CardBg} className="d-block w-100" alt="..."></img>
+                            <img src={CardBg} className="d-block w-100" alt="..." />
                         </div>
                     </div>
                 </div>
@@ -34,4 +34,5 @@ const Header = () => {
         </section>
     )
 }
+
 export default Header

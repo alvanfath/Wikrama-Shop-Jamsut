@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom"
 import Logo from "../assets/logo.png"
-import Login from '../login'
+
 const NavigationBar = () => {
     return (
-        
         <nav className="navbar navbar-expand-lg bg-white sticky-top">
             <div className="container">
                 <a className="navbar-brand" href="#">
@@ -17,9 +17,9 @@ const NavigationBar = () => {
                         <input className="form-control search me-2" type="search" placeholder="Cari Barang" aria-label="Search"></input>
                         
                     </form>
-                    <a href="{}">
+                    <Link to="/login">
                     <button className="btn-outline me-3">Login</button>
-                    </a>
+                    </Link>
                     <button className="btn-solid me-3">Daftar</button>
                     <span className="shop-bag"><i className="fa-sharp fa-solid fa-cart-shopping"></i></span>
                 </div>
