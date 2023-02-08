@@ -16,7 +16,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        abort(404);
+        $data = DB::table('category')->get();
+        return response()->json($data);
     }
 
     /**
