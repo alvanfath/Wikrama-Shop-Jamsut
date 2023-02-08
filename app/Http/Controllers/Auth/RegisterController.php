@@ -40,7 +40,8 @@ class RegisterController extends Controller
                 'email' => $request->input('email'),
                 'username' => $request->input('username'),
                 'password' => Hash::make($request->input('password')),
-                'token' => $token
+                'token' => $token,
+                'driver' => 'register'
             ]);
 
             return response()->json([

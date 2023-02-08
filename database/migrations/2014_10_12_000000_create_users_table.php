@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->enum('status', [1, 2, 3])->default(2);
             $table->string('token', 20)->unique();
+            $table->enum('driver', ['register', 'facebook','google'])->default('register');
             $table->timestamps();
         });
     }
