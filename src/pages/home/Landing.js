@@ -169,7 +169,7 @@ function Landing() {
             {/* end rekomendasi produk */}
             <CardKategori />
             {/* cta motor */}
-            <section className="small-section">
+            <section className="">
                 <div className="container bg-blue card-cta">
                     <div className="row">
                         <div className="col-3 col-md-4 col-lg-4">
@@ -188,7 +188,7 @@ function Landing() {
             </section>
             {/* end cta motor */}
             {/* produk lainnya */}
-            <section className="small-section">
+            <section className="half-section">
                 <div className="container">
                     <div className="col-12">
                         <h1 className="title-text">Produk Lainnya</h1>

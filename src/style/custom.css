@@ -1,11 +1,24 @@
 /* background */
-.bg-blue {background-color: #5278Ff;}
-.bg-white {background-color: white !important;}
-.bg-red {background-color: red !important;}
+.bg-blue {
+    background-color: #5278Ff;
+}
+
+.bg-white {
+    background-color: white !important;
+}
+
+.bg-red {
+    background-color: red !important;
+}
 
 /* section */
-section.half-section {padding: 80px 0;}
-section.small-section {padding: 25px 0;}
+section.half-section {
+    padding: 80px 0;
+}
+
+section.small-section {
+    padding: 25px 0;
+}
 
 /* button */
 button.btn-outline {
@@ -20,10 +33,12 @@ button.btn-outline {
     color: black;
     transition: 0.3s;
 }
+
 button.btn-outline:hover {
     background-color: #5278Ff;
     color: white;
 }
+
 button.btn-solid {
     padding: 6px 22px;
     background-color: #5278Ff;
@@ -36,6 +51,7 @@ button.btn-solid {
     color: white;
     transition: 0.3s;
 }
+
 button.btn-white {
     padding: 6px 22px;
     background-color: #ffffff;
@@ -48,9 +64,11 @@ button.btn-white {
     color: #5278Ff;
     transition: 0.3s;
 }
+
 button.btn-white:hover {
     background-color: #f0f0f0;
 }
+
 button.btn-solid:hover {
     background-color: #052cb6;
 }
@@ -99,6 +117,7 @@ input.form-control.search {
     width: 10px !important;
     height: 10px !important;
 }
+
 .carousel-item img {
     border-radius: 20px;
 }
@@ -129,6 +148,7 @@ input.form-control.search {
     display: flex;
 
 }
+
 .header-sosmed i {
     cursor: pointer;
     font-size: 20px;
@@ -138,6 +158,7 @@ input.form-control.search {
     padding: 10px;
     /* border-radius: 100%; */
 }
+
 .title-text {
     font-style: normal;
     font-weight: 600;
@@ -153,6 +174,7 @@ input.form-control.search {
     border-radius: 15px !important;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
+
 span.card-badge {
     color: white;
     border-radius: 15px 0px 15px 0px;
@@ -163,6 +185,7 @@ span.card-badge {
     background-color: #5278Ff;
     padding: 5px 5px;
 }
+
 .card-img-top {
     width: 85px !important;
     margin: 0 auto;
@@ -234,7 +257,7 @@ button.card-button {
 }
 
 .card.categories img {
-    width: 360px !important;
+    width: 415px !important;
 }
 
 .text-card-categories {
@@ -389,27 +412,31 @@ input[type="password"].form-control.login-input::placeholder {
     h5.card-harga {
         font-size: 18px;
     }
+
     button.card-button {
         display: flex;
         padding: 8px 10px;
         font-size: 14px;
     }
-    
+
     .icon-shop {
         font-size: 13px;
     }
-    .card-img-top{
+
+    .card-img-top {
         width: 75px !important;
     }
+
     .card.categories img {
         width: 300px !important;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .title-text{
+    .title-text {
         font-size: 28px;
     }
+
     .carousel-caption {
         bottom: 5% !important;
     }
@@ -425,40 +452,49 @@ input[type="password"].form-control.login-input::placeholder {
     .header-sosmed i {
         font-size: 12px;
     }
+
     .card {
         margin-bottom: 30px;
         padding: 10px 3px;
     }
-    
+
     span.card-badge {
         font-size: 12px;
         top: -10px;
         left: -3px;
         padding: 5px 5px;
     }
-    .card-img-top{
+
+    .card-img-top {
         width: 55px !important;
     }
-    .card-body h6{
+
+    .card-body h6 {
         font-size: 10px;
     }
-    .card-body h5{
+
+    .card-body h5 {
         font-size: 12px;
     }
-    .card-icon{
+
+    .card-icon {
         font-size: 10px;
     }
-    h6.card-sold{
+
+    h6.card-sold {
         font-size: 10px;
     }
-    .card-by{
+
+    .card-by {
         font-size: 10px;
     }
+
     h5.card-harga {
         position: relative;
         top: 5px;
         font-size: 11px;
     }
+
     button.card-button {
         position: relative;
         left: -10px;
@@ -466,72 +502,94 @@ input[type="password"].form-control.login-input::placeholder {
         padding: 5px 8px;
         font-size: 10px;
     }
+
     .icon-shop {
         margin-top: 3px;
         font-size: 9px;
     }
+
     .card.categories img {
         width: 220px !important;
     }
-    .txt-card-categories{
+
+    .txt-card-categories {
         position: relative;
-        top:0px;
+        top: 0px;
     }
-    .text-card-categories{
+
+    .text-card-categories {
         font-size: 22px !important;
     }
-    .carousel-caption .tag-card-categories{
+
+    .carousel-caption .tag-card-categories {
         font-size: 11px !important;
     }
-    .card-cta img{
+
+    .card-cta img {
         width: 160px;
     }
-    .txt-cta-motor{
+
+    .txt-cta-motor {
         position: relative;
         top: 5px;
     }
-    .txt-cta-motor h1{
+
+    .txt-cta-motor h1 {
         font-size: 26px;
     }
-    .txt-cta-motor p{
+
+    .txt-cta-motor p {
         font-size: 12px;
     }
-    button.btn-white{
+
+    button.btn-white {
         font-size: 12px;
     }
-    button.btn-solid{
+
+    button.btn-solid {
         font-size: 15px;
     }
-    .logo-footer img{
+
+    .logo-footer img {
         width: 90px !important;
     }
-    .txt-footer-logo h1{
+
+    .txt-footer-logo h1 {
         font-size: 26px;
     }
-    .txt-footer-logo h2{
+
+    .txt-footer-logo h2 {
         font-size: 24px;
     }
-    .footer-text h3{
+
+    .footer-text h3 {
         font-size: 16px;
     }
-    .footer-text p{
+
+    .footer-text p {
         font-size: 13px;
     }
 }
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-    .navbar-brand img{
+    section
+    .navbar-brand img {
         width: 45px;
         height: 45px;
     }
-    .navbar-brand h4{
+
+    .navbar-brand h4 {
         font-size: 18px;
     }
-    .carousel-item img{
+
+    .carousel-item img {
         border-radius: 5px;
     }
-    .title-text{
+
+    .title-text {
         font-size: 16px;
     }
+
     .carousel-caption {
         bottom: -16px !important;
         left: 15px !important;
@@ -548,40 +606,49 @@ input[type="password"].form-control.login-input::placeholder {
     .header-sosmed i {
         display: none;
     }
+
     .card {
         margin-bottom: 30px;
-        padding: 5px 3px;
+        padding: 0px 0px;
     }
-    
+
     span.card-badge {
-        font-size: 10px;
-        top: -10px;
-        left: -3px;
+        font-size: 8px;
+        top: 0px;
+        left: -0px;
         padding: 5px 5px;
     }
-    .card-img-top{
+
+    .card-img-top {
         width: 40px !important;
     }
-    .card-body h6{
+
+    .card-body h6 {
         font-size: 8px;
     }
-    .card-body h5{
+
+    .card-body h5 {
         font-size: 10px;
     }
-    .card-icon{
+
+    .card-icon {
         font-size: 8px;
     }
-    h6.card-sold{
+
+    h6.card-sold {
         font-size: 8px;
     }
-    .card-by{
+
+    .card-by {
         font-size: 8px;
     }
+
     h5.card-harga {
         position: relative;
         top: 5px;
         font-size: 9px;
     }
+
     button.card-button {
         position: relative;
         left: -15px;
@@ -589,65 +656,94 @@ input[type="password"].form-control.login-input::placeholder {
         padding: 5px 8px;
         font-size: 8px;
     }
+
     .icon-shop {
         margin-top: 3px;
         font-size: 8px;
     }
+
     .card.categories img {
-        width: 100px !important;
+        width: 110px !important;
     }
-    .txt-card-categories{
+
+    .txt-card-categories {
         position: relative;
-        top:0px;
+        top: 0px;
+        
     }
-    .text-card-categories{
-        font-size: 22px !important;
+    .slick-dots{
+        display: none !important;
     }
-    .carousel-caption .tag-card-categories{
-        font-size: 11px !important;
+
+    .text-card-categories {
+        font-size: 10px !important;
+        position: relative;
+        top: -10px;
+        left: 20px;
+        
     }
-    .card-cta{
-        width: 290px !important;
+
+    .carousel-caption .tag-card-categories {
+        font-size: 5px !important;
+        position: relative;
+        top: -22px !important;
+        left: 20px;
     }
-    .card-cta img{
-position: relative;
-top: 15px;
-        width: 60px;
-        height: 60px;
-    }
-    .txt-cta-motor{
+
+    .card-cta {
+        border-radius:0px;
+        width: 400px !important;
+     }
+ 
+     .card-cta img {
+         position: relative;
+         top: 15px;
+         width: 60px;
+         height: 60px;
+     }
+
+    .txt-cta-motor {
         position: relative;
         top: 5px;
     }
-    .txt-cta-motor h1{
+
+    .txt-cta-motor h1 {
         font-size: 13px;
     }
-    .txt-cta-motor p{
+
+    .txt-cta-motor p {
         font-size: 8px;
     }
-    button.btn-white{
+
+    button.btn-white {
         padding: 3px 9px;
         position: relative;
         top: -10px;
         font-size: 8px;
     }
-    button.btn-solid{
+
+    button.btn-solid {
         font-size: 10px;
     }
-    .logo-footer img{
+
+    .logo-footer img {
         width: 50px !important;
         height: 50px !important;
     }
-    .txt-footer-logo h1{
+
+    .txt-footer-logo h1 {
         font-size: 18px;
     }
-    .txt-footer-logo h2{
+
+    .txt-footer-logo h2 {
         font-size: 18px;
     }
-    .footer-text h3{
+
+    .footer-text h3 {
         font-size: 14px;
     }
-    .footer-text p{
+
+    .footer-text p {
         font-size: 10px;
     }
 }
