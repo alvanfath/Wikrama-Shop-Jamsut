@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Carbon\Carbon;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -44,26 +45,23 @@ class CategoryController extends Controller
             ]);
             if($validator->fails()){
                 return response()->json([
-                    'statusCode' => 400,
                     'success' => false,
                     'message' => $validator->errors()
-                ]);
+                ],422);
             }
             DB::table('category')->insert([
                 'category' => $request->input('category'),
                 'created_at' => Carbon::now()
             ]);
             return response()->json([
-                'statusCode' => 200,
                 'success' => true,
                 'message' => 'Add category success'
-            ]);
+            ],200);
         }catch(\Throwable $th){
             return response()->json([
-                'statusCode' => 500,
                 'success' => false,
                 'message' => 'Add category failed'
-            ]);
+            ],500);
         }
 
     }
@@ -118,27 +116,24 @@ class CategoryController extends Controller
             if($validator->fails()){
                 return response()->json([
                     'data' => 'exist',
-                    'statusCode' => 400,
                     'success' => false,
                     'message' => $validator->errors()
-                ]);
+                ],422);
             }
             DB::table('category')->where('id', $id)->update([
                 'category' => $request->input('category')
             ]);
             return response()->json([
                 'data' => 'exist',
-                'statusCode' => 200,
                 'success' =>  true,
                 'message' => 'Update Category Successfully'
-            ]);
+            ],200);
         }else{
             return response()->json([
                 'data' => 'not exist',
-                'statusCode' => 404,
                 'success' => false,
                 'message' => 'Data Not Found'
-            ]);
+            ],404);
         }
     }
 
@@ -155,17 +150,16 @@ class CategoryController extends Controller
             DB::table('category')->where('id', $id)->delete();
             return response()->json([
                 'data' => 'exist',
-                'statusCode' => 200,
                 'success' =>  true,
                 'message' => 'Delete Category Successfully'
-            ]);
+            ],200);
         }else{
             return response()->json([
                 'data' => 'not exist',
                 'statusCode' => 404,
                 'success' =>  false,
                 'message' => 'Data not found'
-            ]);
+            ],404);
         }
     }
 }

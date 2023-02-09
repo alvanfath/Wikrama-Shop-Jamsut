@@ -27,12 +27,7 @@ class RegisterController extends Controller
             ]);
 
             if($validator->fails()){
-                return response()->json([
-                    'statusCode' => 400,
-                    'success' => false,
-                    'message' => 'validation error',
-                    'error_response' => $validator->errors()
-                ]);
+                return response()->json($validator->errors(),422);
             }
 
             Mail::to($request->email)->send(new SendRegister($request->name, $token));
@@ -43,21 +38,20 @@ class RegisterController extends Controller
                 'username' => $request->input('username'),
                 'password' => Hash::make($request->input('password')),
                 'token' => $token,
-                'driver' => 'register'
+                'driver' => 'register',
+                'created_at' => Carbon::now()
             ]);
 
             return response()->json([
-                'statusCode' => 200,
                 'success' => true,
-                'message' => 'Register Success'
-            ]);
+                'message' => 'Registrasi Berhasil'
+            ], 200);
 
         } catch (\Throwable $th) {
             return response()->json([
-                'statusCode' => 500,
                 'success' => false,
-                'message' => 'error'
-            ]);
+                'message' => 'Ada masalah teknis, silakan coba lagi dalam beberapa saat'
+            ], 500);
         }
     }
 
@@ -72,31 +66,28 @@ class RegisterController extends Controller
                     'token' => $new_token
                 ]);
                 return response()->json([
-                    'statusCode' => 200,
                     'success' => true,
                     'message' => 'Verified email success'
-                ]);
+                ],200);
             }else{
                 return response()->json([
-                    'statusCode' => 400,
                     'success' => false,
                     'message' => 'Your account not found'
-                ]);
+                ],422);
             }
         }catch(\Throwable $th){
             return response()->json([
-                'statusCode' => 500,
                 'success' => false,
                 'message' => 'Verified email failed'
-            ]);
+            ],500);
         }
     }
 
-    public function facebook(){
-        return Socialite::driver('facebook')->redirect();
+    public function google(){
+        return Socialite::driver('google')->redirect();
     }
 
-    public function facebookCallback(){
+    public function googleCallback(){
 
     }
 }

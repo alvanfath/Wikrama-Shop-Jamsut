@@ -1,18 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Admin\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
-class LoginController extends Controller
+class AuthController extends Controller
 {
-    public function __construct() {
-        $this->middleware('auth:api', ['except' => ['login', 'register']]);
-    }
-
-    public function login(Request $request){
+    public function loginAdmin(Request $request){
     	$validator = Validator::make($request->all(), [
             'email' => 'required',
             'password' => 'required|string|min:6',
@@ -21,19 +17,19 @@ class LoginController extends Controller
         if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
         }
-        if (! $token = auth()->attempt([$email_or_us => $request->input('email'), 'password' => $request->input('password')])) {
+        if (! $token = auth()->guard('admin')->attempt([$email_or_us => $request->input('email'), 'password' => $request->input('password')])) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }else{
-            if (auth()->user()->email_verified_at == null){
-                return response()->json(['error' => 'your account not verified']);
-            }else{
-                return $this->createNewToken($token);
-            }
+            return $this->createNewToken($token);
         }
     }
-
+    /**
+     * Get the authenticated User.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function refresh() {
-        return $this->createNewToken(auth()->refresh());
+        return $this->createNewToken(auth()->guard('admin')->refresh());
     }
     /**
      * Get the authenticated User.
@@ -41,9 +37,13 @@ class LoginController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function userProfile() {
-        return response()->json(auth()->user());
+        return response()->json(auth()->guard('admin')->user());
     }
-
+    /**
+     * Get the authenticated User.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function logout(Request $request) {
         auth()->logout();
         return response()->json(['message' => 'User successfully signed out']);
@@ -53,8 +53,8 @@ class LoginController extends Controller
         return response()->json([
             'access_token' => $token,
             'token_type' => 'bearer',
-            'expires_in' => auth()->factory()->getTTL() * 60,
-            'user' => auth()->user()
+            'expires_in' => auth()->guard('admin')->factory()->getTTL() * 60,
+            'user' => auth()->guard('admin')->user()
         ]);
     }
 }
