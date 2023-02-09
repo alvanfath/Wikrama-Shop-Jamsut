@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\Auth\LoginController;
 
 class RegisterController extends Controller
 {
@@ -67,12 +68,12 @@ class RegisterController extends Controller
                 ]);
                 return response()->json([
                     'success' => true,
-                    'message' => 'Verified email success'
+                    'message' => 'Verifikasi email sukses'
                 ],200);
             }else{
                 return response()->json([
                     'success' => false,
-                    'message' => 'Your account not found'
+                    'message' => 'Akunmu tidak ditemukan'
                 ],422);
             }
         }catch(\Throwable $th){
@@ -83,11 +84,11 @@ class RegisterController extends Controller
         }
     }
 
-    public function google(){
-        return Socialite::driver('google')->redirect();
-    }
+    // public function google(){
+    //     return Socialite::driver('google')->redirect();
+    // }
 
-    public function googleCallback(){
-
-    }
+    // public function googleCallback(){
+    //     //
+    // }
 }
