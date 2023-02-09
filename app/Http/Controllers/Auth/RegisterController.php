@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -21,7 +22,8 @@ class RegisterController extends Controller
                 'name' => 'required',
                 'email' => 'required|unique:users,email',
                 'username' => 'required|unique:users,username',
-                'password' => 'required'
+                'password' => 'required',
+                'confirm_password' => 'required|same:password'
             ]);
 
             if($validator->fails()){
@@ -88,5 +90,13 @@ class RegisterController extends Controller
                 'message' => 'Verified email failed'
             ]);
         }
+    }
+
+    public function facebook(){
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    public function facebookCallback(){
+
     }
 }
