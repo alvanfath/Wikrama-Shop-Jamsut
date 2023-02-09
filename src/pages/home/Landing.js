@@ -5,6 +5,8 @@ import CardKategori from "../../components/CardKategori";
 import Motor1 from "../../assets/motor1.png";
 import Motor2 from "../../assets/motor2.png";
 import Footer from "../../components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function Landing() {
     return(
@@ -69,7 +71,7 @@ function Landing() {
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
                                             <div className="col-5">
-                                                <button className="card-button"><i className="icon-shop fa-sharp fa-solid fa-cart-shopping"></i>Add</button>
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -98,7 +100,7 @@ function Landing() {
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
                                             <div className="col-5">
-                                                <button className="card-button"><i className="icon-shop fa-sharp fa-solid fa-cart-shopping"></i>Add</button>
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -127,7 +129,7 @@ function Landing() {
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
                                             <div className="col-5">
-                                                <button className="card-button"><i className="icon-shop fa-sharp fa-solid fa-cart-shopping"></i>Add</button>
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -156,7 +158,7 @@ function Landing() {
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
                                             <div className="col-5">
-                                                <button className="card-button"><i className="icon-shop fa-sharp fa-solid fa-cart-shopping"></i>Add</button>
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -216,7 +218,7 @@ function Landing() {
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
                                             <div className="col-5">
-                                                <button className="card-button"><i className="icon-shop fa-sharp fa-solid fa-cart-shopping"></i>Add</button>
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -245,7 +247,7 @@ function Landing() {
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
                                             <div className="col-5">
-                                                <button className="card-button"><i className="icon-shop fa-sharp fa-solid fa-cart-shopping"></i>Add</button>
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -274,7 +276,7 @@ function Landing() {
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
                                             <div className="col-5">
-                                                <button className="card-button"><i className="icon-shop fa-sharp fa-solid fa-cart-shopping"></i>Add</button>
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -303,7 +305,7 @@ function Landing() {
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
                                             <div className="col-5">
-                                                <button className="card-button"><i className="icon-shop fa-sharp fa-solid fa-cart-shopping"></i>Add</button>
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -332,7 +334,7 @@ function Landing() {
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
                                             <div className="col-5">
-                                                <button className="card-button"><i className="icon-shop fa-sharp fa-solid fa-cart-shopping"></i>Add</button>
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -361,7 +363,7 @@ function Landing() {
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
                                             <div className="col-5">
-                                                <button className="card-button"><i className="icon-shop fa-sharp fa-solid fa-cart-shopping"></i>Add</button>
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -390,7 +392,7 @@ function Landing() {
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
                                             <div className="col-5">
-                                                <button className="card-button"><i className="icon-shop fa-sharp fa-solid fa-cart-shopping"></i>Add</button>
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -419,7 +421,7 @@ function Landing() {
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
                                             <div className="col-5">
-                                                <button className="card-button"><i className="icon-shop fa-sharp fa-solid fa-cart-shopping"></i>Add</button>
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
