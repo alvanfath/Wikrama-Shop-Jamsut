@@ -391,6 +391,124 @@ input[type="password"].form-control.login-input::placeholder {
     border-radius: 25px;
 }
 
+/* detail produk */
+.image-produk-detail img {
+    width: 140px;
+
+}
+
+.text-produk-detail span {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 12px;
+    color: #F74B81;
+    padding: 10px;
+    background-color: #FDE0E9;
+    border-radius: 10px;
+}
+
+.text-produk-detail h2 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 28px;
+    color: black;
+    margin-top: 14px;
+}
+
+.rating-produk-detail {
+    display: inline-flex;
+}
+
+.stars-detail i {
+    position: relative;
+    top: -3px;
+}
+
+.rating-produk-detail span {
+    color: #adadad;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+.harga-produk-detail h4 {
+    text-decoration-line: line-through;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ff5252;
+    margin-bottom: 0px;
+    margin-top: 12px;
+}
+
+.harga-produk-detail h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #5278FF;
+}
+
+.desc-produk-detail p {
+    font-size: 14px;
+}
+
+.card-checkout {
+    padding: 10px 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.card-checkout h2 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    
+}
+
+.card-checkout p {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+   
+}
+
+.qty-card-checkout span{
+    margin-left: 12px;
+    color: black;
+    font-weight: 600;
+}
+.note-card-checkout{
+    margin-top: 11px;
+}
+.note-card-checkout a{
+    text-decoration: none;
+}
+.subtotal-card-checkout{
+    margin-top: 37px;
+    margin-bottom: 33px;
+}
+.subtotal-card-checkout h4{
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+.subtotal-card-checkout h3{
+    font-weight: 600;
+    font-size: 20px;
+    color: #5278FF;
+}
+input[type=number]{
+    padding: 3px 3px;
+    text-align: center;
+    border:3px solid #5278FF !important;
+    width: 60px;
+    border-radius: 6px;
+}
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    color: #5278FF !important;
+}
+
+
 /* 1024 */
 @media only screen and (min-width: 1024px) and (max-width:1200px) {
     .carousel-caption {
@@ -572,8 +690,7 @@ input[type="password"].form-control.login-input::placeholder {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-    section
-    .navbar-brand img {
+    section .navbar-brand img {
         width: 45px;
         height: 45px;
     }
@@ -669,9 +786,10 @@ input[type="password"].form-control.login-input::placeholder {
     .txt-card-categories {
         position: relative;
         top: 0px;
-        
+
     }
-    .slick-dots{
+
+    .slick-dots {
         display: none !important;
     }
 
@@ -680,7 +798,7 @@ input[type="password"].form-control.login-input::placeholder {
         position: relative;
         top: -10px;
         left: 20px;
-        
+
     }
 
     .carousel-caption .tag-card-categories {
@@ -691,16 +809,16 @@ input[type="password"].form-control.login-input::placeholder {
     }
 
     .card-cta {
-        border-radius:0px;
+        border-radius: 0px;
         width: 400px !important;
-     }
- 
-     .card-cta img {
-         position: relative;
-         top: 15px;
-         width: 60px;
-         height: 60px;
-     }
+    }
+
+    .card-cta img {
+        position: relative;
+        top: 15px;
+        width: 60px;
+        height: 60px;
+    }
 
     .txt-cta-motor {
         position: relative;
