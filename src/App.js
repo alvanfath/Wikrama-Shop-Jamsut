@@ -5,6 +5,7 @@ import Landing from './pages/home/Landing';
 import './style/custom.css';
 import './App.css';
 import { Helmet } from 'react-helmet';
+import DetailProduk from './pages/home/DetailProduk';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/" element={<Landing />}></Route>
+        <Route path="/detail-produk" element={<DetailProduk />}></Route>
       </Routes>
     </>
   );

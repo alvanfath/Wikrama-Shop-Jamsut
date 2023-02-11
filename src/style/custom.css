@@ -521,7 +521,7 @@ button.auth-facebook {
         width: 380px;
     }
 
-    input[type="password"].form-control.auth-input {
+    input[type="password"].form-control.auth-input.password-input {
         width: 182px;
     }
 
@@ -685,7 +685,7 @@ button.auth-facebook {
         width: 100%;
     }
 
-    input[type="password"].form-control.auth-input {
+    input[type="password"].form-control.auth-input.password-input {
         width: 100%;
     }
 
@@ -695,8 +695,7 @@ button.auth-facebook {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-    section
-    .navbar-brand img {
+    section .navbar-brand img {
         width: 45px;
         height: 45px;
     }
@@ -792,9 +791,10 @@ button.auth-facebook {
     .txt-card-categories {
         position: relative;
         top: 0px;
-        
+
     }
-    .slick-dots{
+
+    .slick-dots {
         display: none !important;
     }
 
@@ -803,7 +803,7 @@ button.auth-facebook {
         position: relative;
         top: -10px;
         left: 20px;
-        
+
     }
 
     .carousel-caption .tag-card-categories {
@@ -814,16 +814,16 @@ button.auth-facebook {
     }
 
     .card-cta {
-        border-radius:0px;
+        border-radius: 0px;
         width: 400px !important;
-     }
- 
-     .card-cta img {
-         position: relative;
-         top: 15px;
-         width: 60px;
-         height: 60px;
-     }
+    }
+
+    .card-cta img {
+        position: relative;
+        top: 15px;
+        width: 60px;
+        height: 60px;
+    }
 
     .txt-cta-motor {
         position: relative;
@@ -905,7 +905,7 @@ button.auth-facebook {
         width: 100%;
     }
 
-    input[type="password"].form-control.auth-input {
+    input[type="password"].form-control.auth-input.password-input {
         width: 100%;
     }
 

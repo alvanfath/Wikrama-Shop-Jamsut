@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function Landing() {
-    return(
+    return (
         <>
             <NavigationBar />
             {/* header */}
@@ -171,7 +171,7 @@ function Landing() {
             {/* end rekomendasi produk */}
             <CardKategori />
             {/* cta motor */}
-            <section className="">
+            <section className="small-section">
                 <div className="container bg-blue card-cta">
                     <div className="row">
                         <div className="col-3 col-md-4 col-lg-4">
