@@ -9,7 +9,7 @@ function Footer() {
                         <div className="row">
                             <div className="col-12 col-md-4 col-lg-4">
                                 <div className="logo-footer">
-                                    <img src={Logo} alt="Wikrama Shop"></img>
+                                    <img src={Logo} alt="Wikrama Shop" />
                                     <div className="txt-footer-logo">
                                         <h1>Wikrama</h1>
                                         <h2>Shop</h2>

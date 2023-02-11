@@ -1,6 +1,9 @@
 import NavigationBar from "../../components/NavigationBar";
 import Produk from "../../assets/produk.png";
+import Profile from "../../assets/profile.jpg";
+import Footer from "../../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const ColoredLine = ({ color }) => (
     <hr
@@ -22,7 +25,7 @@ function DetailProduk() {
                         <div className="col-3 d-flex justify-content-center">
                             <div className="image-produk-detail">
                                 <center>
-                                <img src={Produk}></img>
+                                    <img src={Produk}></img>
                                 </center>
                                 <div className="image-other-produk-detail">
                                     <div className="row">
@@ -62,6 +65,12 @@ function DetailProduk() {
                             <div className="desc-produk-detail">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet aliquet enim. Pellentesque egestas rutrum nibh. Morbi tempor lacinia eros sit amet.</p>
                                 <h3>Categories : <span>Makanan Ringan</span></h3>
+                            </div>
+                            <div className="variant-produk-detail">
+                                <h5>Variant : 25 Gram</h5>
+                                <button className="variant-produk-detail-btn active">25 Gram</button>
+                                <button className="variant-produk-detail-btn">25 Gram</button>
+                                <button className="variant-produk-detail-btn">25 Gram</button>
                             </div>
                         </div>
                         <div className="col-4">
@@ -105,6 +114,172 @@ function DetailProduk() {
                     </div>
                 </div>
             </section>
+            {/* review produk */}
+            <section className="small-section">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-8">
+                            <div className="col-12">
+                                <h1 className="title-text">Ulasan</h1>
+                            </div>
+                            <div className="review-produk">
+                                <div className="row">
+                                    <div className="col-1">
+                                        <img className="rounded-circle" src={Profile}></img>
+                                    </div>
+                                    <div className="col-7">
+                                        <div className="review-produk-text">
+                                            <label>Username</label>
+                                            <div className="stars">
+                                                <i className="card-icon fa-solid fa-star"></i>
+                                                <i className="card-icon fa-solid fa-star"></i>
+                                                <i className="card-icon fa-solid fa-star"></i>
+                                                <i className="card-icon fa-solid fa-star"></i>
+                                                <i className="card-icon fa-solid fa-star"></i>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                            <div className="image-review">
+                                                <img src={Produk}></img>
+                                                <img src={Produk}></img>
+                                                <img src={Produk}></img>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* end review produk */}
+            {/* related product */}
+            <section className="small-section">
+                <div className="container">
+                    <div className="col-12">
+                        <h1 className="title-text">Produk Serupa</h1>
+                    </div>
+                    <div className="row">
+                        <div className="col-6 col-md-3 col-lg-3">
+                            <div className="card produk">
+                                <span className="text-center col-lg-3 col-md-4 col-5 card-badge">-16%</span>
+                                <img src={Produk} className="card-img-top" />
+                                <div className="card-body">
+                                    <h6 className="card-categories">Snack</h6>
+                                    <h5 className="card-title">Keripik Kaca Pedas</h5>
+                                    <div className="stars d-flex">
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <h6 className="card-sold">100 Terjual</h6>
+                                    </div>
+                                    <p className="card-by">by <span>BDP Wikrama</span></p>
+                                    <div className="card-button">
+                                        <div className="row">
+                                            <div className="col-7">
+                                                <h5 className="card-harga">Rp 20.000</h5>
+                                            </div>
+                                            <div className="col-5">
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-6 col-md-3 col-lg-3">
+                            <div className="card">
+                                <span className="text-center col-lg-3 col-md-4 col-5 card-badge">-16%</span>
+                                <img src={Produk} className="card-img-top" />
+                                <div className="card-body">
+                                    <h6 className="card-categories">Snack</h6>
+                                    <h5 className="card-title">Keripik Kaca Pedas</h5>
+                                    <div className="stars d-flex">
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <h6 className="card-sold">100 Terjual</h6>
+                                    </div>
+                                    <p className="card-by">by <span>BDP Wikrama</span></p>
+                                    <div className="card-button">
+                                        <div className="row">
+                                            <div className="col-7">
+                                                <h5 className="card-harga">Rp 20.000</h5>
+                                            </div>
+                                            <div className="col-5">
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-6 col-md-3 col-lg-3">
+                            <div className="card">
+                                <span className="text-center col-lg-3 col-md-4 col-5 card-badge">-16%</span>
+                                <img src={Produk} className="card-img-top" />
+                                <div className="card-body">
+                                    <h6 className="card-categories">Snack</h6>
+                                    <h5 className="card-title">Keripik Kaca Pedas</h5>
+                                    <div className="stars d-flex">
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <h6 className="card-sold">100 Terjual</h6>
+                                    </div>
+                                    <p className="card-by">by <span>BDP Wikrama</span></p>
+                                    <div className="card-button">
+                                        <div className="row">
+                                            <div className="col-7">
+                                                <h5 className="card-harga">Rp 20.000</h5>
+                                            </div>
+                                            <div className="col-5">
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-6 col-md-3 col-lg-3">
+                            <div className="card">
+                                <span className="text-center col-lg-3 col-md-4 col-5 card-badge">-16%</span>
+                                <img src={Produk} className="card-img-top" />
+                                <div className="card-body">
+                                    <h6 className="card-categories">Snack</h6>
+                                    <h5 className="card-title">Keripik Kaca Pedas</h5>
+                                    <div className="stars d-flex">
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <i className="card-icon fa-solid fa-star"></i>
+                                        <h6 className="card-sold">100 Terjual</h6>
+                                    </div>
+                                    <p className="card-by">by <span>BDP Wikrama</span></p>
+                                    <div className="card-button">
+                                        <div className="row">
+                                            <div className="col-7">
+                                                <h5 className="card-harga">Rp 20.000</h5>
+                                            </div>
+                                            <div className="col-5">
+                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* end related product */}
+            <Footer />
         </>
     )
 }
