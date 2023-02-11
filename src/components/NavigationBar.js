@@ -9,7 +9,7 @@ function NavigationBar() {
             <nav className="navbar navbar-expand-lg bg-white sticky-top">
                 <div className="container">
                     <Link className="navbar-brand" to="/">
-                        <img src={Logo} alt="Wikrama Shop" width="40" className="d-inline-block align-text-top"></img>
+                        <img src={Logo} alt="Wikrama Shop" width="40" className="d-inline-block align-text-top" />
                         <h4>Wikrama <span>Shop</span></h4>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

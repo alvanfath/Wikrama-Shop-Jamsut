@@ -351,44 +351,125 @@ hr {
     flex-direction: row;
 }
 
-.auth-input-wrapper {
+.auth-image-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.auth-input-wrapper h4 {
-    text-align: center;
-    color: #5278Ff;
+.auth-input-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-input[type="text"].form-control.login-input,
-input[type="password"].form-control.login-input {
-    width: 400px;
-    padding-left: 0;
+.auth-input-wrapper h4.title-auth {
+    text-align: center;
+    color: #5278Ff;
+    font-weight: 600;
+}
+
+.navbar-brand.auth-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.form-floating label {
+    padding-left: 0 !important;
+    color: #808080;
+}
+
+input[type="text"].form-control.auth-input,
+input[type="email"].form-control.auth-input {
+    width: 447px;
+    padding-bottom: 6px;
+    padding-left: 2px;
     border-radius: 0;
     border-top: none;
     border-left: none;
     border-right: none;
+    border-bottom-color: #808080;
+}
+
+input[type="text"].form-control.auth-input.password-input,
+input[type="password"].form-control.auth-input.password-input {
+    width: 215px;
+    padding-bottom: 6px;
+    padding-left: 2px;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #808080;
+}
+
+input[type="password"].form-control.auth-input.login-input {
+    width: 447px;
+    padding-bottom: 6px;
+    padding-left: 2px;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #808080;
+}
+
+input[type="text"].form-control.auth-input:focus,
+input[type="email"].form-control.auth-input:focus,
+input[type="password"].form-control.auth-input:focus {
     border-bottom-color: #5278Ff;
 }
 
-input[type="text"].form-control.login-input::placeholder,
-input[type="password"].form-control.login-input::placeholder {
+button.btn-show-password {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #808080;
+    color: #808080;
+}
+
+.text-auth p {
+    font-size: 15px;
+}
+
+.text-auth a {
+    text-decoration: none;
     color: #5278Ff;
 }
 
-.text-gray p {
-    color: #9d9b9b;
+.text-auth label {
+    font-size: 14px;
 }
 
 .btn-auth button {
     text-align: center;
-    padding: 10px 50px;
+    padding: 12px 50px;
     color: #fff;
     background-color: #5278Ff;
     border: none;
     border-radius: 25px;
+}
+
+.grey-line {
+    font-weight: 900;
+    color: #808080;
+}
+
+p.divider-or {
+    color: #808080;
+}
+
+.other-auth button {
+    border: none;
+    border: 2px solid #808080;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 8px 12px;
+}
+
+button.auth-facebook {
+    margin-right: 12px;
 }
 
 /* 1024 */
@@ -429,6 +510,23 @@ input[type="password"].form-control.login-input::placeholder {
 
     .card.categories img {
         width: 300px !important;
+    }
+
+    .auth-image-wrapper img {
+        width: 100%;
+    }
+
+    input[type="text"].form-control.auth-input,
+    input[type="email"].form-control.auth-input {
+        width: 380px;
+    }
+
+    input[type="password"].form-control.auth-input {
+        width: 182px;
+    }
+
+    input[type="password"].form-control.auth-input.login-input {
+        width: 380px;
     }
 }
 
@@ -568,6 +666,31 @@ input[type="password"].form-control.login-input::placeholder {
 
     .footer-text p {
         font-size: 13px;
+    }
+
+    .row.auth-container {
+        display: block;
+    }
+
+    .auth-image-wrapper {
+        display: none;
+    }
+
+    .auth-input-wrapper {
+        margin: 0 auto;
+    }
+
+    input[type="text"].form-control.auth-input,
+    input[type="email"].form-control.auth-input {
+        width: 100%;
+    }
+
+    input[type="password"].form-control.auth-input {
+        width: 100%;
+    }
+
+    input[type="password"].form-control.auth-input.login-input {
+        width: 100%;
     }
 }
 
@@ -745,5 +868,48 @@ input[type="password"].form-control.login-input::placeholder {
 
     .footer-text p {
         font-size: 10px;
+    }
+
+    .row.auth-container {
+        display: block;
+    }
+
+    .auth-image-wrapper {
+        display: none;
+    }
+
+    .auth-input-wrapper {
+        margin: 0 auto;
+    }
+
+    .row.auth-container {
+        justify-content: center;
+    }
+
+    .auth-image-wrapper {
+        display: none;
+    }
+
+    .other-auth {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button.auth-facebook {
+        margin-right: 0px;
+        margin-bottom: 12px;
+    }
+
+    input[type="text"].form-control.auth-input,
+    input[type="email"].form-control.auth-input {
+        width: 100%;
+    }
+
+    input[type="password"].form-control.auth-input {
+        width: 100%;
+    }
+
+    input[type="password"].form-control.auth-input.login-input {
+        width: 100%;
     }
 }
