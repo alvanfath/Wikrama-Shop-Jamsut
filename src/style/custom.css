@@ -30,7 +30,7 @@ button.btn-outline {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    color: black;
+    color: #5278Ff;
     transition: 0.3s;
 }
 
@@ -394,7 +394,13 @@ input[type="password"].form-control.login-input::placeholder {
 /* detail produk */
 .image-produk-detail img {
     width: 140px;
+    margin-bottom: 30px;
 
+}
+.image-other-produk-detail img{
+    padding: 5px;
+    background-color: #fefefe;
+    width: 50px;
 }
 
 .text-produk-detail span {
@@ -449,6 +455,12 @@ input[type="password"].form-control.login-input::placeholder {
 .desc-produk-detail p {
     font-size: 14px;
 }
+.desc-produk-detail h3 {
+    font-size: 14px;
+}
+.desc-produk-detail span {
+    color: #5278FF;
+}
 
 .card-checkout {
     padding: 10px 5px;
@@ -477,7 +489,7 @@ input[type="password"].form-control.login-input::placeholder {
     font-weight: 600;
 }
 .note-card-checkout{
-    margin-top: 11px;
+    margin-top: 15px;
 }
 .note-card-checkout a{
     text-decoration: none;

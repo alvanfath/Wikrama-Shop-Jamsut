@@ -18,10 +18,25 @@ function DetailProduk() {
             <NavigationBar />
             <section className="small-section">
                 <div className="container">
-                    <div className="row px-5">
-                        <div className="col-2 d-flex justify-content-center">
+                    <div className="row">
+                        <div className="col-3 d-flex justify-content-center">
                             <div className="image-produk-detail">
+                                <center>
                                 <img src={Produk}></img>
+                                </center>
+                                <div className="image-other-produk-detail">
+                                    <div className="row">
+                                        <div className="col-4">
+                                            <img src={Produk}></img>
+                                        </div>
+                                        <div className="col-4">
+                                            <img src={Produk}></img>
+                                        </div>
+                                        <div className="col-4">
+                                            <img src={Produk}></img>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="col-5">
@@ -46,6 +61,7 @@ function DetailProduk() {
                             </div>
                             <div className="desc-produk-detail">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet aliquet enim. Pellentesque egestas rutrum nibh. Morbi tempor lacinia eros sit amet.</p>
+                                <h3>Categories : <span>Makanan Ringan</span></h3>
                             </div>
                         </div>
                         <div className="col-4">
@@ -66,7 +82,7 @@ function DetailProduk() {
                                             <div className="col-6">
                                                 <h4>Subtotal</h4>
                                             </div>
-                                            <div className="col-6">
+                                            <div className="col-6 text-end">
                                                 <h3>Rp 20.000</h3>
                                             </div>
                                         </div>
