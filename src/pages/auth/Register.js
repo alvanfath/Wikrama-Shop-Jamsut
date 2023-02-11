@@ -58,30 +58,30 @@ function Register() {
                             </Link>
                             <h4 className="title-auth mb-5">Buat Akun</h4>
                             <div className="form-floating mb-3">
-                                <input type="text" className="form-control auth-input shadow-none" id="floatingInput" placeholder="Nama Lengkap" value={name} onChange={(e) => setName(e.target.value)} />
-                                <label for="floatingInput">Nama Lengkap</label>
+                                <input type="text" className="form-control auth-input shadow-none" id="floatingInput1" placeholder="Nama Lengkap" value={name} onChange={(e) => setName(e.target.value)} />
+                                <label htmlFor="floatingInput1">Nama Lengkap</label>
                             </div>
                             <div className="form-floating mb-3">
-                                <input type="text" className="form-control auth-input shadow-none" id="floatingInput" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-                                <label for="floatingInput">Username</label>
+                                <input type="text" className="form-control auth-input shadow-none" id="floatingInput2" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+                                <label htmlFor="floatingInput2">Username</label>
                             </div>
                             <div className="form-floating mb-3">
-                                <input type="email" className="form-control auth-input shadow-none" id="floatingInput" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                                <label for="floatingInput">Email</label>
+                                <input type="email" className="form-control auth-input shadow-none" id="floatingInput3" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <label htmlFor="floatingInput3">Email</label>
                             </div>
                             <div className="d-flex mb-4">
                                 <div className="form-floating me-3">
-                                    <input type={type} className="form-control auth-input password-input shadow-none" id="floatingInput" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                                    <label for="floatingInput">Password</label>
+                                    <input type={type} className="form-control auth-input password-input shadow-none" id="floatingInput4" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                    <label htmlFor="floatingInput4">Password</label>
                                 </div>
                                 <div className="form-floating">
-                                    <input type={type} className="form-control auth-input password-input shadow-none" id="floatingInput" placeholder="Konfirmasi Password" value={confirmationPassword} onChange={(e) => setConfirmationPassword(e.target.value)} />
-                                    <label for="floatingInput">Konfirmasi Password</label>
+                                    <input type={type} className="form-control auth-input password-input shadow-none" id="floatingInput5" placeholder="Konfirmasi Password" value={confirmationPassword} onChange={(e) => setConfirmationPassword(e.target.value)} />
+                                    <label htmlFor="floatingInput5">Konfirmasi Password</label>
                                 </div>
                             </div>
-                            <div class="form-check text-auth mb-5">
-                                <input class="form-check-input shadow-none" type="checkbox" id="flexCheckChecked" onClick={showPasswordHandler} />
-                                <label class="form-check-label" for="flexCheckChecked">
+                            <div className="form-check text-auth mb-5">
+                                <input className="form-check-input shadow-none" type="checkbox" id="flexCheckChecked" onClick={showPasswordHandler} />
+                                <label className="form-check-label" htmlFor="flexCheckChecked">
                                     Tampilkan password
                                 </label>
                             </div>

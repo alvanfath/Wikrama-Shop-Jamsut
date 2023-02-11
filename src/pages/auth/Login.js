@@ -58,16 +58,16 @@ function Login() {
                             </Link>
                             <h4 className="title-auth mb-5">Silahkan Login</h4>
                             <div className="form-floating mb-3">
-                                <input type="text" className="form-control auth-input shadow-none" id="floatingInput" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-                                <label for="floatingInput">Username</label>
+                                <input type="text" className="form-control auth-input shadow-none" id="floatingInput1" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+                                <label htmlFor="floatingInput1">Username</label>
                             </div>
                             <div className="form-floating mb-4">
-                                <input type={type} className="form-control auth-input login-input shadow-none" id="floatingInput" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                                <label for="floatingInput">Password</label>
+                                <input type={type} className="form-control auth-input login-input shadow-none" id="floatingInput2" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                <label htmlFor="floatingInput2">Password</label>
                             </div>
-                            <div class="form-check text-auth mb-5">
-                                <input class="form-check-input shadow-none" type="checkbox" id="flexCheckChecked" onClick={showPasswordHandler} />
-                                <label class="form-check-label" for="flexCheckChecked">
+                            <div className="form-check text-auth mb-5">
+                                <input className="form-check-input shadow-none" type="checkbox" id="flexCheckChecked" onClick={showPasswordHandler} />
+                                <label className="form-check-label" htmlFor="flexCheckChecked">
                                     Tampilkan password
                                 </label>
                             </div>
