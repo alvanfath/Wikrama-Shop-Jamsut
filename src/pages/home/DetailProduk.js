@@ -15,6 +15,18 @@ const ColoredLine = ({ color }) => (
     />
 );
 
+// var btnContainer = document.getElementById("btn-variant");
+
+// var button = btnContainer.getElementsByClassName("variant-produk-detail-btn");
+
+// for (var i = 0; i < button.length; i++) {
+//     button[i].addEventListener("click", function () {
+//         var current = document.getElementsByClassName("active");
+//         current[0].className = current[0].className.replace(" active", "");
+//         this.className += " active";
+//     });
+// }
+
 function DetailProduk() {
     return (
         <>
@@ -25,18 +37,18 @@ function DetailProduk() {
                         <div className="col-3 d-flex justify-content-center">
                             <div className="image-produk-detail">
                                 <center>
-                                    <img src={Produk}></img>
+                                    <img src={Produk} alt="gambar-produk"></img>
                                 </center>
                                 <div className="image-other-produk-detail">
                                     <div className="row">
                                         <div className="col-4">
-                                            <img src={Produk}></img>
+                                            <img src={Produk} alt="gambar-produk"></img>
                                         </div>
                                         <div className="col-4">
-                                            <img src={Produk}></img>
+                                            <img src={Produk} alt="gambar-produk"></img>
                                         </div>
                                         <div className="col-4">
-                                            <img src={Produk}></img>
+                                            <img src={Produk} alt="gambar-produk"></img>
                                         </div>
                                     </div>
                                 </div>
@@ -68,9 +80,11 @@ function DetailProduk() {
                             </div>
                             <div className="variant-produk-detail">
                                 <h5>Variant : 25 Gram</h5>
-                                <button className="variant-produk-detail-btn active">25 Gram</button>
-                                <button className="variant-produk-detail-btn">25 Gram</button>
-                                <button className="variant-produk-detail-btn">25 Gram</button>
+                                <div id="btn-variant">
+                                    <button className="variant-produk-detail-btn active">25 Gram</button>
+                                    <button className="variant-produk-detail-btn">30 Gram</button>
+                                    <button className="variant-produk-detail-btn">35 Gram</button>
+                                </div>
                             </div>
                         </div>
                         <div className="col-4">
@@ -84,7 +98,7 @@ function DetailProduk() {
                                         <span className="col-6">Stock 8</span>
                                     </div>
                                     <div className="note-card-checkout">
-                                        <a href="#"><span><i class="fa-regular fa-pen-to-square"></i>Tambah Catatan</span></a>
+                                        <a href="#s"><span><i class="fa-regular fa-pen-to-square"></i>Tambah Catatan</span></a>
                                     </div>
                                     <div className="subtotal-card-checkout">
                                         <div className="row">
@@ -125,7 +139,7 @@ function DetailProduk() {
                             <div className="review-produk">
                                 <div className="row">
                                     <div className="col-1">
-                                        <img className="rounded-circle" src={Profile}></img>
+                                        <img className="rounded-circle" src={Profile} alt="gambar-produk"></img>
                                     </div>
                                     <div className="col-7">
                                         <div className="review-produk-text">
@@ -139,9 +153,9 @@ function DetailProduk() {
                                             </div>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                             <div className="image-review">
-                                                <img src={Produk}></img>
-                                                <img src={Produk}></img>
-                                                <img src={Produk}></img>
+                                                <img src={Produk} alt="gambar-produk"></img>
+                                                <img src={Produk} alt="gambar-produk"></img>
+                                                <img src={Produk} alt="gambar-produk"></img>
                                             </div>
                                         </div>
                                     </div>
@@ -162,7 +176,7 @@ function DetailProduk() {
                         <div className="col-6 col-md-3 col-lg-3">
                             <div className="card produk">
                                 <span className="text-center col-lg-3 col-md-4 col-5 card-badge">-16%</span>
-                                <img src={Produk} className="card-img-top" />
+                                <img src={Produk} className="card-img-top" alt="gambar-produk" />
                                 <div className="card-body">
                                     <h6 className="card-categories">Snack</h6>
                                     <h5 className="card-title">Keripik Kaca Pedas</h5>
@@ -191,7 +205,7 @@ function DetailProduk() {
                         <div className="col-6 col-md-3 col-lg-3">
                             <div className="card">
                                 <span className="text-center col-lg-3 col-md-4 col-5 card-badge">-16%</span>
-                                <img src={Produk} className="card-img-top" />
+                                <img src={Produk} className="card-img-top" alt="gambar-produk" />
                                 <div className="card-body">
                                     <h6 className="card-categories">Snack</h6>
                                     <h5 className="card-title">Keripik Kaca Pedas</h5>
@@ -220,7 +234,7 @@ function DetailProduk() {
                         <div className="col-6 col-md-3 col-lg-3">
                             <div className="card">
                                 <span className="text-center col-lg-3 col-md-4 col-5 card-badge">-16%</span>
-                                <img src={Produk} className="card-img-top" />
+                                <img src={Produk} className="card-img-top" alt="gambar-produk" />
                                 <div className="card-body">
                                     <h6 className="card-categories">Snack</h6>
                                     <h5 className="card-title">Keripik Kaca Pedas</h5>
@@ -249,7 +263,7 @@ function DetailProduk() {
                         <div className="col-6 col-md-3 col-lg-3">
                             <div className="card">
                                 <span className="text-center col-lg-3 col-md-4 col-5 card-badge">-16%</span>
-                                <img src={Produk} className="card-img-top" />
+                                <img src={Produk} className="card-img-top" alt="gambar-produk" />
                                 <div className="card-body">
                                     <h6 className="card-categories">Snack</h6>
                                     <h5 className="card-title">Keripik Kaca Pedas</h5>

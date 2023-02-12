@@ -173,6 +173,12 @@ input.form-control.search {
     /* border:1px solid gray !important; */
     border-radius: 15px !important;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    transition: 0.3s !important;
+}
+.card:hover{
+    transition: 0.3s !important;
+    position: relative;
+    bottom:10px;
 }
 
 span.card-badge {
@@ -181,7 +187,7 @@ span.card-badge {
     font-size: 13px;
     position: relative;
     top: -20px;
-    left: -3px;
+    left: -4px;
     background-color: #5278Ff;
     padding: 5px 5px;
 }
@@ -453,9 +459,14 @@ button.btn-show-password {
 
 
 /* detail produk */
+.image-produk-detail{
+    
+
+}
 .image-produk-detail img {
     width: 140px;
     margin-bottom: 30px;
+
 }
 
 
@@ -467,8 +478,11 @@ button.btn-show-password {
 
 .image-other-produk-detail img {
     padding: 5px;
-    background-color: #fefefe;
+    background-color: #F7F8FA;
     width: 50px;
+    border: 1px solid rgba(192, 192, 192, 0.25);
+    cursor: pointer;
+    border-radius :8px;
 }
 
 p.divider-or {
@@ -549,7 +563,7 @@ button.auth-facebook {
     border: 1px solid rgba(176, 176, 176, 0.5);
     border-radius: 8px;
 }
-.variant-produk-detail-btn.active {
+.active, .variant-produk-detail-btn:hover {
     border: 1px solid rgba(82, 120, 255, 0.5);
     background: rgba(82, 120, 255, 0.2);
 }
@@ -566,7 +580,7 @@ button.auth-facebook {
 
 .card-checkout {
     padding: 10px 5px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
     border-radius: 10px;
 }
 
@@ -638,8 +652,11 @@ input[type=number]::-webkit-inner-spin-button {
     display: inline;
 }
 .image-review img{
+    padding: 5px ;
     width: 40px;
     margin-right: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 }
 
 
