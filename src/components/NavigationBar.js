@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 
 function NavigationBar() {
-    return(
+    return (
         <>
             <nav className="navbar navbar-expand-lg bg-white sticky-top">
                 <div className="container">
@@ -25,7 +25,9 @@ function NavigationBar() {
                         <Link to="/register">
                             <button className="btn-solid me-3">Daftar</button>
                         </Link>
-                        <span className="shop-bag"><FontAwesomeIcon icon={faCartShopping} /></span>
+                        <Link to="/keranjang">
+                            <span className="shop-bag"><FontAwesomeIcon icon={faCartShopping} /></span>
+                        </Link>
                     </div>
                 </div>
             </nav>

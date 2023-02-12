@@ -175,10 +175,11 @@ input.form-control.search {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
     transition: 0.3s !important;
 }
-.card:hover{
+
+.card:hover {
     transition: 0.3s !important;
     position: relative;
-    bottom:10px;
+    bottom: 10px;
 }
 
 span.card-badge {
@@ -459,10 +460,7 @@ button.btn-show-password {
 
 
 /* detail produk */
-.image-produk-detail{
-    
 
-}
 .image-produk-detail img {
     width: 140px;
     margin-bottom: 30px;
@@ -482,7 +480,7 @@ button.btn-show-password {
     width: 50px;
     border: 1px solid rgba(192, 192, 192, 0.25);
     cursor: pointer;
-    border-radius :8px;
+    border-radius: 8px;
 }
 
 p.divider-or {
@@ -563,7 +561,9 @@ button.auth-facebook {
     border: 1px solid rgba(176, 176, 176, 0.5);
     border-radius: 8px;
 }
-.active, .variant-produk-detail-btn:hover {
+
+.active,
+.variant-produk-detail-btn:hover {
     border: 1px solid rgba(82, 120, 255, 0.5);
     background: rgba(82, 120, 255, 0.2);
 }
@@ -596,6 +596,14 @@ button.auth-facebook {
     font-weight: 500;
     font-size: 16px;
     color: #000000;
+
+}
+
+.card-checkout h5 {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
 
 }
 
@@ -642,21 +650,44 @@ input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
     color: #5278FF !important;
 }
-.review-produk-text{
+
+.review-produk-text {
     margin-bottom: 30px;
 }
-.review-produk img{
+
+.review-produk img {
     width: 60px;
 }
-.image-review{
+
+.image-review {
     display: inline;
 }
-.image-review img{
-    padding: 5px ;
+
+.image-review img {
+    padding: 5px;
     width: 40px;
     margin-right: 20px;
     border: 1px solid rgba(0, 0, 0, 0.25);
     cursor: pointer;
+}
+
+.banner-chart {
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.text-banner {
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+.text-banner h3{
+    font-weight: 700;
+    font-size: 26px;
+}
+.text-banner p{
+    font-weight: 700;
+    font-size: 18px;
 }
 
 
