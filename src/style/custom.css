@@ -269,42 +269,42 @@ input.form-control.search {
 .card-m-pembayaran {
     background-color: red;
     width: 120px;
-    margin: 30px;    
+    margin: 30px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 
-.metode-pembayaran{
+.metode-pembayaran {
     background-color: #fcfcfc;
-    padding-top: 20px;  
+    padding-top: 20px;
     border-radius: 20px;
 }
 
 /* card total pembayaran */
 
-.card-total-pembayaran{
+.card-total-pembayaran {
     border: 1px solid #EEEEEE;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
 
-.text-total{
+.text-total {
     padding: 10px;
 }
 
-.total-pemb{
+.total-pemb {
     font-weight: 600;
 }
 
-.total-rup{
+.total-rup {
     color: #5278FF;
     font-weight: 600;
 }
 
 .mrgn {
     margin-top: 15px;
-    
+
 }
 
 /* card produk */
@@ -607,6 +607,7 @@ button.btn-show-password {
     margin-bottom: 30px;
 
 }
+
 .grey-line {
     font-weight: 900;
     color: #808080;
@@ -850,6 +851,41 @@ input[type=number]::-webkit-inner-spin-button {
     font-weight: 700;
     font-size: 18px;
 }
+
+input.checkbox {
+    margin-right: 10px;
+    accent-color: #FFDD00;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFDD00;
+}
+input.small-checkbox {
+    margin-right: 10px;
+    accent-color: #FFDD00;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #FFDD00;
+}
+
+
+.checkbox-produk span {
+    position: relative;
+    top: -2px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.card-keranjang{
+    padding: 10px 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.image-keranjang img{
+    width: 40px;
+}
+.card-keranjang h4{
+    font-size: 15px;
+}
+
 
 
 

@@ -1,6 +1,7 @@
 import Footer from "../../components/Footer";
 import NavigationBar from "../../components/NavigationBar";
 import Chartbanner from "../../assets/chart-banner.png";
+import Produk from "../../assets/produk.png";
 
 const ColoredLine = ({ color }) => (
     <hr
@@ -8,6 +9,15 @@ const ColoredLine = ({ color }) => (
             color: color,
             backgroundColor: color,
             height: 2
+        }}
+    />
+);
+const Linebold = ({ color }) => (
+    <hr
+        style={{
+            color: color,
+            backgroundColor: color,
+            height: 10,
         }}
     />
 );
@@ -43,8 +53,36 @@ function Keranjang() {
                             {/*  */}
                             <section className="small-section">
                                 <div className="checkbox-produk">
-                                    <input type={"checkbox"}></input>
+                                    <input className="checkbox" type={"checkbox"}></input>
                                     <span>Pilih Semua</span>
+                                    <Linebold color="grey" />
+                                </div>
+                                <div className="container">
+                                    <div className="card-keranjang">
+                                        <div className="container">
+                                            <div className="col-12">
+                                                <input className="small-checkbox" type={"checkbox"}></input>
+                                                <span>Wikrama Shop</span>
+                                                <ColoredLine color="black" />
+                                            </div>
+                                            <div className="row">
+                                                <div className="col-1 px-4">
+                                                    <input className="small-checkbox" type={"checkbox"}></input>
+                                                </div>
+                                                <div className="col-1">
+                                                    <div className="image-keranjang">
+                                                        <img src={Produk} alt="gambar-produk"></img>
+                                                    </div>
+                                                </div>
+                                                <div className="col-2">
+                                                    <h4>Snack Keripik Kaca Pedas</h4>
+                                                </div>
+                                                <div className="col-1">
+                                                    <h5>45 Gram</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </section>
                         </div>
