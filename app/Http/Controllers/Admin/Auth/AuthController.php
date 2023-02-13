@@ -12,13 +12,16 @@ class AuthController extends Controller
     	$validator = Validator::make($request->all(), [
             'email' => 'required',
             'password' => 'required|string|min:6',
+        ],[
+            'email.required' => 'Email atau username wajib diisi',
+            'password.'
         ]);
         $email_or_us = filter_var($request->input('email'), FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
         if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
         }
         if (! $token = auth()->guard('admin')->attempt([$email_or_us => $request->input('email'), 'password' => $request->input('password')])) {
-            return response()->json(['error' => 'Username atau password salah'], 401);
+            return response()->json(['error' => 'Autentikasi gagal'], 401);
         }else{
             return $this->createNewToken($token);
         }

@@ -27,6 +27,11 @@ class RegisterController extends Controller
                 'confirm_password' => 'required|same:password'
             ],[
                 'name.required' => 'Nama wajib diisi',
+                'email.required' => 'Email wajib diisi',
+                'email.unique' => 'Email tidak tersedia',
+                'username.required' => 'Username wajib diisi',
+                'username.unique' => 'Username sudah ada sebelumnya',
+                'password.required' => 'Password wajib diisi',
                 'confirm_password.required' => 'Konfirmasi password wajib diisi',
                 'confirm_password.same' => 'Konfirmasi password salah'
             ]);

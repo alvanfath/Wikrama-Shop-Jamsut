@@ -81,4 +81,7 @@ Route::prefix('/webmin')->name('webmin.')->group(function () {
         });
     });
 
+    Route::middleware(['auth:api'])->group(function () {
+
+    });
 });
