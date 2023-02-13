@@ -25,10 +25,10 @@ class LoginController extends Controller
             return response()->json($validator->errors(), 422);
         }
         if (! $token = auth()->attempt([$email_or_us => $request->input('email'), 'password' => $request->input('password')])) {
-            return response()->json(['error' => 'Unauthorized'], 401);
+            return response()->json(['error' => 'Autentikasi gagal'], 401);
         }else{
             if (auth()->user()->email_verified_at == null){
-                return response()->json(['error' => 'your account not verified']);
+                return response()->json(['error' => 'Akun anda belum diverifikasi']);
             }else{
                 return $this->createNewToken($token);
             }
