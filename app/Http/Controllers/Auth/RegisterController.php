@@ -25,6 +25,10 @@ class RegisterController extends Controller
                 'username' => 'required|unique:users,username',
                 'password' => 'required',
                 'confirm_password' => 'required|same:password'
+            ],[
+                'name.required' => 'Nama wajib diisi',
+                'confirm_password.required' => 'Konfirmasi password wajib diisi',
+                'confirm_password.same' => 'Konfirmasi password salah'
             ]);
 
             if($validator->fails()){
