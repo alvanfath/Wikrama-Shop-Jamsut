@@ -111,6 +111,23 @@ input.form-control.search {
     justify-content: center;
 }
 
+.back-bar {
+    display: flex;
+}
+
+.back-bar-text {
+    color: #fff;
+    margin: 5px;
+
+}
+
+.circle-arrow-left {
+    color: #ececec;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
 /* header */
 .carousel-indicators button {
     border-radius: 100% !important;
@@ -166,6 +183,130 @@ input.form-control.search {
     margin-bottom: 30px;
 }
 
+/* card alamat */
+.card-alamat {
+    background-color: #fff;
+    width: 782px;
+    padding: 10px;
+    border: #E8E8E8 2px solid;
+    border-radius: 5px;
+}
+
+.card-alamat-title {
+    padding: 10px;
+}
+
+.card-alamat-title h1 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* card produk pesanan */
+.card-pesanan {
+    margin-top: 20px;
+    background-color: #fff;
+    width: 782px;
+    padding: 10px;
+    border: #E8E8E8 2px solid;
+    border-radius: 5px;
+}
+
+.image-produk-pembayaran img {
+    width: 45px;
+}
+
+.nama-produk-pembayaran h3 {
+    position: relative;
+    top: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.nama-produk-pembayaran {
+    text-align: center;
+}
+
+.nama-produk-pembayaran h3 {
+    font-size: 18px;
+    text-align: left;
+}
+
+.nama-produk-pembayaran span {
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.nama-produk-pembayaran h4 {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.nama-produk-pembayaran p {
+    color: #EDC64D;
+    font-weight: 700;
+}
+
+/* card metode pembayaran */
+
+.card-metode-pembayaran {
+    margin-top: 20px;
+    background-color: #fff;
+    width: 782px;
+    padding: 10px;
+    border: #E8E8E8 2px solid;
+    border-radius: 5px;
+
+}
+
+.card-metode-pembayaran h1 {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.card-m-pembayaran {
+    background-color: red;
+    width: 120px;
+    margin: 30px;    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.metode-pembayaran{
+    background-color: #fcfcfc;
+    padding-top: 20px;  
+    border-radius: 20px;
+}
+
+/* card total pembayaran */
+
+.card-total-pembayaran{
+    border: 1px solid #EEEEEE;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.text-total{
+    padding: 10px;
+}
+
+.total-pemb{
+    font-weight: 600;
+}
+
+.total-rup{
+    color: #5278FF;
+    font-weight: 600;
+}
+
+.mrgn {
+    margin-top: 15px;
+    
+}
+
 /* card produk */
 .card {
     margin-bottom: 30px;
@@ -173,6 +314,13 @@ input.form-control.search {
     /* border:1px solid gray !important; */
     border-radius: 15px !important;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    transition: 1s !important;
+}
+
+.card:hover {
+    transition: 1s !important;
+    position: relative;
+    bottom: 10px;
 }
 
 span.card-badge {
@@ -181,7 +329,7 @@ span.card-badge {
     font-size: 13px;
     position: relative;
     top: -20px;
-    left: -3px;
+    left: -4px;
     background-color: #5278Ff;
     padding: 5px 5px;
 }
@@ -451,14 +599,27 @@ button.btn-show-password {
     border-radius: 25px;
 }
 
+
+/* detail produk */
+
 .image-produk-detail img {
     width: 140px;
     margin-bottom: 30px;
-}
 
+}
 .grey-line {
     font-weight: 900;
     color: #808080;
+
+}
+
+.image-other-produk-detail img {
+    padding: 5px;
+    background-color: #F7F8FA;
+    width: 50px;
+    border: 1px solid rgba(192, 192, 192, 0.25);
+    cursor: pointer;
+    border-radius: 8px;
 }
 
 .image-other-produk-detail img {
@@ -495,6 +656,7 @@ input[type="password"].validation-error {
 }
 
 /* detail produk */
+
 .rating-produk-detail {
     display: inline-flex;
 }
@@ -557,7 +719,10 @@ input[type="password"].validation-error {
     border: 1px solid rgba(176, 176, 176, 0.5);
     border-radius: 8px;
 }
-.variant-produk-detail-btn.active {
+
+
+.active,
+.variant-produk-detail-btn:hover {
     border: 1px solid rgba(82, 120, 255, 0.5);
     background: rgba(82, 120, 255, 0.2);
 }
@@ -574,7 +739,7 @@ input[type="password"].validation-error {
 
 .card-checkout {
     padding: 10px 5px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
     border-radius: 10px;
 }
 
@@ -590,6 +755,14 @@ input[type="password"].validation-error {
     font-weight: 500;
     font-size: 16px;
     color: #000000;
+
+}
+
+.card-checkout h5 {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
 
 }
 
@@ -636,18 +809,46 @@ input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
     color: #5278FF !important;
 }
-.review-produk-text{
+
+.review-produk-text {
     margin-bottom: 30px;
 }
-.review-produk img{
+
+.review-produk img {
     width: 60px;
 }
-.image-review{
+
+.image-review {
     display: inline;
 }
-.image-review img{
+
+.image-review img {
+    padding: 5px;
     width: 40px;
     margin-right: 20px;
+    border: 1px solid rgba(192, 192, 192, 0.25);
+    cursor: pointer;
+}
+
+.banner-chart {
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.text-banner {
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.text-banner h3 {
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.text-banner p {
+    font-weight: 700;
+    font-size: 18px;
 }
 
 
