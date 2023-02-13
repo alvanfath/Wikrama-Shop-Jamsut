@@ -16,14 +16,13 @@ class CreateProductTable extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->id();
-            $table->string('no_product',20)->unique()->default(Str::random(20));
+            $table->string('no_product',20)->unique();
             $table->string('product_image');
             $table->string('product_name');
             $table->string('description');
-            $table->string('price');
-            $table->string('stock');
             $table->integer('category_id');
             $table->string('supplier_id')->nullable()->default('Wikrama Shop');
+            $table->integer('discount')->nullable();
             $table->timestamps();
         });
     }
