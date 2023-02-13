@@ -111,6 +111,23 @@ input.form-control.search {
     justify-content: center;
 }
 
+.back-bar {
+    display: flex;
+}
+
+.back-bar-text {
+    color: #fff;
+    margin: 5px;
+
+}
+
+.circle-arrow-left {
+    color: #ececec;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
 /* header */
 .carousel-indicators button {
     border-radius: 100% !important;
@@ -164,6 +181,130 @@ input.form-control.search {
     font-weight: 600;
     font-size: 32px;
     margin-bottom: 30px;
+}
+
+/* card alamat */
+.card-alamat {
+    background-color: #fff;
+    width: 782px;
+    padding: 10px;
+    border: #E8E8E8 2px solid;
+    border-radius: 5px;
+}
+
+.card-alamat-title {
+    padding: 10px;
+}
+
+.card-alamat-title h1 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* card produk pesanan */
+.card-pesanan {
+    margin-top: 20px;
+    background-color: #fff;
+    width: 782px;
+    padding: 10px;
+    border: #E8E8E8 2px solid;
+    border-radius: 5px;
+}
+
+.image-produk-pembayaran img {
+    width: 45px;
+}
+
+.nama-produk-pembayaran h3 {
+    position: relative;
+    top: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.nama-produk-pembayaran {
+    text-align: center;
+}
+
+.nama-produk-pembayaran h3 {
+    font-size: 18px;
+    text-align: left;
+}
+
+.nama-produk-pembayaran span {
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.nama-produk-pembayaran h4 {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.nama-produk-pembayaran p {
+    color: #EDC64D;
+    font-weight: 700;
+}
+
+/* card metode pembayaran */
+
+.card-metode-pembayaran {
+    margin-top: 20px;
+    background-color: #fff;
+    width: 782px;
+    padding: 10px;
+    border: #E8E8E8 2px solid;
+    border-radius: 5px;
+
+}
+
+.card-metode-pembayaran h1 {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.card-m-pembayaran {
+    background-color: red;
+    width: 120px;
+    margin: 30px;    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.metode-pembayaran{
+    background-color: #fcfcfc;
+    padding-top: 20px;  
+    border-radius: 20px;
+}
+
+/* card total pembayaran */
+
+.card-total-pembayaran{
+    border: 1px solid #EEEEEE;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.text-total{
+    padding: 10px;
+}
+
+.total-pemb{
+    font-weight: 600;
+}
+
+.total-rup{
+    color: #5278FF;
+    font-weight: 600;
+}
+
+.mrgn {
+    margin-top: 15px;
+    
 }
 
 /* card produk */
@@ -681,11 +822,13 @@ input[type=number]::-webkit-inner-spin-button {
     position: relative;
     top: 10px;
 }
-.text-banner h3{
+
+.text-banner h3 {
     font-weight: 700;
     font-size: 26px;
 }
-.text-banner p{
+
+.text-banner p {
     font-weight: 700;
     font-size: 18px;
 }
