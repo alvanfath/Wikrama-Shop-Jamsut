@@ -607,8 +607,6 @@ button.btn-show-password {
     margin-bottom: 30px;
 
 }
-
-
 .grey-line {
     font-weight: 900;
     color: #808080;
@@ -622,6 +620,12 @@ button.btn-show-password {
     border: 1px solid rgba(192, 192, 192, 0.25);
     cursor: pointer;
     border-radius: 8px;
+}
+
+.image-other-produk-detail img {
+    padding: 5px;
+    background-color: #fefefe;
+    width: 50px;
 }
 
 p.divider-or {
@@ -639,6 +643,19 @@ p.divider-or {
 button.auth-facebook {
     margin-right: 12px;
 }
+
+.validation-error {
+    font-size: 14px;
+    color: #dc3545;
+}
+
+input[type="text"].validation-error,
+input[type="email"].validation-error,
+input[type="password"].validation-error {
+    border-bottom-color: #dc3545 !important;
+}
+
+/* detail produk */
 
 .rating-produk-detail {
     display: inline-flex;
@@ -702,6 +719,7 @@ button.auth-facebook {
     border: 1px solid rgba(176, 176, 176, 0.5);
     border-radius: 8px;
 }
+
 
 .active,
 .variant-produk-detail-btn:hover {
