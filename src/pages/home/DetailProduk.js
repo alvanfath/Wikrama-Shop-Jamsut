@@ -15,9 +15,9 @@ const ColoredLine = ({ color }) => (
     />
 );
 
-// var btnContainer = document.getElementById("btn-variant");
 
-// var button = btnContainer.getElementsByClassName("variant-produk-detail-btn");
+
+// var button = document.getElementById("btn-variant").getElementsByClassName("variant-produk-detail-btn");
 
 // for (var i = 0; i < button.length; i++) {
 //     button[i].addEventListener("click", function () {
@@ -98,7 +98,7 @@ function DetailProduk() {
                                         <span className="col-6">Stock 8</span>
                                     </div>
                                     <div className="note-card-checkout">
-                                        <a href="#s"><span><i class="fa-regular fa-pen-to-square"></i>Tambah Catatan</span></a>
+                                        <a href="#s"><span><i className="fa-regular fa-pen-to-square"></i>Tambah Catatan</span></a>
                                     </div>
                                     <div className="subtotal-card-checkout">
                                         <div className="row">

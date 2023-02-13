@@ -173,11 +173,11 @@ input.form-control.search {
     /* border:1px solid gray !important; */
     border-radius: 15px !important;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-    transition: 0.3s !important;
+    transition: 1s !important;
 }
 
 .card:hover {
-    transition: 0.3s !important;
+    transition: 1s !important;
     position: relative;
     bottom: 10px;
 }
@@ -667,7 +667,7 @@ input[type=number]::-webkit-inner-spin-button {
     padding: 5px;
     width: 40px;
     margin-right: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(192, 192, 192, 0.25);
     cursor: pointer;
 }
 

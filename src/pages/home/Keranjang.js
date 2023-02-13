@@ -28,14 +28,25 @@ function Keranjang() {
                                     <div className="col-2">
                                         <img src={Chartbanner}></img>
                                     </div>
-                                    <div className="col-9 text-center text-white">
-                                        <div className="text-banner">
-                                            <h3>Belanja Tanpa Ribet ?</h3>
-                                            <p>Wikrama Shop Dong !</p>
+                                    <div className="col-9">
+                                        {/* banner */}
+                                        <div className="text-center text-white">
+                                            <div className="text-banner">
+                                                <h3>Belanja Tanpa Ribet ?</h3>
+                                                <p>Wikrama Shop Dong !</p>
+                                            </div>
                                         </div>
+                                        {/* end banner */}
                                     </div>
                                 </div>
                             </div>
+                            {/*  */}
+                            <section className="small-section">
+                                <div className="checkbox-produk">
+                                    <input type={"checkbox"}></input>
+                                    <span>Pilih Semua</span>
+                                </div>
+                            </section>
                         </div>
                         {/* Peyment */}
                         <div className="col-4">
