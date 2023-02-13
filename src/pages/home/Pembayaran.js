@@ -232,7 +232,6 @@ function Pembayaran() {
                                 </div>
                             </div>
                         </section>
-
                         <ColoredLine color="#C1C1C1" />
                     </div>
                 </div>
