@@ -7,6 +7,7 @@ import './style/custom.css';
 import './App.css';
 import { Helmet } from 'react-helmet';
 import DetailProduk from './pages/home/DetailProduk';
+import Pembayaran from './pages/home/Pembayaran';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Landing />}></Route>
         <Route path="/detail-produk" element={<DetailProduk />}></Route>
         <Route path="/keranjang" element={<Keranjang />}></Route>
+        <Route path="/pembayaran" element={<Pembayaran />}></Route>
       </Routes>
     </>
   );
