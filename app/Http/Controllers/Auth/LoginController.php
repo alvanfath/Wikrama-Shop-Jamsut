@@ -16,6 +16,9 @@ class LoginController extends Controller
     	$validator = Validator::make($request->all(), [
             'email' => 'required',
             'password' => 'required|string|min:6',
+        ],[
+            'email.required' => 'Email atau username wajib diisi',
+            'password.'
         ]);
         $email_or_us = filter_var($request->input('email'), FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
         if ($validator->fails()) {
