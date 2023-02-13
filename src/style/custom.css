@@ -30,7 +30,7 @@ button.btn-outline {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    color: black;
+    color: #5278Ff;
     transition: 0.3s;
 }
 
@@ -451,9 +451,20 @@ button.btn-show-password {
     border-radius: 25px;
 }
 
+.image-produk-detail img {
+    width: 140px;
+    margin-bottom: 30px;
+}
+
 .grey-line {
     font-weight: 900;
     color: #808080;
+}
+
+.image-other-produk-detail img {
+    padding: 5px;
+    background-color: #fefefe;
+    width: 50px;
 }
 
 p.divider-or {
@@ -471,6 +482,175 @@ p.divider-or {
 button.auth-facebook {
     margin-right: 12px;
 }
+
+.validation-error {
+    font-size: 14px;
+    color: #dc3545;
+}
+
+input[type="text"].validation-error,
+input[type="email"].validation-error,
+input[type="password"].validation-error {
+    border-bottom-color: #dc3545 !important;
+}
+
+/* detail produk */
+.rating-produk-detail {
+    display: inline-flex;
+}
+
+.stars-detail i {
+    position: relative;
+    top: -3px;
+}
+
+.text-produk-detail span {
+    padding: 10px 10px;
+    color: #F74B81;
+    background-color: #FDE0E9;
+    border-radius: 10px;
+}
+
+.text-produk-detail h2 {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.rating-produk-detail span {
+    color: #adadad;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+.harga-produk-detail h4 {
+    text-decoration-line: line-through;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ff5252;
+    margin-bottom: 0px;
+    margin-top: 12px;
+}
+
+.harga-produk-detail h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #5278FF;
+}
+
+.desc-produk-detail p {
+    font-size: 14px;
+}
+
+.desc-produk-detail h3 {
+    font-size: 14px;
+}
+
+.variant-produk-detail-btn {
+    margin-top: 5px;
+    background-color: transparent;
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(176, 176, 176, 0.5);
+    border-radius: 8px;
+}
+.variant-produk-detail-btn.active {
+    border: 1px solid rgba(82, 120, 255, 0.5);
+    background: rgba(82, 120, 255, 0.2);
+}
+
+
+
+.desc-produk-detail span {
+    color: #5278FF;
+}
+
+.variant-produk-detail h5 {
+    font-size: 14px;
+}
+
+.card-checkout {
+    padding: 10px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.card-checkout h2 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.card-checkout p {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+
+}
+
+.qty-card-checkout span {
+    margin-left: 12px;
+    color: black;
+    font-weight: 600;
+}
+
+.note-card-checkout {
+    margin-top: 15px;
+}
+
+.note-card-checkout a {
+    text-decoration: none;
+}
+
+.subtotal-card-checkout {
+    margin-top: 37px;
+    margin-bottom: 33px;
+}
+
+.subtotal-card-checkout h4 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+
+.subtotal-card-checkout h3 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #5278FF;
+}
+
+input[type=number] {
+    padding: 3px 3px;
+    text-align: center;
+    border: 3px solid #5278FF !important;
+    width: 60px;
+    border-radius: 6px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    color: #5278FF !important;
+}
+.review-produk-text{
+    margin-bottom: 30px;
+}
+.review-produk img{
+    width: 60px;
+}
+.image-review{
+    display: inline;
+}
+.image-review img{
+    width: 40px;
+    margin-right: 20px;
+}
+
+
 
 /* 1024 */
 @media only screen and (min-width: 1024px) and (max-width:1200px) {
