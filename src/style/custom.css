@@ -859,6 +859,7 @@ input.checkbox {
     height: 20px;
     border: 2px solid #FFDD00;
 }
+
 input.small-checkbox {
     margin-right: 10px;
     accent-color: #FFDD00;
@@ -874,16 +875,47 @@ input.small-checkbox {
     font-weight: 500;
     font-size: 18px;
 }
-.card-keranjang{
-    padding: 10px 5px;
+
+.card-keranjang {
+    padding: 10px 5px 15px 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
 }
-.image-keranjang img{
+
+.card-keranjang h5 {
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    top: 15px;
+
+}
+
+.text-yellow {
+    color: #EDC64D;
+    font-weight: 500;
+}
+
+.image-keranjang img {
     width: 40px;
 }
-.card-keranjang h4{
+
+.card-keranjang h4 {
     font-size: 15px;
+    position: relative;
+    top: 15px;
+}
+
+.input-number-keranjang {
+    position: relative;
+    top: 15px;
+}
+
+.icon-trash {
+    position: relative;
+    top: 15px;
 }
 
 

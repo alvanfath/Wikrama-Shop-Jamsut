@@ -2,6 +2,8 @@ import Footer from "../../components/Footer";
 import NavigationBar from "../../components/NavigationBar";
 import Chartbanner from "../../assets/chart-banner.png";
 import Produk from "../../assets/produk.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const ColoredLine = ({ color }) => (
     <hr
@@ -69,16 +71,67 @@ function Keranjang() {
                                                 <div className="col-1 px-4">
                                                     <input className="small-checkbox" type={"checkbox"}></input>
                                                 </div>
-                                                <div className="col-1">
+                                                <div className="col-2">
                                                     <div className="image-keranjang">
                                                         <img src={Produk} alt="gambar-produk"></img>
                                                     </div>
                                                 </div>
-                                                <div className="col-2">
+                                                <div className="col-3">
                                                     <h4>Snack Keripik Kaca Pedas</h4>
                                                 </div>
-                                                <div className="col-1">
+                                                <div className="col-2">
                                                     <h5>45 Gram</h5>
+                                                </div>
+                                                <div className="col-2">
+                                                    <h5>Rp 20.000</h5>
+                                                </div>
+                                                <div className="col-1">
+                                                    <div className="input-number-keranjang">
+                                                        <input type="number" min="1"></input>
+                                                    </div>
+                                                </div>
+                                                <div className="col-1">
+                                                    <div className="icon-trash d-flex justify-content-end">
+                                                        <button className="card-button"><FontAwesomeIcon icon={faTrash} /></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="card-keranjang">
+                                        <div className="container">
+                                            <div className="col-12">
+                                                <input className="small-checkbox" type={"checkbox"}></input>
+                                                <span>Jamsut Suplier</span>
+                                                <ColoredLine color="black" />
+                                            </div>
+                                            <div className="row">
+                                                <div className="col-1 px-4">
+                                                    <input className="small-checkbox" type={"checkbox"}></input>
+                                                </div>
+                                                <div className="col-2">
+                                                    <div className="image-keranjang">
+                                                        <img src={Produk} alt="gambar-produk"></img>
+                                                    </div>
+                                                </div>
+                                                <div className="col-3">
+                                                    <h4>Snack Keripik Kaca Pedas</h4>
+                                                </div>
+                                                <div className="col-2">
+                                                    <h5>45 Gram</h5>
+                                                </div>
+                                                <div className="col-2">
+                                                    <h5>Rp 20.000</h5>
+                                                </div>
+                                                <div className="col-1">
+                                                    <div className="input-number-keranjang">
+                                                        <input type="number" min="1"></input>
+                                                    </div>
+                                                </div>
+                                                <div className="col-1">
+                                                    <div className="icon-trash d-flex justify-content-end">
+                                                        <button className="card-button"><FontAwesomeIcon icon={faTrash} /></button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
