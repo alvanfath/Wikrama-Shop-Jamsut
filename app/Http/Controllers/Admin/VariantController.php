@@ -225,7 +225,7 @@ class VariantController extends Controller
     }
 
     public function destroy($no_product, $no_variant){
-        // try {
+        try {
             $data = DB::table('variant')->where('product_code', $no_product)->where('no_variant', $no_variant)->first();
             if ($data) {
                 $variant_image = public_path("uploads/variant/{$data->variant_image}");
@@ -246,12 +246,12 @@ class VariantController extends Controller
                     'message' => 'Data varian tidak ada'
                 ], 404);
             }
-        // } catch (\Throwable $th) {
-        //     return response()->json([
-        //         'exist' => false,
-        //         'success' => false,
-        //         'message' => 'Maaf sepertinya ada yang salah'
-        //     ], 500);
-        // }
+        } catch (\Throwable $th) {
+            return response()->json([
+                'exist' => false,
+                'success' => false,
+                'message' => 'Maaf sepertinya ada yang salah'
+            ], 500);
+        }
     }
 }
