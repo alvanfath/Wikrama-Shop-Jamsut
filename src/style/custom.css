@@ -81,6 +81,7 @@ button.btn-solid:hover {
 .navbar-brand h4 {
     display: flex;
     margin-left: 10px;
+    margin-bottom: 0;
     font-weight: 700;
     align-items: center;
     color: white;
@@ -128,7 +129,15 @@ input.form-control.search {
     justify-content: center;
 }
 
+li.nav-item.dropdown {
+    list-style-type: none;
+}
+
 /* header */
+.header-container {
+    padding: 25px 0;
+}
+
 .carousel-indicators button {
     border-radius: 100% !important;
     width: 10px !important;
