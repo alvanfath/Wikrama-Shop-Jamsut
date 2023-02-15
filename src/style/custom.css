@@ -1157,6 +1157,12 @@ input.small-checkbox {
         width: 45px;
         height: 45px;
     }
+    section.half-section {
+        padding: 40px 0;
+    }
+    section.small-section {
+        padding: 6px 0;
+    }
 
     .navbar-brand h4 {
         font-size: 18px;
@@ -1272,8 +1278,8 @@ input.small-checkbox {
     }
 
     .card-cta {
+        padding: 15px 5px;
         border-radius: 0px;
-        width: 400px !important;
     }
 
     .card-cta img {
@@ -1310,6 +1316,7 @@ input.small-checkbox {
     .logo-footer img {
         width: 50px !important;
         height: 50px !important;
+        margin-bottom: 30px;
     }
 
     .txt-footer-logo h1 {
