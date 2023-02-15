@@ -84,11 +84,12 @@ class ProductController extends Controller
                     'category_id' => $request->input('category_id')
                 ]);
             }
-
+            $variant_code = $this->generateCodeVariant();
             if ($request->hasFile('variant_image')) {
                 $file_name_variant = time(). '_' . $request->variant_image->getClientOriginalName();
                 $request->variant_image->move(public_path('uploads/variant'), $file_name);
                 DB::table('variant')->insert([
+                    'no_variant' => $variant_code,
                     'variant_image' => $file_name_variant,
                     'variant_name' => $request->input('variant'),
                     'price' => $request->input('price'),
@@ -97,6 +98,7 @@ class ProductController extends Controller
                 ]);
             }else{
                 DB::table('variant')->insert([
+                    'no_variant' => $variant_code,
                     'variant_name' => $request->input('variant'),
                     'price' => $request->input('price'),
                     'stock' => $request->input('stock'),
@@ -109,15 +111,22 @@ class ProductController extends Controller
                 'message' => 'Berhasil menambah product'
             ],200);
         }
-
-
     }
 
-    public function generateCode(){
+    protected function generateCode(){
         $code = Str::random(20);
         $data = DB::table('product')->where('no_product', $code)->first();
         if ($data) {
             return $this->generateCode();
+        }
+        return $code;
+    }
+
+    protected function generateCodeVariant(){
+        $code = Str::random(20);
+        $data = DB::table('variant')->where('no_variant', $code)->first();
+        if ($data) {
+            return $this->generateCodeVariant();
         }
         return $code;
     }

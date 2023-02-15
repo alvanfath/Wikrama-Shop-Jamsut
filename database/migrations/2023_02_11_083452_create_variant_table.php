@@ -15,9 +15,10 @@ class CreateVariantTable extends Migration
     {
         Schema::create('variant', function (Blueprint $table) {
             $table->id();
+            $table->string('no_variant',20)->unique();
             $table->string('variant_image')->nullable();
             $table->string('variant_name');
-            $table->string('price');
+            $table->bigInteger('price');
             $table->integer('stock');
             $table->string('product_code');
             $table->timestamps();

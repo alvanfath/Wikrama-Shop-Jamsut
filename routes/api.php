@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\VariantController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SupplierController;
@@ -78,6 +79,16 @@ Route::prefix('/webmin')->name('webmin.')->group(function () {
             Route::get('/edit/{id}',[ProductController::class, 'edit'])->name('.edit');
             Route::put('/update/{id}', [ProductController::class, 'update'])->name('.update');
             Route::delete('/destroy/{id}', [ProductController::class, 'destroy'])->name('.destroy');
+
+            //variant
+            Route::prefix('variant')->name('.variant')->group(function () {
+                Route::get('/{product_code}', [VariantController::class,'index'])->name('.index');
+                // Route::get('/create/{product_code}', [VariantController::class, 'create'])->name('.create');
+                Route::post('/{product_code}/store', [VariantController::class, 'store'])->name('.store');
+                Route::get('/{product_code}/{no_variant}/edit', [VariantController::class, 'edit'])->name('.edit');
+                Route::put('/{product_code}/{no_variant}/update', [VariantController::class, 'update'])->name('.update');
+                Route::delete('/{product_code}/{no_variant}/destroy', [VariantController::class, 'destroy'])->name('.destroy');
+            });
         });
     });
 
