@@ -171,19 +171,21 @@ function Landing() {
             {/* end rekomendasi produk */}
             <CardKategori />
             {/* cta motor */}
-            <section className="small-section">
-                <div className="container bg-blue card-cta">
-                    <div className="row">
-                        <div className="col-3 col-md-4 col-lg-4">
-                            <img src={Motor1} />
-                        </div>
-                        <div className="col-6 col-md-4 col-lg-4 text-center txt-cta-motor">
-                            <h1>Motor Listrik</h1>
-                            <p>lorem ipsum dolar sit amet</p>
-                            <button className="btn-white">Gasken !</button>
-                        </div>
-                        <div className="col-3 col-md-4 col-lg-4 d-flex justify-content-end">
-                            <img src={Motor2} />
+            <section className="small-section d-flex ">
+                <div className="container bg-blue ">
+                    <div className="card-cta">
+                        <div className="row">
+                            <div className="col-3 col-md-4 col-lg-4">
+                                <img src={Motor1} />
+                            </div>
+                            <div className="col-6 col-md-4 col-lg-4 text-center txt-cta-motor">
+                                <h1>Motor Listrik</h1>
+                                <p>lorem ipsum dolar sit amet</p>
+                                <button className="btn-white">Gasken !</button>
+                            </div>
+                            <div className="col-3 col-md-4 col-lg-4 d-flex justify-content-end">
+                                <img src={Motor2} />
+                            </div>
                         </div>
                     </div>
                 </div>
