@@ -1150,6 +1150,48 @@ input.small-checkbox {
     input[type="password"].form-control.auth-input.login-input {
         width: 100%;
     }
+
+    .image-produk-detail .big-image{
+        width: 100px;
+    }
+    .image-other-produk-detail {
+        position: relative;
+        left: -12px;
+    }
+    .image-other-produk-detail img{
+        width: 50px;
+    }
+    .text-produk-detail span{
+       font-size: 10px;
+    }
+    .text-produk-detail span{
+        font-size: 18px;
+     }
+     .harga-produk-detail h3{
+        font-size: 20px;
+     }
+     .desc-produk-detail p {
+        font-size: 12px;
+    }
+    button.variant-produk-detail-btn{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .button-card-checkout{
+        position: relative;
+        top: -10px;
+    }
+    button.btn-solid,.checkout{
+        font-size: 12px;
+        padding: 10px 10px;
+    }
+    button.btn-outline,.checkout{
+        font-size: 12px;
+        padding: 10px 10px;
+    }
+    .image-ulasan img{
+        width: 70px;
+    }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -1278,7 +1320,7 @@ input.small-checkbox {
     }
 
     .card-cta {
-        padding: 15px 5px;
+        padding: 0px 0px;
         border-radius: 0px;
     }
 
@@ -1377,4 +1419,52 @@ input.small-checkbox {
     input[type="password"].form-control.auth-input.login-input {
         width: 100%;
     }
+
+    .card-checkout{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .image-produk-detail .big-image{
+        width: 80px;
+    }
+    .image-other-produk-detail {
+        position: relative;
+       margin: 0 auto;
+    }
+    .image-other-produk-detail img{
+        width: 50px;
+    }
+    .text-produk-detail span{
+        font-size: 14px;
+     }
+     .text-produk-detail h2{
+        font-size: 20px;
+     }
+     .harga-produk-detail h3{
+        font-size: 24px;
+     }
+     .desc-produk-detail p {
+        font-size: 12px;
+    }
+    button.variant-produk-detail-btn{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .button-card-checkout{
+        position: relative;
+        top: -10px;
+    }
+    button.btn-solid,.checkout{
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+    button.btn-outline,.checkout{
+        font-size: 12px;
+        padding: 15px 15px;
+    }
+    .image-ulasan img{
+        width: 70px;
+    }
+    
 }
