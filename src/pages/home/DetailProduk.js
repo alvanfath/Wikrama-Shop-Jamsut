@@ -34,13 +34,13 @@ function DetailProduk() {
             <section className="small-section">
                 <div className="container">
                     <div className="row">
-                        <div className="col-3 d-flex justify-content-center">
+                        <div className="col-12 col-sm-12 col-md-2 col-lg-3 d-flex justify-content-center">
                             <div className="image-produk-detail">
                                 <center>
-                                    <img src={Produk} alt="gambar-produk"></img>
+                                    <img className="big-image" src={Produk} alt="gambar-produk"></img>
                                 </center>
-                                <div className="image-other-produk-detail">
-                                    <div className="row">
+                                <div className="image-other-produk-detail d-flex justify-content-center">
+                                    <div className="row d-flex justify-content-center">
                                         <div className="col-4">
                                             <img src={Produk} alt="gambar-produk"></img>
                                         </div>
@@ -54,7 +54,7 @@ function DetailProduk() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-5">
+                        <div className="col-12 col-sm-12 col-md-5 col-lg-5 px-4">
                             <div className="text-produk-detail">
                                 <span>Discount 14%</span>
                                 <h2>Snack Keripik Kaca Pedas</h2>
@@ -87,7 +87,7 @@ function DetailProduk() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4">
+                        <div className="col-sm-12 co-12 col-md-5 col-lg-4">
                             <div className="card-checkout">
                                 <div className="container">
                                     <h2>Atur jumlah catatan</h2>
@@ -113,14 +113,12 @@ function DetailProduk() {
                                     <div className="button-card-checkout">
                                         <div className="row">
                                             <div className="col-6">
-                                                <button className="btn-solid">+ Keranjang</button>
+                                                <button className="btn-solid checkout">+ Keranjang</button>
                                             </div>
                                             <div className="col-6">
-                                                <button className="btn-outline">Beli Langsung</button>
+                                                <button className="btn-outline checkout">Beli Langsung</button>
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -132,16 +130,16 @@ function DetailProduk() {
             <section className="small-section">
                 <div className="container">
                     <div className="row">
-                        <div className="col-8">
+                        <div className="col-12 col-sm-12 col-md-8 col-lg-8">
                             <div className="col-12">
                                 <h1 className="title-text">Ulasan</h1>
                             </div>
                             <div className="review-produk">
                                 <div className="row">
-                                    <div className="col-1">
+                                    <div className="image-ulasan col-sm-3 col-sm-3 col-md-2 col-lg-1">
                                         <img className="rounded-circle" src={Profile} alt="gambar-produk"></img>
                                     </div>
-                                    <div className="col-7">
+                                    <div className="col-12 col-sm-12 col-lg-7 col-md-8">
                                         <div className="review-produk-text">
                                             <label>Username</label>
                                             <div className="stars">
