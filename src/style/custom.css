@@ -1151,45 +1151,58 @@ input.small-checkbox {
         width: 100%;
     }
 
-    .image-produk-detail .big-image{
+    .image-produk-detail .big-image {
         width: 100px;
     }
+
     .image-other-produk-detail {
         position: relative;
         left: -12px;
     }
-    .image-other-produk-detail img{
+
+    .image-other-produk-detail img {
         width: 50px;
     }
-    .text-produk-detail span{
-       font-size: 10px;
+
+    .text-produk-detail span {
+        font-size: 10px;
     }
-    .text-produk-detail span{
+
+    .text-produk-detail span {
         font-size: 18px;
-     }
-     .harga-produk-detail h3{
+    }
+
+    .harga-produk-detail h3 {
         font-size: 20px;
-     }
-     .desc-produk-detail p {
+    }
+
+    .desc-produk-detail p {
         font-size: 12px;
     }
-    button.variant-produk-detail-btn{
+
+    button.variant-produk-detail-btn {
         padding: 5px 10px;
         font-size: 12px;
     }
-    .button-card-checkout{
+
+    .button-card-checkout {
         position: relative;
         top: -10px;
     }
-    button.btn-solid,.checkout{
+
+    button.btn-solid,
+    .checkout {
         font-size: 12px;
         padding: 10px 10px;
     }
-    button.btn-outline,.checkout{
+
+    button.btn-outline,
+    .checkout {
         font-size: 12px;
         padding: 10px 10px;
     }
-    .image-ulasan img{
+
+    .image-ulasan img {
         width: 70px;
     }
 }
@@ -1199,9 +1212,11 @@ input.small-checkbox {
         width: 45px;
         height: 45px;
     }
+
     section.half-section {
         padding: 40px 0;
     }
+
     section.small-section {
         padding: 6px 0;
     }
@@ -1420,51 +1435,82 @@ input.small-checkbox {
         width: 100%;
     }
 
-    .card-checkout{
+    .card-checkout {
         margin-top: 40px;
         margin-bottom: 40px;
     }
 
-    .image-produk-detail .big-image{
+    .image-produk-detail .big-image {
         width: 80px;
     }
+
     .image-other-produk-detail {
         position: relative;
-       margin: 0 auto;
+        margin: 0 auto;
     }
-    .image-other-produk-detail img{
+
+    .image-other-produk-detail img {
         width: 50px;
     }
-    .text-produk-detail span{
+
+    .text-produk-detail span {
         font-size: 14px;
-     }
-     .text-produk-detail h2{
+    }
+
+    .text-produk-detail h2 {
         font-size: 20px;
-     }
-     .harga-produk-detail h3{
+    }
+
+    .harga-produk-detail h3 {
         font-size: 24px;
-     }
-     .desc-produk-detail p {
+    }
+
+    .desc-produk-detail p {
         font-size: 12px;
     }
-    button.variant-produk-detail-btn{
+
+    .card-checkout h2,.subtotal-card-checkout H3 {
+        font-size: 16px;
+    }
+      .card-checkout p,span,h4 {
+        font-size: 14px;
+    }
+
+    button.variant-produk-detail-btn {
         padding: 5px 10px;
         font-size: 12px;
     }
-    .button-card-checkout{
+
+    .button-card-checkout {
         position: relative;
         top: -10px;
     }
-    button.btn-solid,.checkout{
+
+    button.btn-solid,
+    .checkout {
         font-size: 14px;
         padding: 10px 10px;
     }
-    button.btn-outline,.checkout{
+
+    button.btn-outline,
+    .checkout {
+        display: flex;
+        justify-content: end;
         font-size: 12px;
         padding: 15px 15px;
     }
-    .image-ulasan img{
+
+    .image-ulasan img {
         width: 70px;
     }
-    
+
+    .review-produk-text label {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .review-produk-text p {
+        font-size: 12px;
+    }
+
 }
