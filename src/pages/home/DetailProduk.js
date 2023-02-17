@@ -115,7 +115,7 @@ function DetailProduk() {
                                             <div className="col-6">
                                                 <button className="btn-solid checkout">+ Keranjang</button>
                                             </div>
-                                            <div className="col-6">
+                                            <div className="col-6 d-flex justify-content-end">
                                                 <button className="btn-outline checkout">Beli Langsung</button>
                                             </div>
                                         </div>
