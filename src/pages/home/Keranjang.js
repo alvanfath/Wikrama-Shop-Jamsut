@@ -34,13 +34,13 @@ function Keranjang() {
                         <h1 className="title-text">Keranjang</h1>
                     </div>
                     <div className="row">
-                        <div className="col-8">
+                        <div className="col-12 col-sm-12 col-md-12 col-lg-8">
                             <div className="banner-chart bg-blue">
                                 <div className="row">
-                                    <div className="col-2">
+                                    <div className="col-md-2 col-lg-2">
                                         <img src={Chartbanner}></img>
                                     </div>
-                                    <div className="col-9">
+                                    <div className="col-12 col-sm-12 col-md-9 col-lg-9">
                                         {/* banner */}
                                         <div className="text-center text-white">
                                             <div className="text-banner">
@@ -68,29 +68,29 @@ function Keranjang() {
                                                 <ColoredLine color="black" />
                                             </div>
                                             <div className="row">
-                                                <div className="col-1 px-4">
+                                                <div className="col-1 col-sm-1 col-md-1 col-lg-1 px-4">
                                                     <input className="small-checkbox" type={"checkbox"}></input>
                                                 </div>
-                                                <div className="col-2">
+                                                <div className="col-2 col-sm-5 col-md-2 col-lg-2">
                                                     <div className="image-keranjang">
                                                         <img src={Produk} alt="gambar-produk"></img>
                                                     </div>
                                                 </div>
-                                                <div className="col-3">
+                                                <div className="col-7 col-sm-6 col-md-3 col-lg-3">
                                                     <h4>Snack Keripik Kaca Pedas</h4>
                                                 </div>
-                                                <div className="col-2">
+                                                <div className="col-6 col-sm-6 col-md-1 col-lg-2">
                                                     <h5>45 Gram</h5>
                                                 </div>
-                                                <div className="col-2">
+                                                <div className="col-6 col-sm-6 col-md-2 col-lg-2">
                                                     <h5>Rp 20.000</h5>
                                                 </div>
-                                                <div className="col-1">
+                                                <div className="col-6 col-sm-6 col-md-1 col-lg-1">
                                                     <div className="input-number-keranjang">
                                                         <input type="number" min="1"></input>
                                                     </div>
                                                 </div>
-                                                <div className="col-1">
+                                                <div className="col-4 col-sm-4 col-md-2 col-lg-1">
                                                     <div className="icon-trash d-flex justify-content-end">
                                                         <button className="card-button"><FontAwesomeIcon icon={faTrash} /></button>
                                                     </div>
@@ -106,29 +106,29 @@ function Keranjang() {
                                                 <ColoredLine color="black" />
                                             </div>
                                             <div className="row">
-                                                <div className="col-1 px-4">
+                                                <div className="col-1 col-sm-1 col-md-1 col-lg-1 px-4">
                                                     <input className="small-checkbox" type={"checkbox"}></input>
                                                 </div>
-                                                <div className="col-2">
+                                                <div className="col-2 col-sm-5 col-md-2 col-lg-2">
                                                     <div className="image-keranjang">
                                                         <img src={Produk} alt="gambar-produk"></img>
                                                     </div>
                                                 </div>
-                                                <div className="col-3">
+                                                <div className="col-7 col-sm-6 col-md-3 col-lg-3">
                                                     <h4>Snack Keripik Kaca Pedas</h4>
                                                 </div>
-                                                <div className="col-2">
+                                                <div className="col-6 col-sm-6 col-md-1 col-lg-2">
                                                     <h5>45 Gram</h5>
                                                 </div>
-                                                <div className="col-2">
+                                                <div className="col-6 col-sm-6 col-md-2 col-lg-2">
                                                     <h5>Rp 20.000</h5>
                                                 </div>
-                                                <div className="col-1">
+                                                <div className="col-6 col-sm-6 col-md-1 col-lg-1">
                                                     <div className="input-number-keranjang">
                                                         <input type="number" min="1"></input>
                                                     </div>
                                                 </div>
-                                                <div className="col-1">
+                                                <div className="col-4 col-sm-4 col-md-2 col-lg-1">
                                                     <div className="icon-trash d-flex justify-content-end">
                                                         <button className="card-button"><FontAwesomeIcon icon={faTrash} /></button>
                                                     </div>
@@ -140,7 +140,7 @@ function Keranjang() {
                             </section>
                         </div>
                         {/* Peyment */}
-                        <div className="col-4">
+                        <div className="col-md-12 col-lg-4">
                             <div className="card-checkout">
                                 <div className="container py-2">
                                     <h2 className="text-start">Ringkasan Belanja</h2>
