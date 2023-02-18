@@ -262,8 +262,7 @@ li.nav-item.dropdown {
 .card-metode-pembayaran {
     margin-top: 20px;
     background-color: #fff;
-    width: 782px;
-    padding: 10px;
+    padding: 25px 10px;
     border: #E8E8E8 2px solid;
     border-radius: 5px;
 
@@ -272,27 +271,26 @@ li.nav-item.dropdown {
 .card-metode-pembayaran h1 {
     font-size: 16px;
     font-weight: 600;
-    padding: 20px;
 }
 
 .card-m-pembayaran {
-    background-color: red;
-    width: 120px;
-    margin: 30px;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 
 .metode-pembayaran {
-    background-color: #fcfcfc;
-    padding-top: 20px;
     border-radius: 20px;
 }
 
 /* card total pembayaran */
 
 .card-total-pembayaran {
+    padding: 10px;
     border: 1px solid #EEEEEE;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
@@ -1205,6 +1203,13 @@ input.small-checkbox {
     .image-ulasan img {
         width: 70px;
     }
+    .nama-produk-pembayaran h3{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .text-total{
+        margin-bottom: 10px;
+    }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -1469,10 +1474,14 @@ input.small-checkbox {
         font-size: 12px;
     }
 
-    .card-checkout h2,.subtotal-card-checkout H3 {
+    .card-checkout h2,
+    .subtotal-card-checkout H3 {
         font-size: 16px;
     }
-      .card-checkout p,span,h4 {
+
+    .card-checkout p,
+    span,
+    h4 {
         font-size: 14px;
     }
 
@@ -1512,35 +1521,54 @@ input.small-checkbox {
     .review-produk-text p {
         font-size: 12px;
     }
-    .banner-chart{
+
+    .banner-chart {
         margin-bottom: 40px;
     }
-    .banner-chart img{
+
+    .banner-chart img {
         display: none;
     }
-    .text-banner h3{
+
+    .text-banner h3 {
         font-size: 16px;
     }
-    .text-banner p{
+
+    .text-banner p {
         font-size: 12px;
     }
-    .card-keranjang{
+
+    .card-keranjang {
         padding-bottom: 35px;
     }
-    .image-keranjang img{
+
+    .image-keranjang img {
         width: 30px;
     }
-    .card-keranjang h5{
+
+    .card-keranjang h5 {
         font-size: 13px;
     }
-    .input-number-keranjang{
+
+    .input-number-keranjang {
         position: relative;
         top: 20px;
     }
-    button.card-button{
+
+    button.card-button {
         position: relative;
         top: 10px;
         font-size: 14px;
+    }
+    .nama-produk-pembayaran{
+        text-align: left;
+    }
+    .card-m-pembayaran{
+        padding: 10px 50px;
+        margin-right: 5px !important;
+    }
+    .card-m-pembayaran img{
+        width: 50px;
     }
 
 }

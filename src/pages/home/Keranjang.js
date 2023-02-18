@@ -172,8 +172,8 @@ function Keranjang() {
                                     </div>
                                     <div className="button-card-checkout">
                                         <div className="row">
-                                            <div className="col-12 d-flex justify-content-start">
-                                                <button className="btn-solid">Bayar</button>
+                                            <div className="container">
+                                                <button className="btn-outline mrgn col-12 justify-content-end">Bayar</button>
                                             </div>
                                         </div>
 
