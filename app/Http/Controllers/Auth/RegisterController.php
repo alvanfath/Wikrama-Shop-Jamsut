@@ -23,6 +23,7 @@ class RegisterController extends Controller
                 'name' => 'required',
                 'email' => 'required|unique:users,email',
                 'username' => 'required|unique:users,username',
+                'phone_number' => 'required|unique:users,phone_number',
                 'password' => 'required',
                 'confirm_password' => 'required|same:password'
             ],[
@@ -31,6 +32,8 @@ class RegisterController extends Controller
                 'email.unique' => 'Email tidak tersedia',
                 'username.required' => 'Username wajib diisi',
                 'username.unique' => 'Username sudah ada sebelumnya',
+                'phone_number.required' => 'Nomor telepon wajib diisi',
+                'phone_number.unique' => 'Nomor telepon sudah ada sebelumnya',
                 'password.required' => 'Password wajib diisi',
                 'confirm_password.required' => 'Konfirmasi password wajib diisi',
                 'confirm_password.same' => 'Konfirmasi password salah'
@@ -46,6 +49,7 @@ class RegisterController extends Controller
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
                 'username' => $request->input('username'),
+                'phone_number' => $request->input('phone_number'),
                 'password' => Hash::make($request->input('password')),
                 'token' => $token,
                 'driver' => 'register',
