@@ -18,8 +18,25 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data = DB::table('product')->get();
-        return response()->json($data);
+        $data = DB::table('product')
+        ->join('category', 'product.category_id', '=','category.id')
+        ->select('product.*', 'category.category as kategori')
+        ->get();
+        foreach ($data as $item) {
+            $product[] = [
+                'no_product' => $item->no_product,
+                'product_image' => asset("uploads/product/{$item->product_image}"),
+                'product_name' => $item->product_name,
+                'description' => $item->description,
+                'category_id' => $item->category_id,
+                'supplier_id' => $item->supplier_id,
+                'discount' => $item->discount,
+                'category' => $item->kategori,
+                'total_stock' => DB::table('variant')->where('product_code', $item->no_product)->sum('stock'),
+                'total_variant' => DB::table('variant')->where('product_code', $item->no_product)->count()
+            ];
+        }
+        return response()->json($product);
     }
 
     /**
@@ -55,6 +72,17 @@ class ProductController extends Controller
             'stock' => 'required|numeric|min:10',
             'price' => 'required',
             'category_id' => 'required'
+        ],[
+            'product_image.required' => 'Gambar produk wajib diisi',
+            'product_image.mimes' => 'Gambar produk harus berupa png atau jpg',
+            'description.required' => 'Deskripsi wajib diisi',
+            'variant_image.mimes' => 'Gambar varian harus berupa png atau jpg',
+            'variant.required' => 'Nama varian harus diisi',
+            'stock.required' => 'Stok varian harus diisi',
+            'stock.numeric' => 'Stok varian harus berupa nomor',
+            'stock.min' => 'Stok varian minimal 10',
+            'price.required' => 'Harga varian harus diisi',
+            'category_id.required' => 'Kategori produk wajib diisi'
         ]);
 
         if ($validator->fails()) {
@@ -114,21 +142,27 @@ class ProductController extends Controller
     }
 
     protected function generateCode(){
-        $code = Str::random(20);
-        $data = DB::table('product')->where('no_product', $code)->first();
+        $digit = 'PRDC';
+        $first = strtoupper($digit);
+        $code = Str::random(7);
+        $new_code = $first . '-' .$code;
+        $data = DB::table('product')->where('no_product', $new_code)->first();
         if ($data) {
             return $this->generateCode();
         }
-        return $code;
+        return $new_code;
     }
 
     protected function generateCodeVariant(){
-        $code = Str::random(20);
-        $data = DB::table('variant')->where('no_variant', $code)->first();
+        $digit = 'VRNT';
+        $first = strtoupper($digit);
+        $code = Str::random(7);
+        $new_code = $first . '-' .$code;
+        $data = DB::table('variant')->where('no_variant', $new_code)->first();
         if ($data) {
             return $this->generateCodeVariant();
         }
-        return $code;
+        return $new_code;
     }
     /**
      * Display the specified resource.
