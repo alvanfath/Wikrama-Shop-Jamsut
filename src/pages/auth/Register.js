@@ -10,6 +10,7 @@ function Register() {
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const [confirmationPassword, setConfirmationPassword] = useState('');
 
@@ -24,6 +25,7 @@ function Register() {
         formData.append('name', name);
         formData.append('username', username);
         formData.append('email', email);
+        formData.append('phone_number', phone);
         formData.append('password', password);
         formData.append('confirm_password', confirmationPassword);
 
@@ -118,6 +120,23 @@ function Register() {
                                     )
                                 }
                             </div>
+                            <div className="form-floating mb-2">
+                                <input type="number" className={
+                                    validation.phone_number ?
+                                    "form-control auth-input validation-error shadow-none"
+                                    :
+                                    "form-control auth-input shadow-none"
+                                } id="floatingInput4" placeholder="Nomor Telepon" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                                <label htmlFor="floatingInput4">Nomor Telepon</label>
+                                {
+                                    validation.phone_number &&
+                                    (
+                                        <div className="validation-error mt-1">
+                                            {validation.phone_number}
+                                        </div>
+                                    )
+                                }
+                            </div>
                             <div className="d-flex mb-4">
                                 <div className="form-floating me-3">
                                     <input type={type} className={
@@ -125,8 +144,8 @@ function Register() {
                                         "form-control auth-input password-input validation-error shadow-none"
                                         :
                                         "form-control auth-input password-input shadow-none"
-                                    } id="floatingInput4" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                                    <label htmlFor="floatingInput4">Password</label>
+                                    } id="floatingInput5" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                    <label htmlFor="floatingInput5">Password</label>
                                     {
                                         validation.password &&
                                         (
@@ -142,8 +161,8 @@ function Register() {
                                         "form-control auth-input password-input validation-error shadow-none"
                                         :
                                         "form-control auth-input password-input shadow-none"
-                                    } id="floatingInput5" placeholder="Konfirmasi Password" value={confirmationPassword} onChange={(e) => setConfirmationPassword(e.target.value)} />
-                                    <label htmlFor="floatingInput5">Konfirmasi Password</label>
+                                    } id="floatingInput6" placeholder="Konfirmasi Password" value={confirmationPassword} onChange={(e) => setConfirmationPassword(e.target.value)} />
+                                    <label htmlFor="floatingInput6">Konfirmasi Password</label>
                                     {
                                         validation.confirm_password &&
                                         (

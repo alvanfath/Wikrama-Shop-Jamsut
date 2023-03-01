@@ -14,11 +14,18 @@ function NavigationBar() {
     const token = localStorage.getItem('token');
 
     // Get Data User Logged In
-    const fetchData = async () => {
+    const fetchUser = async () => {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         await axios.get('http://127.0.0.1:8000/api/my-profile')
         .then((res) => {
             setUsername(res.data.username);
+        }).catch((error) => {
+            if(error.response) {
+                localStorage.removeItem('token');
+                navigate('/login', {
+                    state: 'Sesi login berakhir, silahkan login kembali'
+                });
+            }
         });
     }
 
@@ -35,7 +42,7 @@ function NavigationBar() {
     // Middleware Auth
     useEffect(() => {
         if(token) {
-            fetchData();
+            fetchUser();
         }
     }, []);
 
