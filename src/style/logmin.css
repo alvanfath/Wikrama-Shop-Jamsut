@@ -1,0 +1,54 @@
+.logmin-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logmin-wrapper .logmin-header {
+    border-bottom: 2px solid #5278Ff;
+    margin-bottom: 18px;
+}
+
+.logmin-brand {
+    display: flex;
+    text-decoration: none;
+}
+
+.logmin-brand h4 {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-weight: 700;
+    align-items: center;
+    color: white;
+    font-style: italic;
+    font-size: 22px !important;
+    -webkit-text-stroke: 1px #5278Ff;
+}
+
+.logmin-brand span.logmin-shop {
+    margin-left: 2px;
+    font-style: normal;
+    font-size: 22px !important;
+    color: #5278Ff;
+    -webkit-text-stroke: 0px #5278Ff;
+}
+
+.logmin-brand img {
+    width: 60px;
+}
+
+.logmin-show-password {
+    font-size: 14px;
+}
+
+.logmin-validation-error {
+    font-size: 14px;
+    color: #dc3545;
+    margin-top: 3px;
+}
+
+.logmin-btn {
+    width: 100%;
+}

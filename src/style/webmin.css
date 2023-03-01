@@ -1,0 +1,193 @@
+/* Navbar */
+
+.webmin-navbar {
+    z-index: 10;
+}
+
+.webmin-navbar-container {
+    padding: 0 20px !important;
+}
+
+img.webmin-logo {
+    width: 50px;
+}
+
+.webmin-brand {
+    text-decoration: none;
+    font-weight: 700;
+    color: #5278Ff;
+}
+
+.webmin-brand span.webmin-wikrama {
+    color: #f8f9fa;
+    font-style: italic;
+    font-size: 20px !important;
+    -webkit-text-stroke: 1px #5278Ff;
+}
+
+.webmin-display-user a,
+.webmin-display-user a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.webmin-sidebar-toogler {
+    display: none;
+    background-color: #d3d1d1;
+    padding: 6px 12px 6px 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+/* Sidebar */
+
+.webmin-sidebar {
+    position: fixed;
+    top: 0;
+    width: 255px;
+    height: 100vh;
+    background-color: #5278Ff;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    overflow-y: scroll;
+}
+
+ul.webmin-sidemenu {
+    padding: 0 24px 0 24px;
+    margin-bottom: 0;
+}
+
+li.webmin-title-sidelink {
+    list-style: none;
+    color: #f8f9fa;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+a.webmin-link {
+    text-decoration: none;
+    color: #5278Ff;
+}
+
+li.webmin-sidelink.active {
+    list-style: none;
+    background-color: #f8f9fa;
+    color: #5278Ff;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 8px 14px 8px 20px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+}
+
+li.webmin-sidelink {
+    list-style: none;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 8px 14px 8px 20px;
+    color: #f8f9fa;
+}
+
+.webmin-btn-logout {
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    padding: 8px 14px 8px 20px;
+    background-color: #dc3545;
+    color: #f8f9fa;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+}
+
+/* Body */
+
+.webmin-wrapper {
+    margin-left: 255px;
+}
+
+.webmin-content {
+    width: 100%;
+    padding: 30px;
+}
+
+.webmin-banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #5278Ff;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.webmin-banner img {
+    width: 350px;
+}
+
+.webmin-banner-text {
+    color: #f8f9fa;
+}
+
+.webmin-banner-text h2 {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .webmin-display-user {
+        display: none;
+    }
+
+    .webmin-sidebar-toogler {
+        display: block;
+    }
+
+    .webmin-sidebar {
+        left: -255px;
+        animation-name: leftHide;
+        animation-duration: 1.5s;
+    }
+
+    .webmin-sidebar.show {
+        left: 0px;
+        animation-name: leftShow;
+        animation-duration: 1.5s;
+    }
+
+    .webmin-wrapper {
+        margin-left: 0px;
+        animation-name: responsiveContent;
+        animation-duration: 1.5s;
+    }
+}
+
+@keyframes leftHide {
+    from {
+        left: 0px;
+    }
+    to {
+        left: -255px;
+    }
+}
+
+@keyframes leftShow {
+    from {
+        left: -255px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes responsiveContent {
+    from {
+        margin-left: 255px;
+    }
+    to {
+        margin-left: 0px;
+    }
+}

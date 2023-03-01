@@ -537,6 +537,7 @@ hr {
 }
 
 input[type="text"].form-control.auth-input,
+input[type="number"].form-control.auth-input,
 input[type="email"].form-control.auth-input {
     width: 447px;
     padding-bottom: 6px;
@@ -560,6 +561,12 @@ input[type="password"].form-control.auth-input.password-input {
     border-bottom-color: #808080;
 }
 
+input[type="number"].form-control.auth-input {
+    border: none !important;
+    border-bottom: 1px solid #808080 !important;
+    text-align: start !important;
+}
+
 input[type="password"].form-control.auth-input.login-input {
     width: 447px;
     padding-bottom: 6px;
@@ -572,9 +579,10 @@ input[type="password"].form-control.auth-input.login-input {
 }
 
 input[type="text"].form-control.auth-input:focus,
+input[type="number"].form-control.auth-input:focus,
 input[type="email"].form-control.auth-input:focus,
 input[type="password"].form-control.auth-input:focus {
-    border-bottom-color: #5278Ff;
+    border-bottom-color: #5278Ff !important;
 }
 
 button.btn-show-password {

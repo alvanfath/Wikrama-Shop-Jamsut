@@ -69,13 +69,23 @@ function Login() {
     }
 
     useEffect(() => {
-        toast.success(state, {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            theme: "colored",
-        });
+        if(state == 'Sesi login berakhir, silahkan login kembali') {
+            toast.warning(state, {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                theme: "colored",
+            });
+        } else {
+            toast.success(state, {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                theme: "colored",
+            });
+        }
     }, [state]);
 
     window.history.replaceState(null, null, "/login");

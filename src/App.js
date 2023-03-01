@@ -1,13 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import Landing from './pages/home/Landing';
 import Keranjang from './pages/home/Keranjang';
-import './style/custom.css';
-import './App.css';
-import { Helmet } from 'react-helmet';
 import DetailProduk from './pages/home/DetailProduk';
 import Pembayaran from './pages/home/Pembayaran';
+import Webmin from './pages/admin/Webmin';
+import LoginAdmin from './pages/admin/LoginAdmin';
+import ProfileAdmin from './pages/admin/ProfileAdmin';
+import './style/custom.css';
+import './App.css';
+import Kasir from './pages/admin/Kasir';
+import Supplier from './pages/admin/supplier/Supplier';
 
 function App() {
   return (
@@ -22,6 +27,12 @@ function App() {
         <Route path="/detail-produk" element={<DetailProduk />}></Route>
         <Route path="/keranjang" element={<Keranjang />}></Route>
         <Route path="/pembayaran" element={<Pembayaran />}></Route>
+        <Route path="/webmin/login" element={<LoginAdmin />}></Route>
+        <Route path="/webmin" element={<Webmin />}>
+          <Route path="profile" element={<ProfileAdmin />}></Route>
+          <Route path="kasir" element={<Kasir />}></Route>
+          <Route path="supplier" element={<Supplier />}></Route>
+        </Route>
       </Routes>
     </>
   );
