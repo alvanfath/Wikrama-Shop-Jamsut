@@ -12,6 +12,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SupplierController;
 use App\Http\Controllers\Admin\Auth\AuthController;
+use App\Http\Controllers\Admin\TransaksiKasirController;
 
 /*
 |--------------------------------------------------------------------------
@@ -100,6 +101,11 @@ Route::prefix('/webmin')->name('webmin.')->group(function () {
                 Route::put('/{product_code}/{no_variant}/update', [VariantController::class, 'update'])->name('.update');
                 Route::delete('/{product_code}/{no_variant}/destroy', [VariantController::class, 'destroy'])->name('.destroy');
             });
+        });
+
+        Route::prefix('transaction')->name('transaction')->group(function () {
+            Route::get('/', [TransaksiKasirController::class, 'index'])->name('.index');
+            Route::post('/store', [TransaksiKasirController::class, 'store'])->name('.store');
         });
 
         Route::prefix('user')->group(function () {

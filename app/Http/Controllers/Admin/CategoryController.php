@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use Carbon\Carbon;
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
 class CategoryController extends Controller
@@ -42,14 +43,17 @@ class CategoryController extends Controller
         try{
             $validator = Validator::make($request->all(),[
                 'category' => 'required|unique:category,category'
+            ],[
+                'category.required' => 'Kategori wajib diisi',
+                'category.unique' => 'Kategori sudah ada sebelumnya'
             ]);
+
             if($validator->fails()){
-                return response()->json([
-                    'success' => false,
-                    'message' => $validator->errors()
-                ],422);
+                return response()->json($validator->errors(),422);
             }
+            $no_category = $this->codeCategory();
             DB::table('category')->insert([
+                'no_category' => $no_category,
                 'category' => $request->input('category'),
                 'created_at' => Carbon::now()
             ]);
@@ -64,6 +68,17 @@ class CategoryController extends Controller
             ],500);
         }
 
+    }
+
+    public function codeCategory(){
+        $digit = 'CTGR';
+        $code = strtoupper($digit);
+        $data = $code . '-' . Str::random(7);
+        $category = DB::table('category')->where('no_category', $data)->first();
+        if ($category) {
+            return $this->codeCategory();
+        }
+        return $data;
     }
 
     /**
@@ -85,7 +100,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $data = DB::table('category')->where('id', $id)->first();
+        $data = DB::table('category')->where('no_category', $id)->first();
         if($data){
             return response()->json([
                 'exist' => true,
@@ -108,7 +123,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = DB::table('category')->where('id', $id)->first();
+        $data = DB::table('category')->where('no_category', $id)->first();
         if($data){
             $validator = Validator::make($request->all(),[
                 'category' => 'required|unique:category,category,'.$data->id
@@ -120,7 +135,7 @@ class CategoryController extends Controller
                     'message' => $validator->errors()
                 ],422);
             }
-            DB::table('category')->where('id', $id)->update([
+            DB::table('category')->where('no_category', $id)->update([
                 'category' => $request->input('category')
             ]);
             return response()->json([
@@ -145,9 +160,9 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        $data = DB::table('category')->where('id', $id)->first();
+        $data = DB::table('category')->where('no_category', $id)->first();
         if($data){
-            DB::table('category')->where('id', $id)->delete();
+            DB::table('category')->where('no_category', $id)->delete();
             return response()->json([
                 'data' => 'exist',
                 'success' =>  true,

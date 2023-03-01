@@ -122,12 +122,15 @@ class VariantController extends Controller
     }
 
     protected function generateCodeVariant(){
-        $code = Str::random(20);
-        $data = DB::table('variant')->where('no_variant', $code)->first();
+        $digit = 'VRNT';
+        $first = strtoupper($digit);
+        $code = Str::random(7);
+        $new_code = $first . '-' .$code;
+        $data = DB::table('variant')->where('no_variant', $new_code)->first();
         if ($data) {
             return $this->generateCodeVariant();
         }
-        return $code;
+        return $new_code;
     }
 
     public function edit($no_product, $no_variant){
