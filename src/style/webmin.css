@@ -65,19 +65,25 @@ li.webmin-title-sidelink {
     margin-bottom: 8px;
 }
 
+
 a.webmin-link {
     text-decoration: none;
     color: #5278Ff;
 }
 
 li.webmin-sidelink.active {
+    transition: 0.3s;
     list-style: none;
     background-color: #f8f9fa;
     color: #5278Ff;
     border-radius: 12px;
     font-weight: 600;
     padding: 8px 14px 8px 20px;
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+li.webmin-sidelink:hover{
+    background-color: #f8f9fa;
+    color: #5278Ff;
 }
 
 li.webmin-sidelink {
@@ -95,9 +101,12 @@ li.webmin-sidelink {
     outline: none;
     border: none;
     padding: 8px 14px 8px 20px;
-    background-color: #dc3545;
+    background-color: #fd011a;
     color: #f8f9fa;
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+.webmin-btn-logout:hover{
+    background-color: #cb0518;
 }
 
 /* Body */
@@ -131,6 +140,43 @@ li.webmin-sidelink {
 .webmin-banner-text h2 {
     font-weight: 700;
     margin-bottom: 0;
+}
+
+/* kasir */
+.input-kasir span {
+    font-weight: 600;
+}
+
+.input-kasir input,
+.css-1fdsijx-ValueContainer {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #5278Ff;
+}
+
+.css-1xc3v61-indicatorContainer {
+    border: 1px solid #5278Ff;
+}
+
+.kalkulasi-kasir label {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.kalkulasi-kasir h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.kalkulasi-kasir input {
+    font-size: 16px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    padding: 3px 5px;
+    text-align: left !important;
+    width: 120px !important;
 }
 
 
@@ -169,6 +215,7 @@ li.webmin-sidelink {
     from {
         left: 0px;
     }
+
     to {
         left: -255px;
     }
@@ -178,6 +225,7 @@ li.webmin-sidelink {
     from {
         left: -255px;
     }
+
     to {
         left: 0px;
     }
@@ -187,6 +235,7 @@ li.webmin-sidelink {
     from {
         margin-left: 255px;
     }
+
     to {
         margin-left: 0px;
     }

@@ -20,29 +20,29 @@ function NavWebmin() {
     const fetchUser = async () => {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         await axios.get('http://127.0.0.1:8000/api/webmin/my-profile')
-        .then((res) => {
-            setUsername(res.data.username);
-        }).catch((error) => {
-            if(error.response) {
-                localStorage.removeItem('webmin_token');
-                navigate('/webmin/login', {
-                    state: 'Sesi login berakhir, silahkan login kembali'
-                });
-            }
-        });
+            .then((res) => {
+                setUsername(res.data.username);
+            }).catch((error) => {
+                if (error.response) {
+                    localStorage.removeItem('webmin_token');
+                    navigate('/webmin/login', {
+                        state: 'Sesi login berakhir, silahkan login kembali'
+                    });
+                }
+            });
     }
 
     const toogleSidebarHandler = () => {
-        if(toogleSidebar == '') {
+        if (toogleSidebar == '') {
             setToogleSidebar('show');
-        } else if(toogleSidebar == 'show') {
+        } else if (toogleSidebar == 'show') {
             setToogleSidebar('');
         }
     }
 
     // Middleware Auth
     useEffect(() => {
-        if(token) {
+        if (token) {
             fetchUser();
         } else {
             navigate('/webmin/login');
@@ -58,7 +58,7 @@ function NavWebmin() {
                         <h5 className="webmin-brand mb-0"><span class="webmin-wikrama">Wikrama</span>Shop</h5>
                     </Link>
                     <div className="webmin-display-user">
-                        <Link to="/webmin/profile">                        
+                        <Link to="/webmin/profile">
                             {username}
                             <img className="ms-3" src={DefaultProfile} alt="Photo Profile" width="35" />
                         </Link>
