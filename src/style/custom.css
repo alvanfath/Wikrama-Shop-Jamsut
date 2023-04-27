@@ -320,12 +320,17 @@ li.nav-item.dropdown {
     padding: 20px 3px;
     /* border:1px solid gray !important; */
     border-radius: 15px !important;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-    transition: 1s !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19) !important;
+    /* transition: 1s !important; */
+    animation-name: goingDown;
+    animation-duration: .25s;
+    bottom: 0px;
 }
 
 .card:hover {
-    transition: 1s !important;
+    animation-name: goingUp;
+    animation-duration: .25s;
+    /* transition: 1s !important; */
     position: relative;
     bottom: 10px;
 }
@@ -740,6 +745,7 @@ input[type="password"].validation-error {
 .active,
 .variant-produk-detail-btn:hover {
     border: 1px solid rgba(82, 120, 255, 0.5);
+    border-radius: 20px;
     background: rgba(82, 120, 255, 0.2);
 }
 
@@ -1578,5 +1584,24 @@ input.small-checkbox {
     .card-m-pembayaran img{
         width: 50px;
     }
+}
 
+/* Animate */
+
+@keyframes goingUp {
+    from {
+        bottom: 0px;
+    }
+    to {
+        bottom: 10px;
+    }
+}
+
+@keyframes goingDown {
+    from {
+        bottom: 10px;
+    }
+    to {
+        bottom: 0px;
+    }
 }

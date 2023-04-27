@@ -9,10 +9,12 @@ import Pembayaran from './pages/home/Pembayaran';
 import Webmin from './pages/admin/Webmin';
 import LoginAdmin from './pages/admin/LoginAdmin';
 import ProfileAdmin from './pages/admin/ProfileAdmin';
-import './style/custom.css';
-import './App.css';
 import Kasir from './pages/admin/Kasir';
 import Supplier from './pages/admin/supplier/Supplier';
+import Produk from './pages/admin/produk/Produk';
+import Kategori from './pages/admin/kategori/Kategori';
+import './style/custom.css';
+import './App.css';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/webmin" element={<Webmin />}>
           <Route path="profile" element={<ProfileAdmin />}></Route>
           <Route path="kasir" element={<Kasir />}></Route>
+          <Route path="produk" element={<Produk />}></Route>
+          <Route path="kategori" element={<Kategori />}></Route>
           <Route path="supplier" element={<Supplier />}></Route>
         </Route>
       </Routes>

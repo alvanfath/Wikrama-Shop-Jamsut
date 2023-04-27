@@ -55,7 +55,7 @@ function NavWebmin() {
                 <Container fluid className="webmin-navbar-container">
                     <Link to="/webmin" className="webmin-brand d-flex align-items-center">
                         <img className="webmin-logo me-3" src={Logo} alt="Wikrama Shop" />
-                        <h5 className="webmin-brand mb-0"><span class="webmin-wikrama">Wikrama</span>Shop</h5>
+                        <h5 className="webmin-brand mb-0"><span className="webmin-wikrama">Wikrama</span>Shop</h5>
                     </Link>
                     <div className="webmin-display-user">
                         <Link to="/webmin/profile">                        

@@ -70,8 +70,8 @@ function Landing() {
                                             <div className="col-7">
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
-                                            <div className="col-5">
-                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            <div className="col-5 text-align-end">
+                                                <button className="card-button me-0"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -99,8 +99,8 @@ function Landing() {
                                             <div className="col-7">
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
-                                            <div className="col-5">
-                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            <div className="col-5 text-align-end">
+                                                <button className="card-button me-0"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -128,8 +128,8 @@ function Landing() {
                                             <div className="col-7">
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
-                                            <div className="col-5">
-                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            <div className="col-5 text-align-end">
+                                                <button className="card-button me-0"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -157,8 +157,8 @@ function Landing() {
                                             <div className="col-7">
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
-                                            <div className="col-5">
-                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            <div className="col-5 text-align-end">
+                                                <button className="card-button me-0"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -219,8 +219,8 @@ function Landing() {
                                             <div className="col-7">
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
-                                            <div className="col-5">
-                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            <div className="col-5 text-align-end">
+                                                <button className="card-button me-0"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -248,8 +248,8 @@ function Landing() {
                                             <div className="col-7">
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
-                                            <div className="col-5">
-                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            <div className="col-5 text-align-end">
+                                                <button className="card-button me-0"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -277,8 +277,8 @@ function Landing() {
                                             <div className="col-7">
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
-                                            <div className="col-5">
-                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            <div className="col-5 text-align-end">
+                                                <button className="card-button me-0"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -306,8 +306,8 @@ function Landing() {
                                             <div className="col-7">
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
-                                            <div className="col-5">
-                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            <div className="col-5 text-align-end">
+                                                <button className="card-button me-0"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -335,8 +335,8 @@ function Landing() {
                                             <div className="col-7">
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
-                                            <div className="col-5">
-                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            <div className="col-5 text-align-end">
+                                                <button className="card-button me-0"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -364,8 +364,8 @@ function Landing() {
                                             <div className="col-7">
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
-                                            <div className="col-5">
-                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            <div className="col-5 text-align-end">
+                                                <button className="card-button me-0"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -393,8 +393,8 @@ function Landing() {
                                             <div className="col-7">
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
-                                            <div className="col-5">
-                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            <div className="col-5 text-align-end">
+                                                <button className="card-button me-0"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -422,8 +422,8 @@ function Landing() {
                                             <div className="col-7">
                                                 <h5 className="card-harga">Rp 20.000</h5>
                                             </div>
-                                            <div className="col-5">
-                                                <button className="card-button"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
+                                            <div className="col-5 text-align-end">
+                                                <button className="card-button me-0"><FontAwesomeIcon className="icon-shop" icon={faCartShopping} /> Add</button>
                                             </div>
                                         </div>
                                     </div>

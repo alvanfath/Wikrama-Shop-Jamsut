@@ -24,28 +24,28 @@ function CardKategori() {
                             <Slider className="slider-categories d-flex justify-content-start" {...settings}>
 
                                 <div className="card categories position-relative">
-                                    <img src={Categories} alt="Kategori" class="card-img-top" />
+                                    <img src={Categories} alt="Kategori" className="card-img-top" />
                                     <div className="carousel-caption text-center txt-card-categories">
                                         <h4 className="text-card-categories">Minuman</h4>
                                         <p className="tag-card-categories">Minuman Sehat Tanpa Pewarna Buatan</p>
                                     </div>
                                 </div>
                                 <div className="card categories position-relative">
-                                    <img src={Categories} alt="Kategori" class="card-img-top" />
+                                    <img src={Categories} alt="Kategori" className="card-img-top" />
                                     <div className="carousel-caption text-center txt-card-categories">
                                         <h4 className="text-card-categories">Minuman</h4>
                                         <p className="tag-card-categories">Minuman Sehat Tanpa Pewarna Buatan</p>
                                     </div>
                                 </div>
                                 <div className="card categories position-relative">
-                                    <img src={Categories} alt="Kategori" class="card-img-top" />
+                                    <img src={Categories} alt="Kategori" className="card-img-top" />
                                     <div className="carousel-caption text-center txt-card-categories">
                                         <h4 className="text-card-categories">Minuman</h4>
                                         <p className="tag-card-categories">Minuman Sehat Tanpa Pewarna Buatan</p>
                                     </div>
                                 </div>
                                 <div className="card categories position-relative">
-                                    <img src={Categories} alt="Kategori" class="card-img-top" />
+                                    <img src={Categories} alt="Kategori" className="card-img-top" />
                                     <div className="carousel-caption text-center txt-card-categories">
                                         <h4 className="text-card-categories">Minuman</h4>
                                         <p className="tag-card-categories">Minuman Sehat Tanpa Pewarna Buatan</p>

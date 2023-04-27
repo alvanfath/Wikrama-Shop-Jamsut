@@ -116,13 +116,13 @@ function Pembayaran() {
                                         <div className="container">
                                             <div className="text-total">
                                                 <div className="row">
-                                                    <div class="col-6">
+                                                    <div className="col-6">
                                                         <span>Catatan</span>
                                                     </div>
                                                 </div>
                                                 <ColoredLine color="#C1C1C1" />
                                                 <div className="row">
-                                                    <div class="col-12">
+                                                    <div className="col-12">
                                                         <span className="">lorem ipsum dolar sit amet</span>
                                                     </div>
                                                 </div>
@@ -135,35 +135,35 @@ function Pembayaran() {
                                         <div className="container">
                                             <div className="text-total">
                                                 <div className="row mb-1">
-                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 mb-2">
+                                                    <div className="col-6 col-sm-6 col-md-6 col-lg-6 mb-2">
                                                         <span>Subtotal Pembayaran</span>
                                                     </div>
-                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 mb-2">
+                                                    <div className="col-6 col-sm-6 col-md-6 col-lg-6 mb-2">
                                                         <span>Rp. 60.000</span>
                                                     </div>
                                                 </div>
                                                 <div className="row mb-1">
-                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 mb-2">
+                                                    <div className="col-6 col-sm-6 col-md-6 col-lg-6 mb-2">
                                                         <span>Ongkir</span>
                                                     </div>
-                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 mb-2">
+                                                    <div className="col-6 col-sm-6 col-md-6 col-lg-6 mb-2">
                                                         <span>Rp. 10.000</span>
                                                     </div>
                                                 </div>
                                                 <div className="row mb-1">
-                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 mb-2">
+                                                    <div className="col-6 col-sm-6 col-md-6 col-lg-6 mb-2">
                                                         <span>Biaya Layanan</span>
                                                     </div>
-                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 mb-2">
+                                                    <div className="col-6 col-sm-6 col-md-6 col-lg-6 mb-2">
                                                         <span>Rp. 1.000</span>
                                                     </div>
                                                 </div>
                                                 <ColoredLine color="#C1C1C1" />
                                                 <div className="row">
-                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                                    <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                                         <span className="total-pemb">Total</span>
                                                     </div>
-                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                                    <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                                         <span className="total-rup">Rp. 71.000</span>
                                                     </div>
                                                 </div>
