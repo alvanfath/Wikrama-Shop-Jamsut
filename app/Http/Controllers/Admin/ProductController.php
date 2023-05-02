@@ -22,6 +22,7 @@ class ProductController extends Controller
         ->join('category', 'product.category_id', '=','category.id')
         ->select('product.*', 'category.category as kategori')
         ->get();
+        $product = [];
         foreach ($data as $item) {
             $product[] = [
                 'no_product' => $item->no_product,

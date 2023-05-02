@@ -19,7 +19,7 @@ class CreateProductTable extends Migration
             $table->string('no_product',12)->unique();
             $table->string('product_image');
             $table->string('product_name');
-            $table->string('description');
+            $table->text('description');
             $table->integer('category_id');
             $table->string('supplier_id')->nullable()->default('Wikrama Shop');
             $table->integer('discount')->nullable();

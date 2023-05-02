@@ -45,7 +45,8 @@ class TransaksiKasirController extends Controller
                     'product_code' => $product->no_product,
                     'variant_code' => $variant->no_variant,
                     'quantity' => $request->quantity,
-                    'total_price' => $total
+                    'total_price' => $total,
+                    'created_at' => now()
                 ]]);
                 DB::table('variant')->where('product_code',$product->no_product)->where('no_variant', $request->variant_code)->update([
                     'stock' => intval($variant->stock) - intval($request->quantity)
@@ -64,6 +65,18 @@ class TransaksiKasirController extends Controller
             'success' => false,
             'message' => 'Produk tidak ditemukan'
         ], 404);
+    }
+
+    public function getVariant($no_product){
+        $product = DB::table('product')->where('no_product', $no_product)->first();
+        $data = DB::table('variant')->select('no_variant', 'variant_name', 'variant_image')->where('product_code', $no_product)->get();
+        if ($product) {
+            return response()->json($data, 200);
+        }
+        return response()->json([
+            'status' => 'product not found'
+        ], 404);
+
     }
 
     protected function generateCodeTransaction(){
