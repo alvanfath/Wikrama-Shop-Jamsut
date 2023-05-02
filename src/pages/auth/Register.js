@@ -137,8 +137,8 @@ function Register() {
                                     )
                                 }
                             </div>
-                            <div className="d-flex mb-4">
-                                <div className="form-floating me-3">
+                            <div className="pass-res d-flex mb-4">
+                                <div className="form-floating pass-first">
                                     <input type={type} className={
                                         validation.password ?
                                         "form-control auth-input password-input validation-error shadow-none"
@@ -192,6 +192,7 @@ function Register() {
                             <div className="grey-line">──────────</div>
                         </div>
                         <div className="other-auth mb-4">
+                            <a href="https://cf28-2001-448a-304a-51c6-a96b-3ad0-7da2-c74e.ngrok-free.app/api/auth/facebook">Facebook</a>
                             <button className="auth-facebook"><img className="me-2" src={FacebookIcon} alt="Facebook" /> Facebook</button>
                             <button className="auth-google"><img className="me-2" src={GoogleIcon} alt="Facebook" /> Google</button>
                         </div>

@@ -597,6 +597,10 @@ button.btn-show-password {
     color: #808080;
 }
 
+.pass-first {
+    margin-right: 1rem;
+}
+
 .text-auth p {
     font-size: 15px;
 }
@@ -618,7 +622,6 @@ button.btn-show-password {
     border: none;
     border-radius: 25px;
 }
-
 
 /* detail produk */
 
@@ -987,7 +990,8 @@ input.small-checkbox {
     }
 
     input[type="text"].form-control.auth-input,
-    input[type="email"].form-control.auth-input {
+    input[type="email"].form-control.auth-input,
+    input[type="number"].form-control.auth-input {
         width: 380px;
     }
 
@@ -1151,12 +1155,22 @@ input.small-checkbox {
     }
 
     input[type="text"].form-control.auth-input,
-    input[type="email"].form-control.auth-input {
+    input[type="email"].form-control.auth-input,
+    input[type="number"].form-control.auth-input {
         width: 100%;
     }
 
     input[type="password"].form-control.auth-input.password-input {
         width: 100%;
+    }
+
+    .pass-res {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pass-first {
+        margin-right: 0;
     }
 
     input[type="password"].form-control.auth-input.login-input {
@@ -1442,12 +1456,22 @@ input.small-checkbox {
     }
 
     input[type="text"].form-control.auth-input,
-    input[type="email"].form-control.auth-input {
+    input[type="email"].form-control.auth-input,
+    input[type="number"].form-control.auth-input {
         width: 100%;
     }
 
     input[type="password"].form-control.auth-input.password-input {
         width: 100%;
+    }
+
+    .pass-res {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pass-first {
+        margin-right: 0;
     }
 
     input[type="password"].form-control.auth-input.login-input {
