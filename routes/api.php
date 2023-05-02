@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\admin\ChartController;
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\VariantController;
@@ -103,14 +104,20 @@ Route::prefix('/webmin')->name('webmin.')->group(function () {
             });
         });
 
+        // transaction
         Route::prefix('transaction')->name('transaction')->group(function () {
             Route::get('/', [TransaksiKasirController::class, 'index'])->name('.index');
             Route::post('/store', [TransaksiKasirController::class, 'store'])->name('.store');
+            Route::get('/get-variant/{no_product}', [TransaksiKasirController::class, 'getVariant'])->name('.get-variant');
         });
 
+        //user
         Route::prefix('user')->group(function () {
             Route::get('/', [UserController::class, 'index'])->name('.index');
         });
+
+        //chart
+        Route::get('chart-transaction', [ChartController::class,'index'])->name('.chart-transaction');
     });
 
     Route::middleware(['auth:api'])->group(function () {
