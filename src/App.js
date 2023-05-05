@@ -13,6 +13,7 @@ import './style/custom.css';
 import './App.css';
 import Kasir from './pages/admin/Kasir';
 import Supplier from './pages/admin/supplier/Supplier';
+import Product from './pages/admin/Product';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="profile" element={<ProfileAdmin />}></Route>
           <Route path="kasir" element={<Kasir />}></Route>
           <Route path="supplier" element={<Supplier />}></Route>
+          <Route path="produK" element={<Product />}></Route>
         </Route>
       </Routes>
     </>
