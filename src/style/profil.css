@@ -1,0 +1,235 @@
+.vert-line {
+    height: 30px;
+    padding-left: 20px;
+    border-left: 3px solid black;
+}
+
+.vert-line h4 {
+    font-weight: 600;
+}
+
+.bot-line {
+    box-shadow: 0px 2px 2px rgb(209, 209, 209);
+}
+
+.sidebar-profil {
+    position: relative;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #D7D7D7;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.content-profil h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.profil {
+    margin-top: 15px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.image-profil {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+
+.image-user img {
+    padding-top: 7%;
+    width: 66%;
+}
+
+.button-change-img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.button-change-img button {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 180px;
+    height: 35px;
+    background-color: #D9D9D900;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.button-change-img button:hover {
+    background-color: #0249AF;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.note-profil {
+    margin: 20px;
+}
+
+.note-profil h6 {
+    margin-top: 15px;
+    font-weight: 600;
+    line-height: 1px;
+}
+
+.note-image-profil p {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    margin-left: 50px;
+}
+
+.form-biodata input {
+    height: 30px;
+}
+
+.form-biodata .hide {
+    border-style: none;
+}
+
+.button-change-biodata button {
+    margin-top: 20px;
+    font-weight: 600;
+    background-color: #fff;
+    width: 120px;
+    height: 35px;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.button-change-biodata button:hover {
+    background-color: #0249AF;
+    transition: 0.2s;
+    color: #fff;
+}
+
+.sidebar-img-profil {
+    padding: 25px 0px 0px 20px;
+}
+
+.sidebar-user-profil a {
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.sidebar-img-profil img {
+    width: 50px;
+    height: 50px;
+    border-radius: 120%;
+}
+
+.sidebar-user-profil {
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+
+.sidebar-user-profil span {
+    font-weight: 500;
+}
+
+.sidebar-menu ul li {
+    list-style: none;
+}
+
+.sidebar-link {
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+}
+
+.submenu-item a {
+    font-size: 12px;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 20px;
+    color: #000000;
+}
+
+.submenu-item {
+    margin: 20px;
+}
+
+.sidebar-link .icon-title {
+    font-size: 20px;
+    margin-right: 10%;
+    color: #0047AD;
+}
+
+.sidebar-title {
+    line-height: 30px;
+}
+
+.nav-pesanan {
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+    height: 60px;
+}
+
+.nav-pesanan label {
+    font: 600;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 20px 0px 10px 25px;
+}
+
+@media only screen and (max-width: 576px) {
+    .sidebar-menu{
+        display: none;
+    }
+    .sidebar-profil{
+        display: none;
+    }
+
+    .content-profil{
+        width: 100% !important;
+    }
+    .note-profil{
+        width: 98% !important;
+    }
+
+    .image-profil{
+        width: 90% !important;
+    }
+
+    .button-change-img button{
+        font-size: 11px !important;
+        width: 50% !important;
+    }
+
+    .note-image-profil{
+        padding-left: 15px;
+    }
+    .note-image-profil p{
+        text-align: center;
+        padding: 5px;
+        width: 60%;
+    }
+
+    .input-biodata{
+        width: 90% !important;
+    }
+}
+
+@media only screen and (min-width: 576px){
+    .navbar-toggler{
+        display: none;
+    }
+}
