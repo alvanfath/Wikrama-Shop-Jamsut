@@ -185,18 +185,23 @@ class ProductController extends Controller
     public function edit($id)
     {
         $data = DB::table('product')->where('no_product', $id)->join('category', 'product.category_id', '=', 'category.id')->first();
-        $output =  [
-            'id' => $data->id,
-            'no_product' => $data->no_product,
-            'product_image' => asset("uploads/product/{$data->product_image}"),
-            'product_name' => $data->product_name,
-            'description' => $data->description,
-            'category_id' => $data->category_id,
-            'category' => $data->category,
-            'supplier_id' => $data->supplier_id,
-            'discount' => $data->discount
-        ];
-        return response()->json($output,200);
+        if ($data) {
+            $output =  [
+                'id' => $data->id,
+                'no_product' => $data->no_product,
+                'product_image' => asset("uploads/product/{$data->product_image}"),
+                'product_name' => $data->product_name,
+                'description' => $data->description,
+                'category_id' => $data->category_id,
+                'category' => $data->category,
+                'supplier_id' => $data->supplier_id,
+                'discount' => $data->discount
+            ];
+            return response()->json($output,200);
+        }
+        return response()->json([
+            'message' => 'Data Produk tidak valid'
+        ],404);
     }
 
     /**

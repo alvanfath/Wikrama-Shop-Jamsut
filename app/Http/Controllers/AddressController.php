@@ -78,7 +78,7 @@ class AddressController extends Controller
     }
 
     public function generateNoAddress(){
-        $result = Str::random(20);
+        $result = Str::random(12);
         $data = DB::table('address')->where('no_address', $result)->first();
         if ($data) {
             return $this->generateNoAddress();

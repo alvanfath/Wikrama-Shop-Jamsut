@@ -16,12 +16,13 @@ class CreateTransactionTable extends Migration
     {
         Schema::create('transaction', function (Blueprint $table) {
             $table->id();
-            $table->string('nomor_transaksi', 12)->unique();
+            $table->string('nomor_transaksi', 12);
             $table->string('user_id')->nullable();
             $table->string('product_code');
             $table->string('variant_code');
             $table->integer('quantity');
             $table->bigInteger('total_price');
+            $table->enum('status', ['Unpaid', 'Paid', 'Expired', 'live transaction']);
             $table->timestamps();
         });
     }
