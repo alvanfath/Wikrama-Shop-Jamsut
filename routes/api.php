@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\PageUserController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\admin\ChartController;
@@ -40,16 +41,22 @@ Route::middleware(['auth'])->group(function () {
     Route::put('update-profile', [ProfileController::class, 'updateProfile'])->name('update-profile');
     Route::put('update-password', [ProfileController::class, 'updatePassword'])->name('update-password');
 
-    Route::prefix('address')->name('address')->group(function () {
-        Route::get('/', [AddressController::class, 'index'])->name('.index');
-        Route::get('/create', [AddressController::class, 'create'])->name('.create');
-        Route::post('/get-city', [AddressController::class, 'getCity'])->name('.get-city');
-        Route::post('/get-district', [AddressController::class, 'getDistrict'])->name('.get-district');
-        Route::post('/get-village', [AddressController::class, 'getVillage'])->name('.get-village');
-        Route::post('/store', [AddressController::class, 'store'])->name('.store');
-        Route::get('{no_address}/edit', [AddressController::class, 'edit'])->name('.edit');
-        Route::put('{no_address}/update', [AddressController::class, 'update'])->name('.update');
-        Route::delete('{no_address}/destroy', [AddressController::class, 'destroy'])->name('.destroy');
+    Route::middleware(['auth:api'])->group(function () {
+        Route::prefix('address')->name('address')->group(function () {
+            Route::get('/', [AddressController::class, 'index'])->name('.index');
+            Route::get('/create', [AddressController::class, 'create'])->name('.create');
+            Route::post('/get-city', [AddressController::class, 'getCity'])->name('.get-city');
+            Route::post('/get-district', [AddressController::class, 'getDistrict'])->name('.get-district');
+            Route::post('/get-village', [AddressController::class, 'getVillage'])->name('.get-village');
+            Route::post('/store', [AddressController::class, 'store'])->name('.store');
+            Route::get('{no_address}/edit', [AddressController::class, 'edit'])->name('.edit');
+            Route::put('{no_address}/update', [AddressController::class, 'update'])->name('.update');
+            Route::delete('{no_address}/destroy', [AddressController::class, 'destroy'])->name('.destroy');
+        });
+
+        Route::get('home', [PageUserController::class, 'index'])->name('home');
+        Route::get('product-detail/{no_product}', [PageUserController::class, 'productDetail'])->name('product-detail');
+        Route::get('product-detail/{no_product}', [PageUserController::class, 'productDetail'])->name('product-detail');
     });
 });
 
@@ -89,9 +96,9 @@ Route::prefix('/webmin')->name('webmin.')->group(function () {
             Route::get('/',[ProductController::class,'index'])->name('.index');
             Route::get('/create',[ProductController::class,'create'])->name('.create');
             Route::post('/store', [ProductController::class, 'store'])->name('.store');
-            Route::get('/edit/{id}',[ProductController::class, 'edit'])->name('.edit');
-            Route::put('/update/{id}', [ProductController::class, 'update'])->name('.update');
-            Route::delete('/destroy/{id}', [ProductController::class, 'destroy'])->name('.destroy');
+            Route::get('/edit/{procut_code}',[ProductController::class, 'edit'])->name('.edit');
+            Route::put('/update/{procut_code}', [ProductController::class, 'update'])->name('.update');
+            Route::delete('/destroy/{procut_code}', [ProductController::class, 'destroy'])->name('.destroy');
 
             //variant
             Route::prefix('variant')->name('.variant')->group(function () {
@@ -107,6 +114,8 @@ Route::prefix('/webmin')->name('webmin.')->group(function () {
         // transaction
         Route::prefix('transaction')->name('transaction')->group(function () {
             Route::get('/', [TransaksiKasirController::class, 'index'])->name('.index');
+            Route::get('/{no_product}', [TransaksiKasirController::class, 'detailTransaction'])->name('.detail-transaction');
+            Route::put('/pay/{no_product}', [TransaksiKasirController::class, 'payTransaction'])->name('.pay-transaction');
             Route::post('/store', [TransaksiKasirController::class, 'store'])->name('.store');
             Route::get('/get-variant/{no_product}', [TransaksiKasirController::class, 'getVariant'])->name('.get-variant');
         });
