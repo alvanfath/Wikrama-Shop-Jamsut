@@ -22,7 +22,7 @@ function LoginAdmin() {
         formData.append('email', email);
         formData.append('password', password);
 
-        await axios.post('http://127.0.0.1:8000/api/webmin/login', formData)
+        await axios.post(process.env.REACT_APP_API + '/webmin/login', formData)
         .then((res) => {
             localStorage.setItem('webmin_token', res.data.access_token);
             navigate('/webmin');

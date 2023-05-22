@@ -147,17 +147,28 @@ li.webmin-sidelink {
     font-weight: 600;
 }
 
-.input-kasir input,
-.css-1fdsijx-ValueContainer {
+.input-kasir input {
     margin-bottom: 10px;
     margin-top: 5px;
-    padding: 5px;
-    width: 200px;
+    padding: 5px 10px 5px 10px;
+    width: 100%;
     border: 1px solid #5278Ff;
+    outline: none;
 }
 
-.css-1xc3v61-indicatorContainer {
+.css-13cymwt-control {
+    border: 1px solid #5278Ff !important;
+}
+
+/* .css-1xc3v61-indicatorContainer {
     border: 1px solid #5278Ff;
+} */
+
+input[type="number"].form-control.webmin-qty {
+    padding: 5px 10px 5px 10px !important;
+    border-width: 1px !important;
+    width: 80px;
+    margin-bottom: 0 !important;
 }
 
 .kalkulasi-kasir label {
@@ -174,12 +185,19 @@ li.webmin-sidelink {
     font-size: 16px;
     margin-left: 15px;
     margin-bottom: 10px;
-    padding: 3px 5px;
+    padding: 5px 10px 5px 10px;
     text-align: left !important;
     width: 120px !important;
 }
 
+/* supplier */
 
+input[type="number"].form-control.number-phone {
+    width: 100%;
+    padding: 5px 10px 5px 10px !important;
+    border-width: 1px !important;
+    text-align: start;
+}
 
 /* Responsive */
 

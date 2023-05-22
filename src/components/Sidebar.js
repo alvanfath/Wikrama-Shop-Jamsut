@@ -16,7 +16,7 @@ function Sidebar(props) {
     // Logout
     const logoutHandler = async () => {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        await axios.get('http://127.0.0.1:8000/api/webmin/logout')
+        await axios.get(process.env.REACT_APP_API + '/webmin/logout')
         .then(() => {
             localStorage.removeItem('webmin_token');
             navigate('/webmin/login');

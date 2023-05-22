@@ -29,7 +29,7 @@ function Register() {
         formData.append('password', password);
         formData.append('confirm_password', confirmationPassword);
 
-        await axios.post('http://127.0.0.1:8000/api/register', formData)
+        await axios.post(process.env.REACT_APP_API + '/register', formData)
         .then((res) => {
             navigate('/login', {
                 state: res.data.message
@@ -192,7 +192,6 @@ function Register() {
                             <div className="grey-line">──────────</div>
                         </div>
                         <div className="other-auth mb-4">
-                            <a href="https://cf28-2001-448a-304a-51c6-a96b-3ad0-7da2-c74e.ngrok-free.app/api/auth/facebook">Facebook</a>
                             <button className="auth-facebook"><img className="me-2" src={FacebookIcon} alt="Facebook" /> Facebook</button>
                             <button className="auth-google"><img className="me-2" src={GoogleIcon} alt="Facebook" /> Google</button>
                         </div>

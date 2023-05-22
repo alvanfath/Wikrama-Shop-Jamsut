@@ -19,7 +19,7 @@ function NavWebmin() {
     // Get Data User Logged In
     const fetchUser = async () => {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        await axios.get('http://127.0.0.1:8000/api/webmin/my-profile')
+        await axios.get(process.env.REACT_APP_API + '/webmin/my-profile')
             .then((res) => {
                 setUsername(res.data.username);
             }).catch((error) => {

@@ -16,7 +16,7 @@ function NavigationBar() {
     // Get Data User Logged In
     const fetchUser = async () => {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        await axios.get('http://127.0.0.1:8000/api/my-profile')
+        await axios.get(process.env.REACT_APP_API + '/my-profile')
         .then((res) => {
             setUsername(res.data.username);
         }).catch((error) => {
@@ -32,7 +32,7 @@ function NavigationBar() {
     // Logout
     const logoutHandler = async () => {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        await axios.get('http://127.0.0.1:8000/api/logout')
+        await axios.get(process.env.REACT_APP_API + '/logout')
         .then(() => {
             localStorage.removeItem('token');
             navigate('/login');

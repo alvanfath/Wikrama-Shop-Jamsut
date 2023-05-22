@@ -23,7 +23,7 @@ function Login() {
         formData.append('email', email);
         formData.append('password', password);
 
-        await axios.post('http://127.0.0.1:8000/api/login', formData)
+        await axios.post(process.env.REACT_APP_API + "/login", formData)
         .then((res) => {
             if(res.data.error) {
                 notifyMustVerified(res.data.error);

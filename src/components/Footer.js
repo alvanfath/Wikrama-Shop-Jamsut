@@ -19,7 +19,7 @@ function Footer() {
                             <div className="col-12 col-md-3 col-lg-3">
                                 <div className="footer-text">
                                     <h3>Lokasi</h3>
-                                    <p>Gedung wikrama R.203, jalan wangun, bogor timur</p>
+                                    <p>Gedung Wikrama Ruang 203, Jalan Wangun, Bogor Timur</p>
                                 </div>
                             </div>
                             <div className="col-12 col-md-3 col-lg-3">

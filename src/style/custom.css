@@ -1175,6 +1175,7 @@ input.small-checkbox {
 
     .pass-first {
         margin-right: 0;
+        margin-bottom: 0.5rem;
     }
 
     input[type="password"].form-control.auth-input.login-input {
@@ -1476,6 +1477,7 @@ input.small-checkbox {
 
     .pass-first {
         margin-right: 0;
+        margin-bottom: 0.5rem;
     }
 
     input[type="password"].form-control.auth-input.login-input {
