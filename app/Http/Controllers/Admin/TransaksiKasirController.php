@@ -11,11 +11,7 @@ use Illuminate\Support\Facades\Validator;
 class TransaksiKasirController extends Controller
 {
     public function index(){
-        $data = DB::table('transaction')
-        ->join('product', 'transaction.product_code', '=', 'product.no_product')
-        ->join('variant', 'transaction.variant_code', '=', 'variant.no_variant')
-        ->select('transaction.*', 'product.product_image', 'product.product_name as product', 'variant.variant_image', 'variant.variant_name as variant', 'variant.price')
-        ->get();
+        $data = DB::table('transaction_group')->get();
 
         return response()->json($data, 200);
     }
@@ -104,7 +100,9 @@ class TransaksiKasirController extends Controller
             'message' => 'Berhasil membuat transaksi',
             'transaction_code' => $code,
             'result' => $result,
-            'total_amount' => $sumTotal
+            'total_amount' => $sumTotal,
+            'tanggal_transaksi' => now(),
+            'url_pay' => route('webmin.transaction.pay-transaction', $code)
         ], 201);
 
     }
@@ -117,10 +115,9 @@ class TransaksiKasirController extends Controller
             ->join('variant', 'transaction.variant_code', '=', 'variant.no_variant')
             ->select('transaction.*', 'product.product_image', 'product.product_name as product', 'variant.variant_image', 'variant.variant_name as variant', 'variant.price')
             ->get();
-
+            $transaction_group->buying_item = $item;
             return response()->json([
-                'transaksi' => $transaction_group,
-                'item' => $item
+                'transaksi' => $transaction_group
             ], 200);
         }
         return response()->json([
