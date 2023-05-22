@@ -14,6 +14,7 @@ import './App.css';
 import Kasir from './pages/admin/Kasir';
 import Supplier from './pages/admin/supplier/Supplier';
 import Product from './pages/admin/Product';
+import Category from './pages/admin/Category';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="kasir" element={<Kasir />}></Route>
           <Route path="supplier" element={<Supplier />}></Route>
           <Route path="produK" element={<Product />}></Route>
+          <Route path="kategori" element={<Category />}></Route>
         </Route>
       </Routes>
     </>

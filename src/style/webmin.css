@@ -187,7 +187,9 @@ li.webmin-sidelink {
 .icon-data i{
     font-size: 1000px !important;
 }
-
+ textarea{
+    border-color: #5278FF !important;
+ }
 
 
 /* Responsive */
