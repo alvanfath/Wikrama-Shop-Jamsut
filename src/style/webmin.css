@@ -178,7 +178,18 @@ li.webmin-sidelink {
     text-align: left !important;
     width: 120px !important;
 }
-
+.card-data{
+    background-color: #5278FF;
+    padding: 5px 5px;
+    border-radius: 5px;
+    color: white;
+}
+.icon-data i{
+    font-size: 1000px !important;
+}
+ textarea{
+    border-color: #5278FF !important;
+ }
 
 
 /* Responsive */

@@ -20,6 +20,7 @@ section.small-section {
     padding: 25px 0;
 }
 
+
 /* button */
 button.btn-outline {
     padding: 6px 22px;
@@ -1306,7 +1307,7 @@ input.small-checkbox {
     h5.card-harga {
         position: relative;
         top: 5px;
-        font-size: 9px;
+        font-size: 12px;
     }
 
     button.card-button {
@@ -1323,7 +1324,7 @@ input.small-checkbox {
     }
 
     .card.categories img {
-        width: 168px !important;
+        width: 160px !important;
     }
 
     .txt-card-categories {
@@ -1569,8 +1570,8 @@ input.small-checkbox {
 
     button.card-button {
         position: relative;
-        top: 10px;
-        font-size: 14px;
+        top: -3px;
+        font-size: 12px;
     }
     .nama-produk-pembayaran{
         text-align: left;
@@ -1581,6 +1582,12 @@ input.small-checkbox {
     }
     .card-m-pembayaran img{
         width: 50px;
+    }
+    .slick-slider{
+        width: 335px !important;
+    }
+    .card-by span {
+      font-size: 10px !important;
     }
 
 }
