@@ -2,32 +2,29 @@ import { useEffect, useState } from "react";
 import banner from "../../assets/banner-kasir.png";
 import DataTable from "react-data-table-component";
 import axios from "axios";
-import { Button, Modal } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { toast, ToastContainer } from "react-toastify";
 
 function Supplier() {
-    const [modalShow, setModalShow] = useState(false);
-    const [editModalShow, setEditModalShow] = useState(false);
-    const [deleteModalShow, setDeleteModalShow] = useState(false);
-    const [supplier, setSupplier] = useState();
+    const [supplier, setSupplier] = useState([]);
     const [validation, setValidation] = useState([]);
+    const [editMode, setEditMode] = useState(false);
+    const [currentID, setCurrentID] = useState();
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
 
-    // Get Supplier
     useEffect(() => {
         axios.get(process.env.REACT_APP_API + "/webmin/supplier")
             .then((res) => {
                 setSupplier(res.data);
             }).catch((error) => {});
-    }, [supplier]);
+    }, []);
 
-    // Add Supplier
-    const addSupplier = async (e) => {
+    const supplierHandler = async (e) => {
         e.preventDefault();
 
         const formData = new FormData();
@@ -35,22 +32,39 @@ function Supplier() {
         formData.append('email', email);
         formData.append('phone_number', phoneNumber);
 
-        await axios.post(process.env.REACT_APP_API + "/webmin/supplier/store", formData)
-        .then((res) => {
-            notifySuccess(res.data.message);
-            setName('');
-            setEmail('');
-            setPhoneNumber('');
-            setModalShow(false);
-        }).catch((error) => {
-            setValidation(error.response.data);
-            notifyFailed("Gagal menambahkan supplier");
-        });
+        if(editMode == false) {
+            await axios.post(process.env.REACT_APP_API + "/webmin/supplier/store", formData)
+            .then((res) => {
+                notifySuccess(res.data.message);
+                setName('');
+                setEmail('');
+                setPhoneNumber('');
+            }).catch((error) => {
+                setValidation(error.response.data);
+                notifyFailed("Gagal menambahkan supplier");
+            });
+        } else if(editMode == true) {
+            await axios.put(process.env.REACT_APP_API + "/webmin/supplier/update/" + currentID, {
+                name: name,
+                email: email,
+                phone_number: phoneNumber
+            })
+            .then((res) => {
+                notifySuccess(res.data.message);
+                setEditMode(false);
+                setName('');
+                setEmail('');
+                setPhoneNumber('');
+            }).catch((error) => {
+                setValidation(error.response.data);
+                notifyFailed("Gagal mengedit supplier");
+            });
+        }
     };
 
-    // Edit Supplier
     const editSupplier = async (id) => {
-        setEditModalShow(true);
+        setEditMode(true);
+        setCurrentID(id);
 
         await axios.get(process.env.REACT_APP_API + '/webmin/supplier/edit/' + id)
         .then((res) => {
@@ -58,32 +72,24 @@ function Supplier() {
             setEmail(res.data.email);
             setPhoneNumber(res.data.phone_number);
         }).catch((error) => {});
-
-        // Update Supplier
-        const updateSupplier = async (e) => {
-            e.preventDefault();
-    
-            const formData = new FormData();
-            formData.append('name', name);
-            formData.append('email', email);
-            formData.append('phone_number', phoneNumber);
-    
-            await axios.post(process.env.REACT_APP_API + "/webmin/supplier/update/" + id, formData)
-            .then((res) => {
-                notifySuccess(res.data.message);
-                setName('');
-                setEmail('');
-                setPhoneNumber('');
-                setEditModalShow(false);
-            }).catch((error) => {
-                setValidation(error.response.data);
-                notifyFailed("Gagal menambahkan supplier");
-            });
-        };
     };
 
+    const deleteSupplier = async (id) => {
+        await axios.delete(process.env.REACT_APP_API + '/webmin/supplier/destroy/' + id)
+        .then((res) => {
+            notifySuccess(res.data.message);
+        }).catch((error) => {
+            notifyFailed("Gagal menghapus supplier");
+        });
+    }
 
-    // Toast
+    const closeEditMode = () => {
+        setName('');
+        setEmail('');
+        setPhoneNumber('');
+        setEditMode(false);
+    }
+
     const notifySuccess = async (message) => {
         toast.success(message, {
             position: "top-right",
@@ -125,19 +131,10 @@ function Supplier() {
             selector: row => 
             <div>
                 <Button variant="warning" onClick={() => editSupplier(row.id)}><FontAwesomeIcon icon={faPencil} /></Button>
-                <Button className="ms-2" variant="danger"><FontAwesomeIcon icon={faTrash} /></Button>
+                <Button className="ms-2" variant="danger" onClick={() => deleteSupplier(row.id)}><FontAwesomeIcon icon={faTrash} /></Button>
             </div>
         },
     ];
-
-    const closeModal = () => {
-        setName('');
-        setEmail('');
-        setPhoneNumber('');
-        setModalShow(false);
-        setEditModalShow(false);
-        setDeleteModalShow(false);
-    };
 
     return (
         <>
@@ -150,136 +147,82 @@ function Supplier() {
                         <div className="container-fluid">
                             <div className="col-5 carousel-caption">
                                 <h1>Supplier Wikrama Shop</h1>
-                                <p>Memberikan Peluang UMKM</p>
+                                <p>Melayani Dengan Sepenuh Hati</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 {/* end banner */}
             </section>
-            {/* kasir */}
+            {/* supplier */}
             <section className="small-section">
                 <div className="container">
-                    <div className="container mt-3">
-                        <button className="btn-solid" onClick={()=> setModalShow(true)}>Tambah</button>
-                    </div>
-                    {/* modal add */}
-                    <Modal
-                        show={modalShow}
-                        aria-labelledby="contained-modal-title-vcenter"
-                        centered
-                        >
-                        <Modal.Header className="justify-content-center">
-                            <Modal.Title id="contained-modal-title-vcenter">
-                                Tambah Supplier
-                            </Modal.Title>
-                        </Modal.Header>
-                        <form onSubmit={addSupplier}>
-                            <Modal.Body>
-                                    <div className="input-kasir mb-2">
-                                        <span>Nama Supplier</span>
-                                        <input className="form-control" placeholder="Nama Supplier*" value={name} onChange={(e) => setName(e.target.value)}></input>
-                                        {
-                                            validation.name && 
-                                            (
-                                                <div className="validation-error mt-1">
-                                                    {validation.name}
-                                                </div>
-                                            )
-                                        }
+                    <form onSubmit={supplierHandler}>
+                        <div className="row">
+                            <div className="col-lg-4 col-md-6">
+                                <div className="input-kasir">
+                                    <span>Nama Supplier</span>
+                                    <input className="form-control" type="text" placeholder="Nama Supplier*" value={name} onChange={(e) => setName(e.target.value)}></input>
+                                    {
+                                        validation.name && 
+                                        (
+                                            <div className="validation-error mt-1">
+                                                {validation.name}
+                                            </div>
+                                        )
+                                    }
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6">
+                                <div className="input-kasir">
+                                    <span>Email Supplier</span>
+                                    <input className="form-control" type="email" placeholder="Email Supplier*" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                                    {
+                                        validation.email && 
+                                        (
+                                            <div className="validation-error mt-1">
+                                                {validation.email}
+                                            </div>
+                                        )
+                                    }
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6">
+                                <div className="input-kasir">
+                                    <span>Nomor Telepon</span>
+                                    <input className="form-control" type="text" placeholder="Nomor Telepon*" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}></input>
+                                    {
+                                        validation.phone_number && 
+                                        (
+                                            <div className="validation-error mt-1">
+                                                {validation.phone_number}
+                                            </div>
+                                        )
+                                    }
+                                </div>
+                            </div>
+                            <div className="container mt-3">
+                                {
+                                    (editMode == false) ?
+                                    <button className="btn btn-success">
+                                        Tambah
+                                    </button>
+                                    :
+                                    <div>
+                                        <button className="btn btn-warning">
+                                            Edit
+                                        </button>
+                                        <button className="btn btn-danger ms-2" onClick={closeEditMode}>
+                                            Batal Edit
+                                        </button>
                                     </div>
-                                    <div className="input-kasir mb-2">
-                                        <span>Email Supplier</span>
-                                        <input type="email" className="form-control" placeholder="Email Supplier*" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-                                        {
-                                            validation.email && 
-                                            (
-                                                <div className="validation-error mt-1">
-                                                    {validation.email}
-                                                </div>
-                                            )
-                                        }
-                                    </div>
-                                    <div className="input-kasir">
-                                        <span>Nomor Telepon</span>
-                                        <input className="form-control number-phone" type="number" placeholder="Nomor Telepon*" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}></input>
-                                        {
-                                            validation.phone_number && 
-                                            (
-                                                <div className="validation-error mt-1">
-                                                    {validation.phone_number}
-                                                </div>
-                                            )
-                                        }
-                                    </div>
-                            </Modal.Body>
-                            <Modal.Footer>
-                                <Button variant="secondary" onClick={() => closeModal()}>Tutup</Button>
-                                <Button type="submit" variant="success">Tambah</Button>
-                            </Modal.Footer>
-                        </form>
-                    </Modal>
-                    {/* end modal add */}
-                    {/* modal edit */}
-                    <Modal
-                        show={editModalShow}
-                        aria-labelledby="contained-modal-title-vcenter"
-                        centered
-                        >
-                        <Modal.Header className="justify-content-center">
-                            <Modal.Title id="contained-modal-title-vcenter">
-                                Edit Supplier
-                            </Modal.Title>
-                        </Modal.Header>
-                        <form>
-                            <Modal.Body>
-                                    <div className="input-kasir mb-2">
-                                        <span>Nama Supplier</span>
-                                        <input className="form-control" placeholder="Nama Supplier*" value={name} onChange={(e) => setName(e.target.value)}></input>
-                                        {
-                                            validation.name && 
-                                            (
-                                                <div className="validation-error mt-1">
-                                                    {validation.name}
-                                                </div>
-                                            )
-                                        }
-                                    </div>
-                                    <div className="input-kasir mb-2">
-                                        <span>Email Supplier</span>
-                                        <input type="email" className="form-control" placeholder="Email Supplier*" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-                                        {
-                                            validation.email && 
-                                            (
-                                                <div className="validation-error mt-1">
-                                                    {validation.email}
-                                                </div>
-                                            )
-                                        }
-                                    </div>
-                                    <div className="input-kasir">
-                                        <span>Nomor Telepon</span>
-                                        <input className="form-control number-phone" type="number" placeholder="Nomor Telepon*" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}></input>
-                                        {
-                                            validation.phone_number && 
-                                            (
-                                                <div className="validation-error mt-1">
-                                                    {validation.phone_number}
-                                                </div>
-                                            )
-                                        }
-                                    </div>
-                            </Modal.Body>
-                            <Modal.Footer>
-                                <Button variant="secondary" onClick={() => closeModal()}>Tutup</Button>
-                                <Button type="submit" variant="warning">Edit</Button>
-                            </Modal.Footer>
-                        </form>
-                    </Modal>
-                    {/* end modal edit */}
+                                }
+                            </div>                       
+                        </div>
+                    </form>
                 </div>
             </section>
-            {/* emd kasir */}
+            {/* end supplier */}
             {/* table */}
             <DataTable columns={columns} data={supplier} pagination />
             {/* end table */}

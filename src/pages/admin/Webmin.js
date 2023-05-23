@@ -2,6 +2,9 @@ import { Outlet, useLocation } from 'react-router-dom';
 import NavWebmin from '../../components/NavWebmin';
 import ChartBanner from '../../assets/bigger-chart-banner.png';
 import '../../style/webmin.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBoxOpen, faTags, faTruckFast, faUsers } from "@fortawesome/free-solid-svg-icons";
+
 
 function Webmin() {
     const location = useLocation();
@@ -12,7 +15,7 @@ function Webmin() {
             <div className="webmin-wrapper">
                 <div className="webmin-content">
                     {
-                        location.pathname === "/webmin" && 
+                        location.pathname === "/webmin" &&
                         (
                             <div className="webmin-banner">
                                 <div className="webmin-banner-text">
@@ -21,8 +24,14 @@ function Webmin() {
                                 </div>
                                 <img src={ChartBanner} alt="Banner" />
                             </div>
+
                         )
+
+
                     }
+
+             
+
                     <Outlet />
                 </div>
             </div>

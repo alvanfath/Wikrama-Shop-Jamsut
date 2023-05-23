@@ -1,5 +1,5 @@
 import axios from "axios";
-import { faBoxOpen, faCashRegister, faHouseChimney, faPowerOff, faTags, faTruckFast, faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faBoxOpen, faCashRegister, faGripVertical, faHouseChimney, faPowerOff, faTags, faTruckFast, faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
@@ -53,6 +53,13 @@ function Sidebar(props) {
                             <FontAwesomeIcon className="me-3" icon={faBoxOpen} />Produk
                         </li>
                     </Link>
+                    <Link className="webmin-link" to="/webmin/varian">
+                        <li className={
+                            location.pathname === '/webmin/varian' ? 'webmin-sidelink mb-3 active' : 'webmin-sidelink mb-3'
+                        }>
+                            <FontAwesomeIcon className="me-3" icon={faGripVertical} />Varian
+                        </li>
+                    </Link>
                     <Link className="webmin-link" to="/webmin/kategori">
                         <li className={
                             location.pathname === '/webmin/kategori' ? 'webmin-sidelink mb-3 active' : 'webmin-sidelink mb-3'
@@ -65,13 +72,6 @@ function Sidebar(props) {
                             location.pathname === '/webmin/supplier' ? 'webmin-sidelink mb-3 active' : 'webmin-sidelink mb-3'
                         }>
                             <FontAwesomeIcon className="me-3" icon={faTruckFast} />Supplier
-                        </li>
-                    </Link>
-                    <Link className="webmin-link" to="/webmin/users">
-                        <li className={
-                            location.pathname === '/webmin/users' ? 'webmin-sidelink mb-4 active' : 'webmin-sidelink mb-4'
-                        }>
-                            <FontAwesomeIcon className="me-3" icon={faUsers} />Users
                         </li>
                     </Link>
                     <li className="webmin-title-sidelink">Profile</li>

@@ -1,88 +1,55 @@
 import banner from "../../assets/banner-kasir.png";
-import Select from 'react-select'
-import Table from 'react-bootstrap/Table';
 import axios from "axios";
+import Logo from "../../assets/logo.png";
+import { toast, ToastContainer } from "react-toastify";
 import { useEffect, useState } from "react";
-import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
-
-const productOptions = [
-    { value: 'Keripik Kaca Pedas', label: 'Keripik Kaca Pedas' },
-    { value: 'Susu', label: 'Susu' },
-    { value: 'Motor', label: 'Motor' }
-]
-
-const variantOptions = [
-    { value: 'Keripik Kaca Pedas', label: 'Keripik Kaca Pedas' },
-    { value: 'Susu', label: 'Susu' },
-    { value: 'Motor', label: 'Motor' }
-]
+import { Form } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 function Kasir() {
-    const navigate = useNavigate();
-    const token = localStorage.getItem('webmin_token');
-    const [cart, setCart] = useState([]);
+    const [getProduct, setGetProduct] = useState([]);
+    const [getVariant, setGetVariant] = useState([]);
     const [validation, setValidation] = useState([]);
 
-    const [transactionNumber, setTransactionNumber] = useState('');
-    const [user, setUser] = useState('');
     const [product, setProduct] = useState('');
     const [variant, setVariant] = useState('');
     const [quantity, setQuantity] = useState('');
+    
+    // console.log(getProduct);
 
-    const confirmPaymentHandler = async (e) => {
+    useEffect(() => {
+        axios.get(process.env.REACT_APP_API + "/webmin/product")
+            .then((res) => {
+                setGetProduct(res.data);
+            }).catch((error) => {});
+        if(product) {
+            axios.get(process.env.REACT_APP_API + "/webmin/product/variant/" + product)
+                .then((res) => {
+                    setGetVariant(res.data);
+                }).catch((error) => {});
+        }
+    }, [product]);
+
+    const cashierHandler = async (e) => {
         e.preventDefault();
         
         const formData = new FormData();
-        formData.append('nomor_transaksi', transactionNumber);
-        formData.append('user_id', user);
         formData.append('product_code', product);
         formData.append('variant_code', variant);
         formData.append('quantity', quantity);
-        formData.append('total_price', quantity);
         
         await axios.post(process.env.REACT_APP_API + "/webmin/transaction/store", formData)
         .then((res) => {
-            // if(res.data.error) {
-            //     notifyMustVerified(res.data.error);
-            // } else {
-            //     localStorage.setItem('token', res.data.access_token);
-            //     navigate('/');
-            // }
+            notifySuccess("Berhasil melakukan transaksi");
         }).catch((error) => {
+            console.log(error);
             setValidation(error.response.data);
+            notifyFailed("Gagal melakukan transaksi");
         });
     }
 
-    const getVariant = async (code) => {
-        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        await axios.get(process.env.REACT_APP_API + '/webmin/transaction/get-variant/' + code)
-            .then((res) => {
-                
-            }).catch((error) => {
-                if(error.response) {
-
-                }
-            });
-    }
-
-    const fetchUser = async () => {
-        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        await axios.get(process.env.REACT_APP_API + '/webmin/my-profile')
-            .then((res) => {
-                setUser(res.data);
-            }).catch((error) => {
-                if (error.response) {
-                    localStorage.removeItem('webmin_token');
-                    navigate('/webmin/login', {
-                        state: 'Sesi login berakhir, silahkan login kembali'
-                    });
-                }
-            });
-    }
-
     const notifySuccess = async (message) => {
-        toast.error(message, {
+        toast.success(message, {
             position: "top-right",
             autoClose: 3000,
             hideProgressBar: false,
@@ -101,16 +68,9 @@ function Kasir() {
         });
     }
 
-    useEffect(() => {
-        if (token) {
-            fetchUser();
-        } else {
-            navigate('/webmin/login');
-        }
-    }, []);
-
     return (
         <>
+            <ToastContainer />
             <section>
                 {/* banner */}
                 <div className="carousel-inner">
@@ -129,30 +89,21 @@ function Kasir() {
             {/* kasir */}
             <section className="small-section">
                 <div className="container">
-                    <form onSubmit={confirmPaymentHandler}>
+                    <form onSubmit={cashierHandler}>
                         <div className="row">
-                            <div className="col-lg-3 col-md-6">
-                                <div className="input-kasir">
-                                    <span>No Transaksi</span>
-                                    <input className="form-control disabled" disabled></input>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6">
-                                <div className="input-kasir">
-                                    <span>Nama Kasir</span>
-                                    <input className="form-control" value={user.name} disabled></input>
-                                </div>
-                            </div>
                             <div className="col-lg-3">
                                 <div className="input-kasir">
-                                    <span>Tanggal</span>
-                                    <input className="form-control" type="date" defaultValue={new Date().toISOString().substring(0, 10)}></input>
-                                </div>
-                            </div>
-                            <div className="col-lg-3">
-                                <div className="input-kasir">
-                                    <span>Pilih Produk</span>
-                                    <Select className="mt-1" options={productOptions} onChange={(productOptions) => getVariant(productOptions.value)} />
+                                    <span>Produk</span>
+                                    <Form.Select onChange={(e) => setProduct(e.target.value)}>
+                                        <option hidden>== Pilih Produk ==</option>
+                                        {
+                                            getProduct.map(function(p) {
+                                                return (
+                                                    <option key={p.no_product} value={p.no_product}>{p.product_name}</option>
+                                                )
+                                            })
+                                        }
+                                    </Form.Select>
                                     {
                                         validation.product_code && 
                                         (
@@ -163,92 +114,88 @@ function Kasir() {
                                     }
                                 </div>
                             </div>
-                            <div className="col-lg-3">
-                                <div className="input-kasir">
-                                    <span>Pilih Varian</span>
-                                    <Select className="mt-1" options={variantOptions} onChange={(variantOptions) => setVariant(variantOptions.value)} />
-                                    {
-                                        validation.variant_code && 
-                                        (
-                                            <div className="validation-error mt-1">
-                                                {validation.variant_code}
+                            {
+                                product &&
+                                (
+                                    <>
+                                        <div className="col-lg-3">
+                                            <div className="input-kasir">
+                                                <span>Varian</span>
+                                                <Form.Select onChange={(e) => setVariant(e.target.value)}>
+                                                    <option hidden>== Pilih Varian ==</option>
+                                                    {
+                                                        getVariant.map(function(v) {
+                                                            return (
+                                                                <option key={v.no_variant} value={v.no_variant}>{v.variant_name} | {v.stock} Stock</option>
+                                                            )
+                                                        })
+                                                    }
+                                                </Form.Select>
+                                                {
+                                                    validation.variant_code && 
+                                                    (
+                                                        <div className="validation-error mt-1">
+                                                            {validation.variant_code}
+                                                        </div>
+                                                    )
+                                                }
                                             </div>
-                                        )
-                                    }
-                                </div>
-                            </div>
-                            <div className="col-lg-3">
-                                <div className="input-kasir">
-                                    <span>QTY</span>
-                                    <input className="form-control webmin-qty" type="number" min={1} value={quantity} onChange={(e) => setQuantity(e.target.value)}></input>
-                                    {
-                                        validation.quantity && 
-                                        (
-                                            <div className="validation-error mt-1">
-                                                {validation.quantity}
+                                        </div>
+                                        <div className="col-lg-3">
+                                            <div className="input-kasir">
+                                                <span>QTY</span>
+                                                <input className="form-control webmin-qty" type="number" min={1} value={quantity} onChange={(e) => setQuantity(e.target.value)}></input>
+                                                {
+                                                    validation.quantity && 
+                                                    (
+                                                        <div className="validation-error mt-1">
+                                                            {validation.quantity}
+                                                        </div>
+                                                    )
+                                                }
                                             </div>
-                                        )
-                                    }
-                                </div>
-                            </div>
-                            <div className="container mt-3">
-                                <button className="btn-solid">Masukan</button>
-                            </div>                       
+                                        </div>
+                                        <div className="container mt-3">
+                                            <button className="btn-solid">Submit</button>
+                                        </div>
+                                    </>
+                                )
+                            }
                         </div>
                     </form>
                 </div>
             </section>
-            {/* emd kasir */}
+            {/* end kasir */}
             {/* table */}
-            <section className="small-section">
-                <Table className="text-center" >
-                    <thead className="bg-blue text-white">
-                        <tr>
-                            <th>No</th>
-                            <th>Kode Barang</th>
-                            <th>Nama Barang</th>
-                            <th>Jumlah</th>
-                            <th>Harga Satuan</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>@fat</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </Table>
-            </section>
+            <div className="d-flex justify-content-center">
+                <div className="background-stroke">
+                    <Container fluid className="webmin-navbar-container">
+                        <img className="webmin-logo me-3" src={Logo} alt="Wikrama Shop" />
+                        <h5 className="mb-0 mt-2"><b>Wikrama Shop</b></h5>
+                        <div className="line-stroke mt-3"></div>
+                        <div className="d-flex justify-content-between mt-2">
+                            <p className="text-start">aaaaaa</p>
+                            <p className="text-end">Rp. aaaaa</p>
+                        </div>
+                        <div className="line-stroke mt-5"></div>
+                        <div className="d-flex justify-content-between mt-2">
+                            <p className="text-start"><b>Total</b></p>
+                            <p className="text-end"><b>Rp. aaaaa</b></p>
+                        </div>
+                    </Container>
+                </div>
+            </div>
+            <div className="container mt-3 text-end">
+                <button className="btn-solid">Cetak Struk</button>
+            </div>
             {/* end table */}
             {/* kalkulasi */}
-            <section className="small-section">
+            {/* <section className="small-section">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="kalkulasi-kasir">
                                 <h5>Sub Total : </h5>
-                                <h5>Diskon : </h5>
                                 <h5>Total : </h5>
                             </div>
                         </div>
@@ -262,7 +209,7 @@ function Kasir() {
                     </div>
 
                 </div>
-            </section>
+            </section> */}
             {/* end kalkulasi */}
 
         </>

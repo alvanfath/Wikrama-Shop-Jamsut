@@ -8,13 +8,13 @@ import DetailProduk from './pages/home/DetailProduk';
 import Pembayaran from './pages/home/Pembayaran';
 import Webmin from './pages/admin/Webmin';
 import LoginAdmin from './pages/admin/LoginAdmin';
-import ProfileAdmin from './pages/admin/ProfileAdmin';
 import Kasir from './pages/admin/Kasir';
 import Supplier from './pages/admin/Supplier';
-// import Produk from './pages/admin/produk/Produk';
-// import Kategori from './pages/admin/kategori/Kategori';
+import Product from './pages/admin/Product';
+import Category from './pages/admin/Category';
 import './style/custom.css';
 import './App.css';
+import Variant from './pages/admin/Variant';
 
 function App() {
   return (
@@ -31,10 +31,10 @@ function App() {
         <Route path="/pembayaran" element={<Pembayaran />}></Route>
         <Route path="/webmin/login" element={<LoginAdmin />}></Route>
         <Route path="/webmin" element={<Webmin />}>
-          <Route path="profile" element={<ProfileAdmin />}></Route>
           <Route path="kasir" element={<Kasir />}></Route>
-          {/* <Route path="produk" element={<Produk />}></Route> */}
-          {/* <Route path="kategori" element={<Kategori />}></Route> */}
+          <Route path="produk" element={<Product />}></Route>
+          <Route path="varian" element={<Variant />}></Route>
+          <Route path="kategori" element={<Category />}></Route>
           <Route path="supplier" element={<Supplier />}></Route>
         </Route>
       </Routes>
