@@ -67,23 +67,24 @@ class ProductController extends Controller
             'product_image' => 'required|mimes:png,jpg',
             'product_name' => 'required',
             'description' => 'required|min:20',
-            'supplier_id' => 'nullable',
-            'variant_image' => 'nullable|mimes:png,jpg',
-            'variant' => 'required',
-            'stock' => 'required|numeric|min:10',
-            'price' => 'required',
+            'supplier_id' => 'required',
+            // 'variant_image' => 'nullable|mimes:png,jpg',
+            // 'variant' => 'required',
+            // 'stock' => 'required|numeric|min:10',
+            // 'price' => 'required',
             'category_id' => 'required'
         ],[
             'product_image.required' => 'Gambar produk wajib diisi',
             'product_image.mimes' => 'Gambar produk harus berupa png atau jpg',
             'description.required' => 'Deskripsi wajib diisi',
-            'variant_image.mimes' => 'Gambar varian harus berupa png atau jpg',
-            'variant.required' => 'Nama varian harus diisi',
-            'stock.required' => 'Stok varian harus diisi',
-            'stock.numeric' => 'Stok varian harus berupa nomor',
-            'stock.min' => 'Stok varian minimal 10',
-            'price.required' => 'Harga varian harus diisi',
-            'category_id.required' => 'Kategori produk wajib diisi'
+            // 'variant_image.mimes' => 'Gambar varian harus berupa png atau jpg',
+            // 'variant.required' => 'Nama varian harus diisi',
+            // 'stock.required' => 'Stok varian harus diisi',
+            // 'stock.numeric' => 'Stok varian harus berupa nomor',
+            // 'stock.min' => 'Stok varian minimal 10',
+            // 'price.required' => 'Harga varian harus diisi',
+            'category_id.required' => 'Kategori produk wajib diisi',
+            'supplier_id.required' => 'Supplier produk wajib diisi'
         ]);
 
         if ($validator->fails()) {
@@ -219,14 +220,16 @@ class ProductController extends Controller
                 'product_image' => 'nullable|mimes:png,jpg',
                 'product_name' => 'required',
                 'description' => 'required|min:20',
-                'category_id' => 'required'
+                'category_id' => 'required',
+                'supplier_id' => 'required'
             ],
             [
                 'product_image.mimes' => 'Gambar produk harus berbentuk png atau jpg',
                 'product_name.required' => 'Nama produk harus diisi',
                 'description.required' => 'Deskripsi produk harus diisi',
                 'description.min' => 'Deskripsi minimal 20 karakter',
-                'category_id.required' => 'Kategori harus diisi'
+                'category_id.required' => 'Kategori harus diisi',
+                'supplier_id.required' => 'Supplier harus diisi'
             ]);
 
             if ($validator->fails()) {
@@ -244,13 +247,15 @@ class ProductController extends Controller
                     'product_image' => $file_name,
                     'product_name' => $request->input('product_name'),
                     'description' => $request->input('description'),
-                    'category_id' => $request->input('category_id')
+                    'category_id' => $request->input('category_id'),
+                    'supplier_id' => $request->input('supplier_id')
                 ]);
             }else{
                 DB::table('product')->where('no_product', $id)->update([
                     'product_name' => $request->input('product_name'),
                     'description' => $request->input('description'),
-                    'category_id' => $request->input('category_id')
+                    'category_id' => $request->input('category_id'),
+                    'supplier_id' => $request->input('supplier_id')
                 ]);
             }
             return response()->json([
